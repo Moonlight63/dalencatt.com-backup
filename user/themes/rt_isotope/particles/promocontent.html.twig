@@ -1,0 +1,86 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+		
+	<div class="g-promocontent">
+		{% set readmoreInline %}
+			{% if particle.link and particle.linkstyle == 'inline' %}
+			<a href="{{ particle.link|e }}" class="button {{ particle.readmoreclass|e }}">{{ particle.readmore|raw }}</a>
+			{% endif %}
+		{% endset %}
+		{% if particle.link and particle.linkstyle == 'aside' %}
+		<div class="g-inline-action-content"><div class="g-inline-action-text">
+		{% endif %}
+
+		{% if particle.promostyle == 'standard' %}
+		<h2 class="g-title">{{ particle.promo|e }}</h2>
+		{{ readmoreInline }}
+		{% endif %}
+		
+		{% if particle.promostyle == 'promo' %}
+		<div class="g-promo">{{ particle.promo|e }}</div>
+		{{ readmoreInline }}
+		{% endif %}
+	
+		{% if particle.promostyle == 'superpromo' %}
+		<h2 class="g-superpromo">
+			{% if particle.link %}
+			<a href="{{ particle.link|e }}">
+			{% endif %}
+				{{ particle.promo|raw }}
+			{% if particle.link %}
+			</a>
+			{% endif %}
+		</h2>
+		{{ readmoreInline }}
+		{% endif %}
+	
+		{% if particle.promostyle == 'subpromo' %}
+		<div class="g-subpromo">
+			<span>{{ particle.promo|raw }}</span>
+			{{ readmoreInline }}
+		</div>
+		{% endif %}
+	
+		{% if particle.tags %}
+		<ul class="g-tags">
+		{% for tag in particle.tags %}
+			<li>
+				{% if tag.link %}
+				<a href="{{ tag.link|e }}">
+				{% endif %}
+					{% if tag.icon %}
+					<i class="{{ tag.icon|e }}"></i>
+					{% endif %}
+					{{ tag.text|raw }}
+				{% if tag.link %}
+				</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+		</ul>
+		{% endif %}
+		
+		{% if particle.desc %}
+		<div class="g-textpromo">
+			{{ particle.desc|raw }}
+		</div>
+		{% endif %}
+		
+		{% if particle.link and particle.linkstyle == 'aside' %}
+		</div>
+		<div class="g-inline-action-button">
+		{% endif %}
+		
+		{% if particle.link and (particle.linkstyle == 'block' or particle.linkstyle == 'aside') %}
+		<a href="{{ particle.link|e }}" class="button {{ particle.readmoreclass|e }}">{{ particle.readmore|raw }}</a>
+		{% endif %}
+		
+		{% if particle.link and particle.linkstyle == 'aside' %}
+		</div></div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

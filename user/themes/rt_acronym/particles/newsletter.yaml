@@ -1,0 +1,97 @@
+name: Newsletter
+description: Display newsletter form.
+type: particle
+icon: fa-file-text-o
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    width:
+      type: select.selectize
+      label: Width
+      description: Choose the width.
+      default: g-newsletter-fullwidth
+      options:
+        g-newsletter-fullwidth: Full Width
+        g-newsletter-compact: Compact
+
+    layout:
+      type: select.selectize
+      label: Layout
+      description: Choose the layout.
+      default: g-newsletter-stack-compact
+      options:
+        g-newsletter-stack-fullwidth: Stack Fullwidth
+        g-newsletter-stack-compact: Stack Compact
+        g-newsletter-aside-wrap: Aside Wrap
+        g-newsletter-aside-compact: Aside Compact
+
+    style:
+      type: select.selectize
+      label: Style
+      description: Choose the style for the Input Box and Button.
+      default: g-newsletter-square
+      options:
+        g-newsletter-square: Square
+        g-newsletter-rounded: Rounded
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    headtext:
+      type: textarea.textarea
+      label: Heading Text
+      description: Customize the heading text.
+      placeholder: Enter short heading text
+
+    sidetext:
+      type: input.text
+      label: Side Text
+      description: Customize the side text.
+      placeholder: Enter short side text
+
+    inputboxtext:
+      type: input.text
+      label: InputBox Text
+      description: Customize the InputBox text.
+      placeholder: Type your email address here..
+      default: Type your email address here..
+
+    buttonicon:
+      type: input.icon
+      label: Button Icon
+      description: Select the icon.
+
+    buttontext:
+      type: input.text
+      label: Button Text
+      description: Customize the Button text.
+      placeholder: Join
+
+    uri:
+      type: input.text
+      label: Feedburner URI
+      description: Please put your Feedburner Email Subscriptions URI here.
+      placeholder: Feedburner URI
+
+    buttonclass:
+      type: input.selectize
+      label: Button Classes
+      description: CSS class name for the join button.

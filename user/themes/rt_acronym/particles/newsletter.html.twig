@@ -1,0 +1,43 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    <div class="{{ particle.class|e }}">
+
+        {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+        <div id="g-newsletter-{{ id }}" class="g-newsletter {{ particle.width|e }} {{ particle.layout|e }} {{ particle.style|e }}">
+            {% if particle.headtext %}
+                <div class="g-newsletter-headtext">{{ particle.headtext|raw }}</div>
+            {% endif %}
+
+            <form id="g-newsletter-form-{{ id }}" class="g-newsletter-form" action="//feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('//feedburner.google.com/fb/a/mailverify?uri={{ particle.uri|e }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+
+                <div class="g-newsletter-form-wrapper">
+                    <div class="g-newsletter-inputbox">
+                        <input type="text" placeholder="{{ particle.inputboxtext|raw }}" name="email">
+                        <input type="hidden" value="{{ particle.uri|e }}" name="uri">
+                        <input type="hidden" name="loc" value="en_US">
+                    </div>
+                    {% if particle.buttontext %}
+                    <div class="g-newsletter-button">
+                        <a class="g-newsletter-button-submit button {{ particle.buttonclass|e }}" href="#" onclick="document.getElementById('g-newsletter-form-{{ id }}').submit()">
+                            {% if particle.buttonicon %}
+                                <span class="g-newsletter-button-icon"><i class="{{ particle.buttonicon|e }}"></i></span>
+                            {% endif %}
+                            <span class="g-newsletter-button-text">{{ particle.buttontext|raw|default('Join') }}</span>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {% if particle.sidetext %}
+                    <div class="g-newsletter-sidetext">{{ particle.sidetext|raw }}</div>
+                {% endif %}
+
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,402 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1488232369
+layout:
+  top: {  }
+  navigation: {  }
+  /slideshow/:
+    -
+      - headerlicious-7991
+    -
+      - particlesjs-4543
+  /header/:
+    -
+      - owlcards-2603
+  /above/:
+    -
+      - 'custom-3442 60'
+      - 'simplecontent-1498 40'
+  /feature/:
+    -
+      - 'logo-9937 25'
+      - 'logo-2461 25'
+      - 'logo-8996 25'
+      - 'logo-3862 25'
+  showcase:
+    -
+      - owlshowcase-7305
+  extension:
+    -
+      - 'flippingcards-4199 50'
+      - 'contentarray-4120 50'
+  /bottom/:
+    -
+      - simplecontent-7783
+    -
+      - newsletter-8589
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  slideshow:
+    type: section
+    attributes:
+      boxed: '3'
+      class: fp-slideshow
+  header:
+    attributes:
+      boxed: '3'
+      class: g-home-header
+  above:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-home-above
+  feature:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-home-feature
+  showcase:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  bottom:
+    type: section
+    attributes:
+      boxed: '3'
+      class: fp-bottom
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  headerlicious-7991:
+    attributes:
+      header: futuristic.
+      tagline: 'Acronym is a Bold Theme from RocketTheme.'
+  particlesjs-4543:
+    title: Particles
+  owlcards-2603:
+    title: 'Owl Cards'
+    attributes:
+      class: ''
+      lazyload: enabled
+      displayitems: '5'
+      title: ''
+      description: ''
+      nav: enabled
+      loop: enabled
+      scrollspeed: '1000'
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: enabled
+      items:
+        -
+          subtitle: '2 days ago'
+          image: 'gantry-media://home/header/img-01.jpg'
+          caption: 'Gantry 5'
+          link: '#'
+          title: 'The Importance of Great Design'
+        -
+          subtitle: '2 days ago'
+          image: 'gantry-media://home/header/img-02.jpg'
+          caption: 'Color Picker'
+          link: '#'
+          title: 'Find Your Hue with the Color Picker'
+        -
+          subtitle: '2 days ago'
+          image: 'gantry-media://home/header/img-03.jpg'
+          caption: 'Icon Picker'
+          link: '#'
+          title: 'Choose Icons with the Icon Picker'
+        -
+          subtitle: '2 days ago'
+          image: 'gantry-media://home/header/img-04.jpg'
+          caption: 'File Picker'
+          link: '#'
+          title: 'Select Photos with File Picker'
+        -
+          subtitle: '2 days ago'
+          image: 'gantry-media://home/header/img-05.jpg'
+          caption: 'Font Picker'
+          link: '#'
+          title: 'Perfect Your Text with Font Picker'
+  custom-3442:
+    title: 'Promo 1'
+    attributes:
+      html: '<h1>Acronym is designed with a focus on versatility, speed, and modern design. </h1>'
+    block:
+      class: g-promo
+  simplecontent-1498:
+    title: Signature
+    attributes:
+      class: ''
+      title: ''
+      items:
+        -
+          layout: standard
+          created_date: ''
+          content_title: ''
+          author: ''
+          leading_content: 'Acronym is packed with animated features you can easily configure to meet your needs.'
+          main_content: "<div class=\"g-promo-signature\">\n<img src=\"gantry-media://home/above/avatar.png\" alt=\"Avatar\" class=\"g-promo-avatar\">\n<div class=\"g-promo-titles\">\n<div class=\"g-promo-title\">Stone Cold Steve Austin</div>\n<div class=\"g-promo-subtitle\">\nCEO of SprocketBeams\n</div>\n</div>\n<img src=\"gantry-media://home/above/signature.png\"  alt=\"Signature\" class=\"g-promo-sign\">\n</div>"
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: Signature
+    block:
+      class: g-promo-2
+  logo-9937:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://home/feature/img-01.png'
+  logo-2461:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://home/feature/img-02.png'
+  logo-8996:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://home/feature/img-03.png'
+  logo-3862:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://home/feature/img-04.png'
+  owlshowcase-7305:
+    title: 'Owl Showcase'
+    attributes:
+      class: ''
+      source: particle
+      presets: disabled
+      lazyload: enabled
+      displayitems: '1'
+      title: ''
+      description: ''
+      animateIn: fadeIn
+      animateOut: fadeOut
+      nav: enabled
+      dots: enabled
+      loop: enabled
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: enabled
+      items:
+        -
+          image: 'gantry-media://home/showcase/img-01.jpg'
+          icon: ''
+          title: 'Great for Photographers'
+          desc: 'Beautifully Present Images'
+          link: '#'
+          name: 'Item 1'
+        -
+          image: 'gantry-media://home/showcase/img-02.jpg'
+          icon: ''
+          title: 'Multiple Image Particles'
+          desc: 'Display Your Images with Ease'
+          link: '#'
+          name: 'Item 2'
+      joomla:
+        categories: ''
+        articles: '3'
+        introimage: enabled
+        title: enabled
+        introtext: enabled
+        link: enabled
+    block:
+      variations: 'nopaddingall nomarginall'
+  flippingcards-4199:
+    title: 'Flipping Cards'
+    attributes:
+      cols: '2'
+      items:
+        -
+          title_front: 'Flipping Cards'
+          desc_front: 'The Flipping Cards particle makes it easy to display paragraphs of written content in a way that is both compact and stylish. With a click, you can flip the card over to reveal a whole new set of content - including icons and links.'
+          icon_front: 'fa fa-paint-brush'
+          buttontext_front: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_front: '#'
+          buttontarget_front: _self
+          buttonclass_front: ''
+          title_back: 'Card Back'
+          desc_back: 'This is the back-side of a Flipping Cards card. It has a distinctly different appearance and can be given its own unique look and content - all managed from a single, simple user interface.'
+          icon_back: 'fa fa-paint-brush'
+          buttontext_back: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_back: '#'
+          buttontarget_back: _self
+          buttonclass_back: ''
+          title: 'Flipping Cards'
+        -
+          title_front: 'Particles Particle'
+          desc_front: 'Acronym''s animated background is made possible by the Particles particle. This particle sits in the Top section, and enables you to switch between shapes and configure the background with ease. Flip the card for more information.'
+          icon_front: 'fa fa-code'
+          buttontext_front: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_front: '#'
+          buttontarget_front: _self
+          buttonclass_front: ''
+          title_back: 'Particles Particle'
+          desc_back: 'Supported shapes include: rectangles, circles, triangles, polygons, stars, as well as circles and lines. You can also give it a custom configuration using JSON files selectable using a file picker field in the particle''s settings. Easy peasy!'
+          icon_back: 'fa fa-code'
+          buttontext_back: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_back: '#'
+          buttontarget_back: _self
+          buttonclass_back: ''
+          title: Particles
+        -
+          title_front: Headerlicious
+          desc_front: 'Headerlicious gives your site a big, bold text headline to use at the top of your page. This particle is easy to set up, and comes with five different styles to make your text stand out in a way that fits your personal taste.'
+          icon_front: 'fa fa-comments-o'
+          buttontext_front: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_front: '#'
+          buttontarget_front: _self
+          buttonclass_front: ''
+          title_back: Headerlicious
+          desc_back: "Vivamus euismod ligulalis nec maximus luctus. Fusce in mauris arcu. Vivamus interdum dui blandit tempor dapibus.\nVivamus euismod ligulalis nec maximus luctus. Fusce in mauris arcu. Vivamus interdum dui blandit tempor dapibus."
+          icon_back: 'fa fa-comments-o'
+          buttontext_back: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_back: '#'
+          buttontarget_back: _self
+          buttonclass_back: ''
+          title: Headerlicious
+        -
+          title_front: 'Premium Particles'
+          desc_front: 'Give your website a look entirely your own with the versatile Gantry 5 framework and RocketTheme''s exclusive premium particles. Create gorgeous showcases with Owl Showcase. Build beautiful photo galleries with Image Grid.'
+          icon_front: 'fa fa-tv'
+          buttontext_front: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_front: '#'
+          buttontarget_front: _self
+          buttonclass_front: ''
+          title_back: 'Premium Particles'
+          desc_back: 'You can create organized content blocks with Grid Content and Block Content, or maximize your space with Content Tabs and Accordion. With these and Info List, Grid Statistic, Header Tabs, and more, the possibilities are endless.'
+          icon_back: 'fa fa-tv'
+          buttontext_back: 'Flip it <i class="fa fa-angle-double-right" aria-hidden="true"></i>'
+          buttonlink_back: '#'
+          buttontarget_back: _self
+          buttonclass_back: ''
+          title: 'Premium Particles'
+    block:
+      variations: 'nopaddingall equal-height'
+  contentarray-4120:
+    title: 'Platform Content'
+    attributes:
+      article:
+        filter:
+          categories: ''
+          articles: ''
+          featured: include
+        limit:
+          total: '6'
+          columns: '1'
+          start: '0'
+        sort:
+          orderby: publish_up
+          ordering: ASC
+        display:
+          image:
+            enabled: ''
+          text:
+            type: ''
+          date:
+            enabled: published
+          read_more:
+            enabled: ''
+          author:
+            enabled: ''
+          category:
+            enabled: ''
+          hits:
+            enabled: ''
+      post:
+        filter:
+          categories: ''
+          sticky: ''
+        limit:
+          total: '6'
+          columns: '1'
+          start: '0'
+        sort:
+          orderby: date
+          ordering: DESC
+        display:
+          image:
+            enabled: ''
+          read_more:
+            enabled: ''
+          author:
+            enabled: ''
+          category:
+            enabled: ''
+          comments:
+            enabled: ''
+          text:
+            type: ''
+    block:
+      variations: 'equal-height box-white'
+  simplecontent-7783:
+    title: 'Simple Content'
+    attributes:
+      class: ''
+      title: ''
+      items:
+        -
+          layout: standard
+          created_date: ''
+          content_title: 'Let’s stay in touch'
+          author: ''
+          leading_content: 'Sign up for our newsletter and never miss another article.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'Let’s stay in touch'
+    block:
+      variations: center
+  newsletter-8589:
+    attributes:
+      inputboxtext: 'Your email address..'
+      buttontext: 'Sign up'
+      buttonclass: ''
+    block:
+      class: 'nomargintop nopaddingtop'
+      variations: center

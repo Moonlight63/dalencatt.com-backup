@@ -1,0 +1,136 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    {% if particle.title %}<h2 class="g-title g-infolist-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    {% if particle.intro %}
+        <p>{{ particle.intro|raw }}</p>
+    {% endif %}
+
+    <div class="g-infolist {{ particle.cols|e }} {{ particle.class|e }}">
+
+        {% for infolist in particle.infolists %}
+            <div class="g-infolist-item{% if infolist.icon %} g-infolist-with-icon{% endif %}{% if infolist.image %} g-infolist-with-img{% endif %} {% if infolist.image and infolist.imageloc == 'center' or infolist.icon and infolist.iconloc == "center" %}center{% endif %}">
+
+                {% set icondata %}
+                    <div class="g-infolist-item-icon {{ infolist.iconloc|e }}">
+                        <i class="{{ infolist.icon|e }}"></i>
+                    </div>
+                {% endset %}
+
+                {% set imagedata %}
+                    <div class="g-infolist-item-img g-block{% if infolist.imagestyle == 'compact' %} size-22{% endif %}{% if infolist.imagestyle == 'browser' %} browser{% endif %} {{ infolist.imageloc|e }} {% if infolist.imagestyle == 'avatar' %}avatar{% endif %}">
+                        {% if infolist.imagestyle == 'browser' %}
+                        <div class="browser-wrapper">
+                            <div class="browser-bar">
+                                <span class="browser-button"></span>
+                            </div>
+                        {% endif %}
+
+                            <img src="{{ url(infolist.image)|e }}" alt="{{ url(infolist.title)|e }}" />
+
+                        {% if infolist.imagestyle == 'browser' %}
+                        </div>
+                        {% endif %}
+                    </div>
+                {% endset %}
+
+                {% if infolist.icon and infolist.iconloc == 'left' %}
+                    {{ icondata }}
+                {% endif %}
+
+                {% if infolist.image and infolist.imageloc == 'left' %}
+                    {{ imagedata }}
+                {% endif %}
+
+                <div class="g-infolist-item-text{% if infolist.icon or infolist.image %} {% endif %} g-infolist-textstyle-{{ infolist.textstyle }}">
+                    {% if infolist.icon and infolist.iconloc == 'center' %}
+                        {{ icondata }}
+                    {% endif %}
+
+                    {% if infolist.image and infolist.imageloc == 'center' %}
+                        {{ imagedata }}
+                    {% endif %}
+
+                    {% if infolist.tag or infolist.subtag %}
+                        <div class="g-infolist-tags">
+                            {% if infolist.tag %}
+                                {% if infolist.link %}
+                                <a href="{{ infolist.link|e }}" target="{{ infolist.readmoretarget|default('_self')|e }}">
+                                {% endif %}
+
+                                    <span class="g-tag">{{ infolist.tag|e }}</span>
+
+                                {% if infolist.link %}
+                                </a>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if infolist.subtag %}
+                                <span class="g-small">{{ infolist.subtag|e }}</span>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                    {% if infolist.title -%}
+                        {%- spaceless -%}
+                        <div class="g-infolist-item-title {% if infolist.textstyle == 'bold' %}g-bold{% endif %}">
+                            {%- if infolist.textstyle == 'large' -%}
+                            <div class="g-title-hero">
+                            {%- endif -%}
+
+                                {%- if infolist.link -%}
+                                <a href="{{ infolist.link|e }}" target="{{ infolist.readmoretarget|default('_self')|e }}">
+                                {%- endif -%}
+
+                                {{- infolist.title|raw -}}
+
+                                {%- if infolist.link -%}
+                                </a>
+                                {%- endif -%}
+
+                            {%- if infolist.textstyle == 'large' -%}
+                            </div>
+                            {%- endif -%}
+                        </div>
+                    {%- endspaceless %}
+                    {%- endif %}
+
+                    {% if infolist.desc %}
+                        <div class="g-infolist-item-desc">
+                            {% if infolist.textstyle == 'large' %}
+                            <div class="g-large">
+                            {% endif %}
+
+                                {{ infolist.desc|raw }}
+
+                            {% if infolist.textstyle == 'large' %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                    {% if infolist.link %}
+                        <div class="g-infolist-link">
+                            <a href="{{ infolist.link|e }}" target="{{ infolist.readmoretarget|default('_self')|e }}" class="{{ infolist.readmoreclass|e }}">
+                                {% if infolist.buttonicon %}<i class="{{ infolist.buttonicon|e }}"></i>{% endif %}
+                                {{ infolist.label|e }}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+
+                {% if infolist.icon and infolist.iconloc == 'right' %}
+                    {{ icondata }}
+                {% endif %}
+
+                {% if infolist.image and infolist.imageloc == 'right' %}
+                    {{ imagedata }}
+                {% endif %}
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

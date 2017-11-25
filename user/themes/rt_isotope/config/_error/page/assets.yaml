@@ -1,0 +1,13 @@
+javascript:
+  -
+    location: 'https://ajax.googleapis.com/ajax/libs/mootools/1.5.2/mootools.min.js'
+    inline: ''
+    in_footer: '0'
+    extra: {  }
+    name: Mootools
+  -
+    location: 'gantry-assets://js/headroom.js'
+    inline: ''
+    in_footer: '0'
+    extra: {  }
+    name: Headroom

@@ -1,0 +1,98 @@
+.g-simplecontent {
+    h2.g-title {
+        padding: 0.3rem 0.6rem;
+        margin: 0;
+        text-transform: uppercase;
+        background: $accent-color-1;
+        display: inline-block;
+        color: $white;
+        font-size: $core-font-size - 0.1;
+        font-weight: $font-weight-bold;
+        border-radius: $border-radius;
+        letter-spacing: 1px;
+    }
+    .g-simplecontent-item-created-date {
+        font-size: $core-font-size - 0.2;
+        text-transform: uppercase;
+    }
+
+    .g-simplecontent-layout-header {
+        padding: $content-padding 0;
+    }
+
+    .g-simplecontent-item-content-title {
+        font-size: $core-font-size + 2.5;
+        @include breakpoint(mobile-only) {
+            font-size: $core-font-size + 1;
+        }
+        font-weight: $font-weight-ultrabold;
+        strong {
+            font-weight: $font-weight-ultrabold;
+        }
+        margin: ($content-margin - 0.1) 0;
+
+        .g-simplecontent-layout-header & {
+            font-family: get-font-family($font-family-title);
+            font-size: $h1-font-size;
+            font-weight: $font-weight-light;
+            line-height: $core-line-height;
+
+            @include breakpoint(desktop-range) {
+                font-size: $core-font-size + 1.75;
+            }
+
+            @include breakpoint(tablet-range) {
+                font-size: $core-font-size + 1.5;
+            }
+
+            @include breakpoint(mobile-only) {
+                font-size: $core-font-size + 1;
+            }
+        }
+    }
+
+    .g-simplecontent-item-author {
+        font-size: $core-font-size - 0.1;
+        font-weight: $font-weight-bold;
+        margin-bottom: $content-margin;
+    }
+
+    .g-simplecontent-item-leading-content {
+        @extend .g-lead;
+        margin-bottom: $content-margin;
+        font-weight: $font-weight-regular;
+        font-size: $core-font-size + 0.2;
+
+        .g-simplecontent-layout-header & {
+            font-size: $core-font-size + 0.9;
+        }
+    }
+
+    .g-simplecontent-item-main-content {
+        font-size: $core-font-size - 0.1;
+        margin-bottom: $content-margin;
+
+        .g-simplecontent-layout-header & {
+            font-size: $core-font-size;
+            margin-bottom: $content-margin * 2;
+        }
+    }
+
+    .g-simplecontent-item-readmore-container {
+        margin-top: $content-margin;
+        padding-top: $content-padding;
+    }
+
+    .g-simplecontent-item-author, .g-simplecontent-item-created-date {
+        .g-simplecontent-layout-header & {
+            display: inline-block;
+            margin: 0;
+            padding-right: $content-padding;
+            font-family: get-font-family($font-family-default);
+            font-weight: $font-weight-light;
+            font-size: $core-font-size + 0.15;
+            line-height: $core-line-height + 0.5;
+            text-transform: none;
+        }
+    }
+}

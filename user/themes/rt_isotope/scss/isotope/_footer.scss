@@ -1,0 +1,105 @@
+#g-footer {
+	background: $footer-background;
+	color: $footer-text-color;
+
+	// Container
+	.g-container {
+		padding: 1.5rem 0;
+		@include breakpoint(mobile-only) {
+			text-align: center;
+		}		
+	}
+	.g-content {
+		padding: 0 $content-padding;
+		@include breakpoint(mobile-only) {
+			padding: $content-padding/2 $content-padding 0 $content-padding;
+		}		
+	}
+
+
+
+	// Info List - Grid Menu
+	.g-infolist {
+		&.g-gridmenu {
+			margin-top: 1rem;
+			.g-infolist-item {
+				border-bottom: none;
+				margin: 0 !important;
+				padding: 0 0 $content-padding/2 0;
+			}
+			.g-infolist-item-title {
+				font-size: $core-font-size - 0.1;
+				text-transform: uppercase;
+				@include breakpoint(desktop-range) {
+					font-size: $core-font-size - 0.1;
+				}
+				@include breakpoint(tablet-range) {
+					font-size: $core-font-size - 0.2;
+				}		
+				@include breakpoint(mobile-only) {
+					font-size: $core-font-size - 0.1;
+				}					
+				a {
+					font-weight: normal;
+				}					
+			}
+			.g-infolist-item-text {
+				padding: 0;
+			}
+			&.g-2cols {
+				.g-infolist-item {
+					@include breakpoint(mobile-only) {
+						width: 47% !important;
+					}						
+				}
+			}
+		}
+	}
+
+	// About
+	.g-about {
+		p {
+			margin-top: 0.85rem;
+			font-size: $core-font-size - 0.1;
+		}		
+	}
+
+	// Contact
+	.g-contact {
+		&.g-office-hours {
+			.g-contact-item {
+				@include breakpoint(tablet-range) {
+					padding-left: 0;
+					padding-right: 0;
+				}				
+			}
+			.g-contact-icon {
+				@include breakpoint(tablet-range) {
+					display: none;
+				}				
+			}
+		}
+	}
+
+	// Sample Sitemap
+	.g-sample-sitemap {
+		@include breakpoint(mobile-only) {
+			.g-block {
+				@include flex(0 0 auto);
+				width: 50% !important;
+			}
+		}
+		li a {
+			@include breakpoint(tablet-range) {
+				font-size: $core-font-size - 0.2;
+			}
+		}			
+	}
+}
+
+@media print {
+	#g-footer {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

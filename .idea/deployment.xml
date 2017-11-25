@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="dev-1.3.8" showDifferentInSync="false" showNewOnSourceInSync="false">
+    <serverData>
+      <paths name="dalencattdev">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html/dalencatt.com/dev" local="$PROJECT_DIR$" web="dev.dalencatt.com" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/public_html/dalencatt.com/dev/cache" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cache" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="dev-1.3.8">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html/dalencatt.com/dev-1.3.8" local="$PROJECT_DIR$" web="dev-1.3.8.dalencatt.com" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cache" />
+            <excludedPath path="/public_html/dalencatt.com/dev-1.3.8/cache" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

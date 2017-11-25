@@ -1,0 +1,193 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: twosidebarsright
+  timestamp: 1457353897
+layout:
+  top: {  }
+  navigation: {  }
+  header: {  }
+  slideshow:
+    -
+      - simplecontent-7561
+  above: {  }
+  showcase: {  }
+  utility: {  }
+  feature: {  }
+  /container-main/:
+    -
+      -
+        'mainbar 46':
+          -
+            - custom-8235
+      -
+        'sidebar 27':
+          -
+            - custom-7406
+          -
+            - custom-6562
+      -
+        'aside 27':
+          -
+            - custom-9224
+  expanded: {  }
+  extension: {  }
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  slideshow:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  feature:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  mainbar:
+    type: section
+    block:
+      class: equal-height
+  sidebar:
+    type: section
+    block:
+      class: equal-height
+  aside:
+    block:
+      class: equal-height
+  container-main:
+    attributes:
+      boxed: '3'
+      class: g-default-main
+      extra: {  }
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  simplecontent-7561:
+    title: 'Two Sidebars Right Example'
+    attributes:
+      class: ''
+      title: Layout
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: 'Two Sidebars Right Example'
+          author: ''
+          leading_content: 'Example two sidebars right layout.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'Two Sidebars Right Example'
+  custom-8235:
+    title: 'H2 Heading'
+    attributes:
+      html: "<h2>H2 Heading</h2>\n<p>Nullam eget neque. Nullam <a href=\"#\">imperdiet venenatis</a> ligula. Integer a leo. Nunc consectetur. Maecenas sem. Proin vulputate, massa vel volutpat laoreet, purus erat pretium ligula, eget varius arcu nibh sed libero.</p>\n\n<h3>H3 Heading</h3>\n<p>In erat. Pellentesque erat. <strong>Mauris vehicula vestibulum justo.</strong> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pulvinar est. <strong>Integer urna</strong>. Pellentesque pulvinar dui a magna. Nulla facilisi. <a href=\"#\">Sed ac arcu</a>.</p>"
+    block:
+      class: 'nomargintop nopaddingtop'
+  custom-7406:
+    title: 'Left Sidebar'
+    attributes:
+      html: "<h3 class=\"g-title\">Left Sidebar</h3>\n<p class=\"nomarginbottom\"> A left column layout example. The sidebar is independent from the Mainbody so can have multiple rows and columns, separate from the Mainbody area.</p>"
+    block:
+      variations: 'box1 box2'
+  custom-6562:
+    title: 'Custom HTML'
+    attributes:
+      html: '<p>Mauris lobortis. Aliquam lacinia purus. <strong>Pellentesque magna</strong>. Mauris euismod metus nec. <a href="#">Morbi convallis luctus tortor</a>.</p>'
+    block:
+      class: nomargintop
+      variations: box1
+  custom-9224:
+    title: 'Right Sidebar'
+    attributes:
+      html: "<h3 class=\"g-title\">Right Sidebar</h3>\n<p>Gantry 5 benefits from a flexible and intuitive, drag &amp; drop layout manager. You can add as many rows and blocks to each section as you desire, and configure their distance to intervals of 1%.</p>\n\n<p>Each block has individual controls, such as an autocomplete select box for box variations, as well as individual CSS fields.</p>"
+    block:
+      variations: box1

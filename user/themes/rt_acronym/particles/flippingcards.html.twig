@@ -1,0 +1,70 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    <div class="g-flippingcards-wrapper g-flippingcards-columns-{{ particle.cols }}">
+        {% for row in particle.items|batch(particle.cols) %}
+        <div class="g-flippingcards-row" data-flippingcards-id="{{ id }}{{ loop.index }}" data-flippingcards-autosize="{% if particle.autoSize == 'enabled' %}true{% else %}false{% endif %}" data-flippingcards-forcewidth="{% if particle.forceWidth == 'enabled' %}true{% else %}false{% endif %}" data-flippingcards-forceheight="{% if particle.forceHeight == 'enabled' %}true{% else %}false{% endif %}" data-flippingcards-axis="{{ particle.axis }}"  data-flippingcards-trigger="{{ particle.trigger }}" data-flippingcards-speed="{{ particle.speed }}">
+
+
+        {% for card in row %}
+        <div class="g-flippingcard">
+            <div class="g-flippingcards-front">
+                {% if card.icon_front %}
+                <i class="{{ card.icon_front }} g-flippingcards-iconbg" aria-hidden="true"></i>
+                <i class="{{ card.icon_front }}" aria-hidden="true"></i>
+                {% endif %}
+                {% if card.title_front %}
+                <div class="g-flippingcards-title">
+                    {{ card.title_front }}
+                </div>
+                {% endif %}
+                {% if card.desc_front %}
+                <div class="g-flippingcards-desc">
+                    {{ card.desc_front|raw }}
+                </div>
+                {% endif %}
+                {% if card.buttontext_front %}
+                <span class="g-flippingcards-button {{ card.buttonclass_front|e }}">{{ card.buttontext_front|raw }}</span>
+                {% endif %}
+            </div>
+
+            <div class="g-flippingcards-back">
+                <div class="">
+
+                </div>
+                {% if card.icon_back %}
+                <i class="{{ card.icon_back }} g-flippingcards-iconbg" aria-hidden="true"></i>
+                <i class="{{ card.icon_back }}" aria-hidden="true"></i>
+                {% endif %}
+                {% if card.title_back %}
+                <div class="g-flippingcards-title">
+                    {{ card.title_back }}
+                </div>
+                {% endif %}
+                {% if card.desc_back %}
+                <div class="g-flippingcards-desc">
+                    {{ card.desc_back|raw  }}
+                </div>
+                {% endif %}
+                {% if card.buttontext_back %}
+                <span class="g-flippingcards-button {{ card.buttonclass_back|e }}">{{ card.buttontext_back|raw }}</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script src="{{ url('gantry-theme://js/flip.js') }}"></script>
+<script src="{{ url('gantry-theme://js/flip.init.js') }}"></script>
+{% endblock %}

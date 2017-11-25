@@ -1,0 +1,50 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript %}
+<script src="{{ url('gantry-theme://js/juihelper.js') }}"></script>
+{% endblock %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    <div class="g-headertabs">
+        <div id="{{ id }}" data-headertabs="{{ id }}" data-headertabs-animation="{{ particle.animation }}" {% if particle.duration %}data-headertabs-duration="{{ particle.duration }}"{% endif %}  class="g-headertabs-container">
+            <div class="g-headertabs-navigation">
+                <ul class="g-headertabs-tab-wrapper-container">
+                    {% for item in particle.items %}
+                        <li class="g-headertabs-tab-wrapper">
+                            <span class="g-headertabs-tab-wrapper-head">
+                                <a class="g-headertabs-tab" href="#g-headertab-{{ loop.index }}">
+                                    <span class="g-headertabs-tab-title">{{ item.tab_name|raw }}</span>
+                                    {% if item.tab_desc %}
+                                        <span class="g-headertabs-tab-desc">{{ item.tab_desc|raw }}</span>
+                                    {% endif %}
+                                </a>
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="g-headertabs-tabs">
+                <ul class="g-headertabs-content-wrapper-container">
+                    {% for item in particle.items %}
+                    <li class="g-headertabs-tab-wrapper">
+                        <div class="g-headertabs-tab-wrapper-body">
+                            <div id="g-headertab-{{ loop.index }}" class="g-headertabs-content">
+                                <img src="{{ url(item.tab_image) }}" class="g-headertabs-image" alt="{{ item.tab_name|e }}" />
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.document.addScript(url('gantry-theme://js/headertabs.init.js'), 10, 'footer') %}
+{% endblock %}

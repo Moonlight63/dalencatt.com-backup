@@ -1,0 +1,15 @@
+name: Above Styles
+description: Above styles for the Acronym theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#4063fb"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

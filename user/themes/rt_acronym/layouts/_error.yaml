@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _error
+  timestamp: 1483699509
+layout:
+  /top/:
+    -
+      - system-messages-9828
+  navigation:
+    -
+      - 'logo-6939 20'
+      - 'menu-5286 80'
+  /header/: {  }
+  /slideshow/:
+    -
+      - simplecontent-7561
+  /above/: {  }
+  /showcase/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60': {  }
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  /extension/: {  }
+  /bottom/:
+    -
+      - system-content-3192
+  /footer/: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    attributes:
+      boxed: '3'
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  header:
+    inherit:
+      outline: default
+      include:
+        - attributes
+  slideshow:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  showcase:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  feature:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  sidebar:
+    type: section
+    block:
+      class: equal-height
+  mainbar:
+    type: section
+    block:
+      class: equal-height
+  aside:
+    block:
+      class: equal-height
+  container-main:
+    attributes:
+      boxed: '3'
+      class: 'g-default-main'
+      extra: {  }
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  bottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  logo-6939:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: logo-5992
+  menu-5286:
+    inherit:
+      outline: default
+      particle: menu-2350
+      include:
+        - attributes
+        - block
+  simplecontent-7561:
+    title: 'We are sorry!'
+    attributes:
+      class: ''
+      title: '404'
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: '<strong>We</strong> are sorry!'
+          author: ''
+          leading_content: 'Gantry 5 provides a custom error page for you to configure with either positions, particles or a combination of both, as well as styling.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'We are sorry!'
+  system-content-3192:
+    block:
+      class: g-error
+      variations: center

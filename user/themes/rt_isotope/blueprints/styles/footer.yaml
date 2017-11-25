@@ -1,0 +1,15 @@
+name: Footer Styles
+description: Footer styles for the Isotope theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#e8e8e8"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#686868"

@@ -1,0 +1,100 @@
+// Contact Form
+#contact {
+    padding: 19px;
+    margin-bottom: 20px;
+
+    .form-message {
+        margin-bottom: 15px;
+
+        & + .form-field  {
+            margin-top: 15px;
+        }
+    }
+
+    .form-field {
+        margin-bottom: 1.5rem;
+
+        .form-data {
+            margin-left: 100px;
+
+            @include breakpoint(mobile-only) {
+                margin-left: 0;
+            }
+
+            input, textarea {
+                border: 0 none;
+                border: 2px solid $base-border-color;
+                background: $white;
+                border-radius: 4px;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: $accent-color-1;
+                }
+            }
+
+            textarea {
+                padding-top: 10px;
+                min-height: 226px;
+            }
+
+            input[type="checkbox"] {
+                margin-top: 0.5rem;
+            }
+        }
+
+        .form-label {
+            float: left;
+            padding-top: 5px;
+            text-align: right;
+        }
+    }
+
+    .buttons {
+        margin-left: 100px;
+
+        @include breakpoint(mobile-only) {
+            margin-left: 0;
+        }
+    }
+}
+
+legend {
+    color: $base-text-color;
+    font-family: get-font-family($font-family-title);
+    font-weight: $font-weight-bold;
+    font-size: $core-font-size + 0.5;
+    line-height: $core-line-height;
+    margin: 1rem 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    color: $base-text-color;
+    background-color: $white;
+    border: 2px solid $border-color-light;
+    box-shadow: none;
+    box-sizing: border-box !important;
+    @include transition(border 0.2s linear, box-shadow 0.2s linear);
+    .input-prepend &, .input-append & {
+        padding: 0.35rem;
+        max-width: 95%;
+        .dir-rtl & {
+            border-radius: 6px 0 0 6px;
+        }
+    }
+}

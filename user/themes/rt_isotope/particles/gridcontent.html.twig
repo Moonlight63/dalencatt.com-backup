@@ -1,0 +1,33 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}	
+	<div class="g-gridcontent">
+			{% if particle.desc %}<div class="g-gridcontent-desc">{{ particle.desc|raw }}</div>{% endif %}	
+			{% if particle.readmore %}
+			<div class="g-gridcontent-readmore">
+				<a href="{{ particle.readmorelink|e }}" class="button {{ particle.readmoreclass|e }}">{{ particle.readmore|raw }}</a>
+			</div>	
+			{% endif %}		
+		<div class="g-gridcontent-wrapper {{ particle.cols|e }}">
+			{% for gridcontentitem in particle.gridcontentitems %}
+			    <div class="g-gridcontent-item">
+			    	<div class="g-gridcontent-item-wrapper {{ gridcontentitem.textstyle|e }}">
+			    		<div class="g-gridcontent-item-img">
+			    			{% if gridcontentitem.img %}<img src="{{ url(gridcontentitem.img)|e }}" alt="{{ particle.title|e }}">{% endif %}
+			    		</div>
+			    		<div class="g-gridcontent-item-content">
+				        	{% if gridcontentitem.icon %}<i class="{{ gridcontentitem.icon|e }}"></i>{% endif %}
+				        	{% if gridcontentitem.text1 %}<span class="g-gridcontent-item-text1">{{ gridcontentitem.text1|raw }}</span>{% endif %}
+				        	{% if gridcontentitem.text2 %}<span class="g-gridcontent-item-text2">{{ gridcontentitem.text2|raw }}</span>{% endif %}
+				        	{% if gridcontentitem.desc %}<div class="g-gridcontent-item-desc">{{ gridcontentitem.desc|raw }}</div>{% endif %}	
+					        {% if gridcontentitem.link %}<a target="{{ gridcontentitem.linktarget|default('_self')|e }}" href="{{ gridcontentitem.link|e }}" class="button {{ gridcontentitem.linkclass|e }}">{{ gridcontentitem.linktext|raw }}</a>{% endif %} 				    			
+			    		</div>	
+			    	</div>
+			    </div>	
+			{% endfor %} 
+		</div>
+	</div>	
+</div>
+{% endblock %}

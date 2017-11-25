@@ -1,0 +1,882 @@
+//-------------------------------------------//
+
+// OWL CAROUSEL ORIGINAL STYLING
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*  Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel .owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel.owl-text-select-on .owl-item {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+.owl-carousel .owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*  Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*  Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon, .owl-carousel .owl-videolocal-play-icon {
+    position: absolute;
+    height: 66px;
+    width: 66px;
+    left: 50%;
+    bottom: 15%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url('gantry-media://owlcarousel/play.svg') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 3;
+    -webkit-backface-visibility: hidden;
+    @include transition(all 0.2s ease-out);
+    opacity: 1;
+
+    &.paused {
+        background: url('gantry-media://owlcarousel/paused.svg');
+        background-size: contain;
+        opacity: 0.8;
+    }
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+}
+
+/*
+*  Owl Carousel - Nav & Dots
+*/
+.owl-nav {
+    opacity: 1;
+    @include transition(opacity 0.25s);
+
+    div {
+        position: absolute;
+        bottom: 1px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        opacity: 1;
+        color: $white;
+        text-transform: uppercase;
+        font-size: $core-font-size + 1;
+        font-weight: $font-weight-bold;
+        @include transition(all 0.25s);
+
+        &:hover {
+            color: $accent-color-1;
+        }
+
+        @include breakpoint(small-mobile-range) {
+            position: relative;
+        }
+
+        &.owl-prev {
+            margin-right: $content-padding * 5;
+
+            @include breakpoint(small-mobile-range) {
+                margin-right: $content-padding * 2;
+            }
+        }
+
+        .dir-rtl & {
+            left: 0;
+            right: auto;
+        }
+    }
+    &.disabled {
+        display: none;
+    }
+}
+
+.owl-dots {
+    .owl-dot {
+        display: inline-block;
+        background: transparentize($white, 50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 0 0.6rem;
+        background: $white;
+        vertical-align: middle;
+        @include transition(all 0.2s ease-out);
+
+        &.active {
+            background: $accent-color-1;
+        }
+    }
+}
+
+.owlcarousel-offset {
+    margin-right: -45px !important;
+    margin-bottom: -45px !important;
+    margin-left: -45px !important;
+
+    @include breakpoint(mobile-only) {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    position: relative;
+    z-index: 2;
+
+    &.size-100 {
+        flex-basis: auto;
+        width: auto;
+    }
+}
+
+.g-owlcarousel-description {
+    font-family: get-font-family($font-family-default);
+    font-size: $core-font-size + 0.25;
+    font-weight: $font-weight-regular;
+}
+.g-owlcarousel-header {
+    padding: $content-padding !important;
+    margin: $content-margin;
+}
+
+// THEME PARTICLES STYLING
+.g-owlcarousel {
+    &:hover {
+        .owl-nav {
+            opacity: 1;
+        }
+    }
+}
+
+.g-owlcarousel-item-wrapper {
+    position: relative;
+}
+
+.g-owlcarousel-item-img {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        height: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.g-owlcarousel-item-content-container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include transform-style(preserve-3d);
+
+    @include breakpoint(large-desktop-range) {
+        width: $breakpoints-large-desktop-container;
+    }
+
+    @include breakpoint(desktop-range) {
+        width: $breakpoints-desktop-container;
+    }
+
+    @include breakpoint(tablet-range) {
+        width: $breakpoints-tablet-container;
+    }
+
+    @include breakpoint(large-mobile-range) {
+        width: $breakpoints-large-mobile-container;
+    }
+
+    @include breakpoint(small-mobile-range) {
+        width: 100%;
+    }
+}
+
+.g-owlcarousel-item-content-wrapper {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    height: 100%;
+}
+
+.g-owlcarousel-item-content {
+    margin: $content-margin;
+    padding: $content-padding;
+
+    .g-owlcarousel-fullwidth & {
+        width: 100%;
+    }
+
+    .g-owlcarousel-compact & {
+        width: 50%;
+
+        .center-block & {
+            margin: auto;
+        }
+
+        @include breakpoint(desktop-range) {
+            width: 65%;
+        }
+
+        @include breakpoint(tablet-range) {
+            width: 75%;
+        }
+
+        @include breakpoint(mobile-only) {
+            width: 100%;
+        }
+    }
+}
+
+.g-owlcarousel-item-title {
+    font-family: get-font-family($font-family-default);
+    font-size: $core-font-size + 2;
+    color: $white;
+    padding-bottom: $content-padding - 0.4;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    z-index: 2;
+    margin: $content-margin + $content-padding;
+}
+
+.g-owlcarousel-item-desc {
+    font-size: $core-font-size + 0.4;
+    line-height: $core-line-height;
+    font-weight: $font-weight-light;
+    padding-bottom: $content-padding * 2;
+    margin-bottom: $content-margin;
+}
+
+.g-owlcarousel-item-button {
+    @include breakpoint(small-mobile-range) {
+        padding: 0.25rem 1rem;
+        font-weight: $font-weight-regular;
+        font-size: $core-font-size - 0.2;
+    }
+}
+
+// Showcase
+.g-owlcarousel-showcase {
+    position: relative;
+    display: block;
+
+    .owl-stage-outer {
+        border-radius: $border-radius $border-radius 0 0;
+    }
+
+    .g-owlcarousel {
+        .owl-stage {
+            .owl-item {
+                .item {
+                    @include display(flex);
+                    @include flex-flow(wrap);
+
+                    .g-showcase-image-link {
+                        @include flex(50% 1);
+                        @include transition(color);
+                        transform-style: preserve-3d;
+
+                        .showcase-image {
+                            .item-overlay {
+                                position: absolute;
+                                @include display(flex);
+                                @include align-items(center);
+                                @include justify-content(center);
+                                @include flex-direction(column);
+                                z-index: 5;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                color: $white;
+
+                                .fa {
+                                    font-size: $core-font-size + 3rem;
+                                    padding-bottom: $content-padding + 0.25;
+
+                                    @include breakpoint(tablet-range) {
+                                        font-size: $core-font-size + 1.5;
+                                        padding-bottom: $content-padding;
+                                    }
+
+                                    @include breakpoint(mobile-only) {
+                                        font-size: $core-font-size + 1;
+                                        padding-bottom: $content-padding;
+                                    }
+                                }
+
+                                .item-overlay-title {
+                                    display: block;
+                                    font-size: $core-font-size + 2.75rem;
+                                    font-weight: $font-weight-bold;
+                                    line-height: 1;
+
+                                    @include breakpoint(tablet-range) {
+                                        font-size: $core-font-size + 1.5;
+                                        padding-bottom: ($content-padding / 4);
+                                    }
+
+                                    @include breakpoint(mobile-only) {
+                                        font-size: $core-font-size + 0.5;
+                                        padding-bottom: ($content-padding / 4);
+                                    }
+                                }
+
+                                .item-overlay-desc {
+                                    display: block;
+                                    font-size: $core-font-size + 1;
+                                    font-weight: $font-weight-regular;
+                                    opacity: 0.75;
+
+                                    @include breakpoint(tablet-range) {
+                                        font-size: $core-font-size + 0.75;
+                                        padding-bottom: $content-padding;
+                                    }
+
+                                    @include breakpoint(mobile-only) {
+                                        font-size: $core-font-size;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Prev & Next Controls
+        .owl-nav {
+            > div {
+                position: absolute;
+                margin: auto;
+                text-align: center;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 1;
+
+                .fa {
+                    font-size: $core-font-size + 0.5;
+                    font-weight: $font-weight-regular;
+                }
+
+                &:hover {
+                    color: fadeout($white, 40%);
+                }
+            }
+
+            .owl-prev {
+                margin-left: 50px;
+                left: 0;
+                right: auto;
+
+                @include breakpoint(mobile-only) {
+                    margin-left: 0;
+                }
+
+                .dir-rtl & {
+                    margin-right: 50px;
+                    right: 0;
+                    left: auto;
+
+                    @include breakpoint(mobile-only) {
+                        margin-right: 0;
+                    }
+
+                    .fa-chevron-left {
+                        &:before {
+                            content: "\f054";
+                        }
+                    }
+                }
+            }
+
+            .owl-next {
+                margin-right: 50px;
+                left: auto;
+                right: 0;
+
+                @include breakpoint(mobile-only) {
+                    margin-right: 0;
+                }
+
+                .dir-rtl & {
+                    margin-left: 50px;
+                    left: 0;
+                    right: auto;
+
+                    @include breakpoint(mobile-only) {
+                        margin-left: 0;
+                    }
+
+                    .fa-chevron-right {
+                        &:before {
+                            content: "\f053";
+                        }
+                    }
+                }
+            }
+        }
+
+        // Dots
+        .owl-dots {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(center);
+            position: absolute;
+            bottom: 5rem;
+            width: 100%;
+
+            @include breakpoint(tablet-range) {
+                bottom: 2.5rem;
+            }
+
+            @include breakpoint(mobile-only) {
+                bottom: 1rem;
+            }
+
+            .owl-dot {
+                @include display(flex);
+                @include align-items(center);
+                @include justify-content(center);
+                @include flex-direction(column);
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                border: 3px solid $white;
+
+                @include breakpoint(mobile-only) {
+                    width: 15px;
+                    height: 15px;
+                    border-width: 2px;
+                    bottom: 1rem;
+                }
+
+                &.active {
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+
+// Cards
+.g-owlcarousel-cards {
+    position: relative;
+    display: block;
+    margin-left: 6.25rem;
+
+    .dir-rtl & {
+        margin-left: 0;
+        margin-right: 6.25rem;
+    }
+
+    .g-owlcarousel {
+        .owl-stage {
+
+            .owl-item {
+                padding: $content-margin;
+
+                .item {
+                    img {
+                        @include transition(all 0.35s);
+                        width: 100%;
+                        height: 100%;
+                        border-radius: $border-radius;
+                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+                    }
+
+                    .g-owlcarousel-cards-caption {
+                        @include display(flex);
+                        @include justify-content(flex-start);
+                        color: $white;
+                        font-weight: $font-weight-ultrabold;
+                        font-size: $core-font-size * 2.5;
+                        text-transform: uppercase;
+                        z-index: 1;
+
+                        .dir-rtl & {
+                            margin-right: $content-padding + $content-margin;
+                            margin-left: auto;
+                        }
+                    }
+
+                    .indicator {
+                        @include display(flex);
+                        @include align-items(flex-start);
+                        @include justify-content(flex-start);
+                        text-transform: uppercase;
+                        color: $white;
+                        font-style: normal;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+
+                        span {
+                            opacity: 0;
+                            @include transform(translate(0, -20px));
+                            @include transition(all 0.35s);
+                            padding: $content-padding;
+                            font-size: $core-font-size - 0.2;
+                            letter-spacing: 2px;
+                            @include breakpoint(mobile-only) {
+                            letter-spacing: 1px;
+                            }
+                        }
+                    }
+
+                    // Item title & subtitle
+                    .g-owlcarousel-cards-item-desc {
+                        @include display(flex);
+                        @include align-items(flex-start);
+                        @include flex-direction(column);
+                        @include justify-content(flex-end);
+                        color: $white;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+
+                        span {
+                            @include flex(none);
+                        }
+
+                        .g-owlcarousel-cards-item-desc-title {
+                            padding: 0 $content-padding;
+                            font-weight: $font-weight-bold;
+                            @include responsive-font(1.3vw, $core-font-size, false, $core-font-size);
+                            display: block;
+                            width: 100%;
+                        }
+
+                        .g-owlcarousel-cards-item-desc-subtitle {
+                            padding: $content-padding;
+                            padding-top: 0;
+                            font-size: $core-font-size - 0.2;
+                        }
+                    }
+
+                    &:hover {
+                        z-index: 10;
+
+                        .g-owlcarousel-cards-image-link:before {
+                            opacity: 1;
+                            @include transform(scale(1));
+                        }
+
+                        .indicator span {
+                            opacity: 1;
+                            @include transform(translate(0));
+                        }
+                    }
+                }
+
+                .g-owlcarousel-cards-image-link {
+                    @include display(flex);
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    @include transition(all 0.35s);
+
+                    &:before {
+                        color: $white;
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        @include linear-gradient(-200deg, transparentize($accent-color-1, 50%), transparentize($accent-color-2, 10%));
+                        @include transform-origin(bottom);
+                        @include transform(scale(1, 0.2));
+                        @include transition(all 0.35s);
+                        border-radius: $border-radius;
+                    }
+                }
+            }
+        }
+
+        // Prev & Next Controls
+        .owl-nav {
+            > div {
+                position: absolute;
+                margin: auto;
+                text-align: center;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 1;
+
+                .fa {
+                    font-size: $core-font-size + 1.5;
+                    font-weight: $font-weight-regular;
+                }
+
+                &:hover {
+                    color: fadeout($white, 40%);
+                }
+            }
+
+            .owl-prev {
+                margin-left: -70px;
+                right: auto;
+
+                .dir-rtl & {
+                    margin-right: -70px;
+                    left: auto;
+
+                    .fa-chevron-left {
+                        &:before {
+                            content: "\f054";
+                        }
+                    }
+                }
+            }
+
+            .owl-next {
+                display: none;
+                visibility: hidden;
+                margin-right: 50px;
+                left: auto;
+
+                .dir-rtl & {
+                    margin-left: 50px;
+                    right: auto;
+
+                    .fa-chevron-right {
+                        &:before {
+                            content: "\f053";
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.g-owlcarousel-cards-show-nav {
+            .owl-nav {
+                &.disabled {
+                    display: block;
+                }
+            }
+        }
+    }
+}

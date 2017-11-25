@@ -1,0 +1,39 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% do gantry.load('lightcase.init') %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+  <div class="g-blockcontent">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    {% if particle.image or particle.headline or particle.description or particle.linktext %}
+    <div class="g-grid">
+      <div class="g-block">
+        <div class="g-content">
+          {% if particle.image %}<img src="{{ url(particle.image) }}" class="logo-large" alt="{{ particle.headline|e }}" />{% endif %}
+          {% if particle.headline %}<h2 class="g-blockcontent-headline">{{ particle.headline|raw }}</h2>{% endif %}
+          {% if particle.description %}<div class="g-blockcontent-description">{{ particle.description|raw }}</div>{% endif %}
+          {% if particle.linktext %}<p><a href="{{ particle.link|e }}" class="button">{{ particle.linktext|e }}</a></p>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <div class="g-grid g-blockcontent-subcontent">
+      {% for subcontent in particle.subcontents %}
+        <div class="g-block g-blockcontent-subcontent-block {{ subcontent.class }}">
+          <div class="g-content g-blockcontent-subcontent-block-content">
+            {% if subcontent.rokboximage %}<a data-rel="lightcase" title="{{ subcontent.rokboxcaption|e }}" href="{{ url(subcontent.rokboximage) }}">{% endif %}
+            {% if subcontent.img %}<img src="{{ url(subcontent.img) }}" class="g-blockcontent-subcontent-img" alt="{{ subcontent.title|e }}" />{% endif %}
+            {% if subcontent.rokboximage %}</a>{% endif %}
+            {% if subcontent.name %}<h4 class="g-blockcontent-subcontent-title">{% if subcontent.icon %}<i class="{{ subcontent.icon }} g-blockcontent-icons"></i> {% endif %} <span>{{ subcontent.name|raw }}</span></h4>{% endif %}
+            {% if subcontent.subtitle %} <div class="g-blockcontent-subcontent-subtitle">{{ subcontent.subtitle|raw }}</div> {% endif %}
+            {% if subcontent.description %}<div class="g-blockcontent-subcontent-desc">{{ subcontent.description|raw }}</div>{% endif %}
+            {% if subcontent.button %}<p><a href="{{ subcontent.buttonlink|e }}" class="button {{ subcontent.buttonclass|e }}">{{ subcontent.button|e }}</a></p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

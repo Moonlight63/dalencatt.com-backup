@@ -1,0 +1,23 @@
+name: Font Families
+description: Font families for the Isotope theme
+type: core
+
+form:
+  fields:
+
+    family-default:
+      type: input.fonts
+      label: Body Font
+      default: 'sourcesanspro, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    family-title:
+      type: input.fonts
+      label: Title Font
+      default: 'sourcesanspro, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    family-promo:
+      type: input.fonts
+      label: Promo Font
+      default: 'sourcesanspro, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    family-ampersand:
+      type: input.fonts
+      label: Ampersand Font
+      default: 'goudybookletter1911, Helvetica, Tahoma, Geneva, Arial, sans-serif'

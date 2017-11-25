@@ -1,0 +1,38 @@
+#g-showcase {
+    background: $showcase-background;
+    color: $showcase-text-color;
+    position: relative;
+
+	.largetopspace {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		margin-top: 3rem;
+	}    
+
+	&:before {
+	   	@include background(linear-gradient(rgba($accent-color-1, 0.35), rgba($showcase-background, 1)));
+	   	position: absolute;
+	   	content: "";
+	   	top: 0;
+	   	right: 0;
+	   	bottom: 0;
+	   	left: 0;	
+	}	
+
+	.flex-control-paging li a {
+		color: $showcase-text-color;
+		&:hover {
+			background: $showcase-text-color;
+		}
+		&.flex-active {
+			background: $showcase-text-color;
+		}	
+	}	
+}
+
+@media print {
+	#g-showcase {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

@@ -1,0 +1,166 @@
+.flush,
+.g-flushed {
+    margin: 0 !important;
+    > .g-container,
+    > .g-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.g-container-flushed {
+    margin: -4rem 0;
+}
+
+.g-nobackground {
+    background: none !important;
+}
+
+// Responsive Font Mixin
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
+
+// no(margin/padding)(left/right/top/bottom)
+// (margin/padding)(2x/3x)
+$css_properties: "margin", "padding";
+$css_directions: "left", "right", "top", "bottom", "all";
+$css_multipliers: 2, 3;
+@each $prop in $css_properties {
+    @each $dir in $css_directions {
+        .no#{$prop}#{$dir} {
+            &, > .g-content {
+                @if ($dir != "all") {
+                    #{$prop}-#{$dir}: 0;
+                } @else {
+                    #{$prop}: 0;
+                }
+            }
+        }
+    }
+
+    @each $multi in $css_multipliers {
+        .#{$prop}#{$multi}x {
+            > .g-content {
+                @if ($prop == "padding") {
+                    #{$prop}: $content-padding * $multi;
+                } @else if ($prop == "margin") {
+                    #{$prop}: $content-margin * $multi;
+                }
+            }
+        }
+    }
+}
+
+// Section Padding
+.section-paddings {
+    padding: 0 10%;
+
+    @include breakpoint(tablet-range) {
+        padding: 0 2%;
+    }
+
+    @include breakpoint(mobile-only) {
+        padding: 0 2%;
+    }
+}
+
+// Disable Section Paddings
+.no-section-paddings {
+    padding: 0 !important;
+}
+
+.center-block {
+    text-align: center;
+    margin: auto;
+}
+
+.g-center-vertical {
+    @include display(flex);
+    @include align-items(center);
+}
+
+.g-linethrough {
+    text-decoration: line-through;
+    opacity: 0.55;
+}
+
+.g-menuspacer {
+    padding-top: $content-padding * 3;
+    @include breakpoint(mobile-only) {
+        padding: 0;
+    }
+}
+
+.noliststyle {
+    list-style: none;
+}
+
+.g-bold {
+    font-weight: $font-weight-bold;
+}
+
+.g-uppercase {
+    text-transform: uppercase;
+}
+
+.g-compact {
+    .g-container {
+        padding: 0 !important;
+    }
+}
+
+.g-sidebar-offset {
+    margin-top: -4rem;
+}
+
+.g-sample-sitemap {
+    line-height: $core-line-height + 0.2;
+    font-size: $core-font-size + 0.1;
+    font-family: get-font-family($font-family-promo);
+}
+
+.g-mobile-center-compact {
+    @include breakpoint(mobile-only) {
+        .g-container {
+            padding: $content-padding 0;
+        }
+
+        .g-content {
+            padding: 0 $content-padding;
+            margin: $content-margin/2 $content-margin;
+            text-align: center !important;
+        }
+    }
+}
+
+// Lightcase
+@include breakpoint(mobile-only) {
+    .lightcase-fullScreenMode {
+        #lightcase-info {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}

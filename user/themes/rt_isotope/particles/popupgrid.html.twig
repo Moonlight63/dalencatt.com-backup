@@ -1,0 +1,40 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+<div class="{{ particle.class|e }}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+    <div class="g-popupgrid" data-popupgrid-id="{{ id }}">
+
+        {% for item in particle.items %}
+        <div class="g-popupgrid-item  {{ item.animations|default('g-zoom')|e }}" data-size="{{ item.datasize|e }}">
+            <div data-src="{{ url(item.img) }}" class="g-popupgrid-item-img-wrap">
+                <img class="g-popupgrid-item-img-wrap-img" src="{{ url(item.img) }}" alt="{{ item.title|e }}" />
+                {% if item.previewicon %}<div class="g-popupgrid-description-preview-icon {{ item.overlay|e }}"><span class="{{ item.previewicon|e }}"></span></div>{% endif %}
+                <div class="g-popupgrid-description g-popupgrid-description-grid">
+                    {% if item.tag %}<div class="g-popupgrid-description-preview-tag">{{ item.tag|raw }}</div>{% endif %}
+                    {% if item.title %}<div class="g-popupgrid-description-preview-title">{{ item.title|raw }}</div>{% endif %}
+                    {% if item.desc %}<div class="g-popupgrid-description-preview-content">{{ item.desc|raw }}</div>{% endif %}
+                    {% if item.buttontext %}
+                    <div class="g-popupgrid-description-preview-readmore">
+                        <a target="{{ item.buttontarget|default('_self')|e }}" href="{{ item.buttonlink|e }}" title="{{ item.buttontext|e }}" class="button {{ item.buttonclass|e }}">{{ item.buttontext|e }}</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="g-popupgrid-preview">
+        <div class="g-popupgrid-preview-area"></div>
+        <button class="g-popupgrid-action g-popupgrid-action-close"><i class="fa fa-times"></i><span class="g-popupgrid-text-hidden">Close</span></button>
+        <div class="g-popupgrid-description g-popupgrid-description-preview"></div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script src="{{ url('gantry-theme://js/popupgrid.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript %}
+<script src="{{ url('gantry-theme://js/juihelper.js') }}"></script>
+{% endblock %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    <div class="g-contenttabs">
+        <div id="{{ id }}" class="g-contenttabs-container">
+            <div class="g-contenttabs-navigation">
+                <ul class="g-contenttabs-tab-wrapper-container">
+
+                    {% for item in particle.items %}
+                    <li class="g-contenttabs-tab-wrapper">
+                        <span class="g-contenttabs-tab-wrapper-head">
+                            <a class="g-contenttabs-tab" href="#g-contenttab-{{ loop.index }}">
+                                {% if particle.numbers == 'enabled' %}<span class="g-contenttabs-tab-number">{{ loop.index }}</span>{% endif %}
+                                <span class="g-contenttabs-tab-details">
+                                    <span class="g-contenttabs-tab-title">{{ item.title|raw }}</span>
+                                    {% if item.description %}<span class="g-contenttabs-tab-description">{{ item.description|raw }}</span>{% endif %}
+                                </span>
+                            </a>
+                        </span>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+
+            <div class="g-contenttabs-tabs">
+                <ul class="g-contenttabs-content-wrapper-container">
+
+                    {% for item in particle.items %}
+                    <li class="g-contenttabs-tab-wrapper">
+                        <div class="g-contenttabs-tab-wrapper-body">
+                            <div id="g-contenttab-{{ loop.index }}" class="g-contenttabs-content-container"{% if item.image %} style="background-image: url('{{ url(item.image) }}');"{% endif %}>
+                                <div class="g-contenttabs-content{% if item.image %} g-contenttabs-image-overlay{% endif %}">
+                                    {{ item.content|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+<script type="text/javascript">
+jQuery(window).load(function(){
+    jQuery('#{{ id }}').tabs({
+        show: {
+            {% if particle.animation == 'up' or particle.animation == 'down' or particle.animation == 'left' or particle.animation == 'right' %}
+            effect: 'slide',
+            direction: '{{ particle.animation }}',
+            {% else %}
+            effect: '{{ particle.animation|default('slide') }}',
+            {% endif %}
+            duration: {{ particle.duration|default('500') }}
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,30 @@
+#g-mainbar {
+    background: $main-background;
+    color: $main-text-color;  
+
+    // Home
+    .g-home &, .g-homepositions & {
+        .g-gridcontent-item-text2 {
+            color: $main-text-color;
+        }
+    }
+
+    // Typography
+    .g-typography & {
+    	> .g-grid {
+    		&:nth-child(even) {
+    			background: darken($main-background, 1%);
+    		}
+	    	&:nth-child(odd) {
+	    		background: darken($main-background, 5%);
+	    	}
+    	}
+    }
+}
+
+@media print {
+	#g-main {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

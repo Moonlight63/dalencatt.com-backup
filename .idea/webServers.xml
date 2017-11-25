@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="48e71c50-d6bd-43e8-97dd-0b484b79a104" name="dalencattdev" url="http://moonlightstudiosproductions.com">
+        <fileTransfer host="moonlightstudiosproductions.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="ec934806-69fe-4af7-9fc4-472774ebb43b" name="dev-1.3.8" url="http://moonlightstudiosproductions.com">
+        <fileTransfer host="moonlightstudiosproductions.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

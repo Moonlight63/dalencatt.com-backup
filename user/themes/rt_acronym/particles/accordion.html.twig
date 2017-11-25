@@ -1,0 +1,30 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="{{ particle.class|e }}">
+        {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+        <ul class="accordion" id="{{ id }}" data-accordion-id="{{ id }}">
+            {% for item in particle.items %}
+                <li id="accordion-id{{ loop.index }}" >
+                    <div class="accordion-item-title">{{ item.title }}
+                        <span class="indicator"><span>+</span></span>
+                    </div>
+                    <div class="accordion-item-content">
+                        {{ item.desc|raw }}
+                        {% if item.buttontext %}
+                            <br /><br />
+                            <span class="accor-button">
+                                <a target="{{ item.buttontarget|default('_self')|e }}" href="{{ item.buttonlink|e }}" title="{{ item.buttontext|e }}" class="button {{ item.buttonclass|e }}">{{ item.buttontext|e }}</a>
+                            </span>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script src="{{ url('gantry-theme://js/accordion.init.js') }}"></script>
+{% endblock %}

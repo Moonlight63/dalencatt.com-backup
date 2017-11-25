@@ -1,0 +1,88 @@
+name: Flipping Content
+description: Display Flipping Content.
+type: particle
+icon: fa-exchange
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable Flipping Content particles.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    cols:
+      type: select.select
+      label: Grid Column
+      description: Select the grid column amount
+      placeholder: 'Select...'
+      default: g-flippingcontent-2cols
+      options:
+        g-flippingcontent-1cols: 1 Column
+        g-flippingcontent-2cols: 2 Columns
+        g-flippingcontent-3cols: 3 Columns
+        g-flippingcontent-4cols: 4 Columns
+        g-flippingcontent-5cols: 5 Columns
+        g-flippingcontent-6cols: 6 Columns
+
+    flippingcontentitems:
+      type: collection.list
+      array: true
+      label: Items
+      description: Create each item to appear in the content row.
+      value: title
+      ajax: true
+
+      fields:
+        .img:
+          type: input.imagepicker
+          label: Image
+          description: Select the desired image.
+        .imgAltText:
+          type: input.text
+          label: Image Alt Text
+          description: Enter the Image Alt Text.          
+        .text2:
+          type: input.text
+          label: Title
+          description: Enter the Title.
+        .text1:
+          type: input.text
+          label: SubTitle
+          description: Enter the SubTitle.
+        .desc:
+          type: textarea.textarea
+          label: Description
+          description: Customize the description.
+          placeholder: Enter short description
+        .linktext:
+          type: input.text
+          label: Link Text
+          description: Enter the Link Text.
+        .linktarget:
+          type: select.selectize
+          label: Target
+          description: Target browser window when item is clicked.
+          placeholder: 'Select...'
+          options:
+              _self: Self
+              _blank: New Window
+        .link:
+          type: input.text
+          label: Link
+          description: Enter the link address.

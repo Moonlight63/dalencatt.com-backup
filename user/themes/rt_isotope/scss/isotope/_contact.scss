@@ -1,0 +1,76 @@
+.g-contact {
+	.g-contact-item {
+		position: relative;
+		padding-left: 50px;
+		margin-bottom: 1.5rem;
+		.dir-rtl & {
+			padding-left: 0;
+			padding-right: 50px;
+		}
+	}
+	.g-contact-icon {
+		position: absolute;
+		left: 0;
+		font-size: 1.25rem;
+		border-right: 1px solid $rule-color;
+		width: 35px;
+		height: 45px;
+		line-height: 45px;
+		.dir-rtl & {
+			left: auto;
+			right: 0;
+			border-left: 1px solid $rule-color;
+			border-right: 0;
+		}
+	}
+	.g-contact-label {
+		text-transform: uppercase;
+		font-size: $core-font-size - 0.2;
+		font-weight: bold;
+		opacity: 0.5;
+	}
+	.g-contact-text {
+		font-family: get-font-family($font-family-title);
+		font-weight: $font-weight-bold;
+	}
+	// Compact Mode
+	&.g-contact-compact {
+		.g-contact-item {
+			padding-left: 0;
+			margin-bottom: 0;
+		}
+		.g-contact-label {
+			display: none;
+		}
+		.g-contact-text {
+			font-weight: normal;
+		}
+	}
+	// Map
+	.g-contact-map {
+		position: relative;
+		display: block;
+	}
+	.g-contact-map-overlay {
+		&:before {
+		    background: fadeout($footer-background, 25%);
+		    bottom: 0;
+		    content: "";
+		    left: 0;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    @include transition(background 0.2s);
+		}	
+		&:hover {
+			&:before {
+				background: fadeout($accent-color-1, 75%);
+			}
+		}	
+	}
+	.g-contact-map-marker {
+		color: $accent-color-1;
+	    font-size: 3rem;
+	    position: absolute;
+	}
+}

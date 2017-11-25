@@ -1,0 +1,19 @@
+#g-feature {
+    background: $feature-background;
+    color: $feature-text-color;  
+
+	// Container
+	.g-container {
+		padding: 1.5rem 0;
+		@include breakpoint(mobile-only) {
+			text-align: center;
+		}		
+	}    
+}
+
+@media print {
+	#g-feature {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

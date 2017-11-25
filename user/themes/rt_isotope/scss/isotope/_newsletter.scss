@@ -1,0 +1,39 @@
+.g-newsletter {
+	.g-newsletter-form {
+		white-space: nowrap;
+	}
+	.g-newsletter-headtext {
+		margin-bottom: 1.5rem;
+	}
+	.g-newsletter-inputbox,
+	.g-newsletter-button {
+	    height: 50px;
+		@include breakpoint(tablet-range) {
+			height: 40px;
+		}		    
+	}	
+	.g-newsletter-inputbox {
+		border-radius: 0;
+		color: $base-text-color;
+		background-color: darken($base-background, 15%);
+		border: 0;
+		display: inline-block;
+		padding: 0.7rem 1.25rem;
+		width: 73%;
+		margin-right: 0.25rem;
+		vertical-align: top;
+		box-shadow: none;
+		@include breakpoint(tablet-range) {
+			padding: 0.7rem 0.5rem;
+			width: 53%;
+		}			
+	}
+	.g-newsletter-button {
+		width: 25%;
+		padding-left: inherit;
+		padding-right: inherit;
+		@include breakpoint(tablet-range) {
+			width: 40%;
+		}		
+	}
+}

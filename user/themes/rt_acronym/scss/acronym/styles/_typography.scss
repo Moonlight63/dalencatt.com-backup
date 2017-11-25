@@ -1,0 +1,174 @@
+// Font Import
+@include import-font($font-family-default);
+@include import-font($font-family-title);
+@include import-font($font-family-promo);
+@include import-font($font-family-subpromo);
+@include import-font($font-family-weather);
+
+body {
+    font-family: get-font-family($font-family-default);
+    font-weight: $font-weight-regular;
+}
+
+// Headings
+h1, h2, h3, h4, h5 {
+    font-family: get-font-family($font-family-title);
+    font-weight: $font-weight-semibold;
+    margin: $leading-margin 0 ($leading-margin / 2) 0;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-semibold;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-semibold;
+
+    &.g-title {
+        font-size: $h2-font-size;
+        font-weight: $font-weight-bold;
+    }
+}
+
+h3 {
+    font-size: $h3-font-size;
+    font-weight: $font-weight-semibold;
+
+    &.g-title {
+        font-size: $h3-font-size;
+        font-weight: $font-weight-semibold;
+        display: block;
+        line-height: $core-line-height;
+    }
+}
+
+h4 {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-semibold;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    font-weight: $font-weight-semibold;
+}
+
+h6 {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-semibold;
+}
+
+// Horizontal Rule
+hr {
+    display: block;
+    margin: $content-padding 0;
+    border-bottom: 1px solid $rule-color;
+}
+
+// Title
+.g-title {
+    font-size: $core-font-size - 0.2;
+    font-weight: $font-weight-bold;
+    line-height: $core-line-height;
+    margin: 0 0 $content-margin 0;
+    padding: 0 0 $content-padding 0;
+
+    // Title Variations
+    .g-title-xlarge & {
+        font-size: $core-font-size + 2;
+        font-weight: $font-weight-semibold;
+        line-height: $core-line-height - 0.5;
+        padding: 0;
+
+        @include breakpoint(small-mobile-range) {
+            font-size: $core-font-size - 1;
+            line-height: $core-line-height - 0.25;
+        }
+    }
+
+    .g-title-large & {
+        font-size: $core-font-size + 1;
+        font-weight: $font-weight-semibold;
+        line-height: $core-line-height - 0.25;
+        padding: 0;
+
+        @include breakpoint(small-mobile-range) {
+            font-size: $core-font-size + 0.75;
+        }
+    }
+
+    .g-title-small & {
+        font-size: $core-font-size - 0.1;
+        font-weight: $font-weight-bold;
+    }
+
+    .g-title-300 & {
+        font-weight: 300;
+    }
+}
+
+// Lead Content
+.g-lead {
+    position: relative;
+    font-family: get-font-family($font-family-title);
+    font-weight: $font-weight-semibold;
+    font-size: $core-font-size + 0.5;
+    line-height: $core-line-height - 0.15;
+    margin: ($content-margin * 2) 0 $content-margin 0;
+}
+
+// Blockquote
+blockquote {
+    border-left: 10px solid $rule-color;
+    font-size: $core-font-size + 0.1;
+
+    cite {
+        display: block;
+        text-align: right;
+        color: $base-text-color;
+        font-size: $core-font-size + 0.2;
+    }
+}
+
+// Inline and Code
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-family-mono;
+}
+
+code {
+    background: $code-bg;
+    color: darken($code-text, 10%);
+}
+
+pre {
+    padding: 1rem;
+    margin: 2rem 0;
+    background: $pre-bg;
+    border: 1px solid $base-border-color;
+    border-radius: $core-border-radius;
+    line-height: 1.15;
+    font-size: $core-font-size - 0.1;
+
+    code {
+        color: $pre-text;
+        background: inherit;
+        font-size: $core-font-size - 0.1;
+    }
+
+    &.prettyprint {
+        border-color: $border-color-light !important;
+    }
+}
+
+// Additional
+hr {
+    border-bottom: 1px solid $rule-color;
+}
+
+.g-para {
+    margin: 0.3rem 0 1rem;
+}

@@ -1,0 +1,183 @@
+%g-button {
+	display: inline-block;
+	font-family: get-font-family($font-family-default);
+	font-weight: $font-weight-bold;
+	background: $accent-color-1;
+	color: $white !important;
+	font-size: $core-font-size;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	margin: 0 0 0.5rem 0;
+	padding: 0.5rem 1.5rem;
+	vertical-align: middle;
+	text-shadow: none;
+	@include transition(all 0.2s);
+	&:hover, &:active, &:focus {
+		background: darken($accent-color-1, 15%);
+		color: $white !important;
+	}
+}
+.button {
+	@extend %g-button;
+	.fa {
+		font-size: $core-font-size + 0.5;
+	}
+	&.button-square {
+		border-radius: 0;
+		&[class*="button"] {
+			border-radius: 0;
+		}
+	}
+	&.button-block {
+		display: block;
+	}
+	&.button-xlarge {
+		font-size: $core-font-size + 0.4;
+	}
+	&.button-large {
+		font-size: $core-font-size + 0.2;
+	}
+	&.button-medium {
+		font-size: $core-font-size;
+	}
+	&.button-small {
+		font-size: $core-font-size - 0.2;		
+	}
+	&.button-xsmall {
+		font-size: $core-font-size - 0.4;
+	}
+	&.button-2 {
+		border-radius: 2rem;
+	}
+	&.button-3,
+	&.button-4,
+	&.button-grey,
+	&.button-pink,
+	&.button-red,
+	&.button-purple,
+	&.button-orange,
+	&.button-blue {
+		&.button-3, &.button-4 {
+			background: transparent;
+			&:hover, &:active, &:focus {
+				background: transparent;
+			}
+		}
+	}
+	&.button-3 {
+		border-radius: 2rem;
+		color: $accent-color-1 !important;
+		border: 2px solid $accent-color-1;
+		&:hover, &:active, &:focus {
+			border: 2px solid darken($accent-color-1, 15%);
+			color: darken($accent-color-1, 15%) !important;
+		}
+	}	
+	&.button-4 {
+		color: $accent-color-1 !important;
+		border: 2px solid $accent-color-1;
+		&:hover, &:active, &:focus {
+			border: 2px solid darken($accent-color-1, 15%);
+			color: darken($accent-color-1, 15%) !important;
+		}
+	}
+	&.button-grey {
+		background: $box-grey-background;
+		&.button-3, &.button-4 {
+			color: $box-grey-background !important;
+			border: 2px solid $box-grey-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-grey-background, 15%);
+				color: darken($box-grey-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-grey-background, 15%);
+		}
+	}
+	&.button-pink {
+		background: $box-pink-background;
+		&.button-3, &.button-4 {
+			color: $box-pink-background !important;
+			border: 2px solid $box-pink-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-pink-background, 15%);
+				color: darken($box-pink-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-pink-background, 15%);
+		}
+	}
+	&.button-red {
+		background: $box-red-background;
+		&.button-3, &.button-4 {
+			color: $box-red-background !important;
+			border: 2px solid $box-red-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-red-background, 15%);
+				color: darken($box-red-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-red-background, 15%);
+		}
+	}
+	&.button-purple {
+		background: $box-purple-background;
+		&.button-3, &.button-4 {
+			color: $box-purple-background !important;
+			border: 2px solid $box-purple-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-purple-background, 15%);
+				color: darken($box-purple-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-purple-background, 15%);
+		}
+	}
+	&.button-orange {
+		background: $box-orange-background;
+		&.button-3, &.button-4 {
+			color: $box-orange-background !important;
+			border: 2px solid $box-orange-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-orange-background, 15%);
+				color: darken($box-orange-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-orange-background, 15%);
+		}
+	}
+	&.button-blue {
+		background: $box-blue-background;
+		&.button-3, &.button-4 {
+			color: $box-blue-background !important;
+			border: 2px solid $box-blue-background;
+			&:hover, &:active, &:focus {
+				border: 2px solid darken($box-blue-background, 15%);
+				color: darken($box-blue-background, 15%) !important;
+			}
+		}
+		&:hover, &:active, &:focus {
+			background: darken($box-blue-background, 15%);
+		}
+	}
+	&.button-arrow {
+		background: transparent;
+	    font-size: 3rem;
+	    line-height: 1;
+	    padding: 0 2rem;
+		&:hover, &:active, &:focus {
+			color: darken($accent-color-1, 25%) !important;
+		}	    
+	}
+}
+.g-button-arrow {
+	display: block;
+    font-family: "helvetica";
+    font-size: 4rem;
+    line-height: 2rem;    
+}

@@ -1,0 +1,23 @@
+// Blockquote and Code
+blockquote {
+    border-left: 5px solid $border-color-light;
+}
+
+blockquote small {
+    color: $base-text-color;
+}
+
+blockquote.pull-right {
+    border-right: 5px solid $border-color-light;
+}
+
+code, pre {
+    background-color: $off-white;
+    border: 1px solid $border-color-light;
+}
+
+pre {
+    &.prettyprint {
+        padding: 1rem !important;
+    }
+}

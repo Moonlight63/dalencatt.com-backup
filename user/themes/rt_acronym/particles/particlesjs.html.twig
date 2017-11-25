@@ -1,0 +1,11 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div id="{{ id }}" data-particlesjs-id="{{ id }}" data-particlesjs-path="{% if particle.file %}{{ url(particle.file) }}{% else %}{% if (gantry.theme.preset) and (particle.preset_sync == "enabled")  %}{{ url('gantry-theme://json/particlejs/' ~ gantry.theme.preset ~ '.json') }}{% else %}{{ url('gantry-theme://json/particlejs/' ~ particle.conf_presets ~ '.json') }}{% endif %}{% endif %}"  class="g-particlesjs {% if particle.sectiononly == 'enabled' %}sectiononly{% endif %}"></div>
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/particles.js') }}"></script>
+    <script src="{{ url('gantry-theme://js/particlesjs.init.js') }}"></script>
+{% endblock %}

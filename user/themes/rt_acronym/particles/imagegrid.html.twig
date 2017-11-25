@@ -1,0 +1,47 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% do gantry.load('lightcase.init') %}
+
+{% block particle %}
+
+{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+<div class="g-imagegrid {{ particle.class|e }}">
+
+    {% if particle.desc %}<div class="g-imagegrid-desc">{{ particle.desc|raw }}</div>{% endif %}
+
+    <div class="g-imagegrid-wrapper {{ particle.cols|e }} {{ particle.layout }}">
+        {% for imagegriditem in particle.imagegriditems %}
+        <div class="g-imagegrid-item">
+            <a class="g-imagegrid-link" {% if imagegriditem.linkto == 'image' %} href="{{ url(imagegriditem.image)|e }}" data-rel="lightcase{% if particle.album %}:{{ particle.album }}{% endif %}" {% else %} href="{{ url(imagegriditem.link)|e }}" {% endif %}>
+                <img src="{{ url(imagegriditem.image)|e }}" alt="{{ imagegriditem.caption|e }}" />
+                <span class="indicator">
+                    <span>
+                        {% if particle.layout == 'g-imagegrid-standard' %}
+                        {{ imagegriditem.caption }}
+                        {% else %}
+                        <span class="g-imagegrid-caption">
+                            {{ imagegriditem.caption }}
+                        </span>
+                        {% endif %}
+                    </span>
+                </span>
+
+                <span class="g-imagegrid-item-desc">
+                    <span class="g-imagegrid-item-desc-title">
+                        {% if imagegriditem.title %}{{ imagegriditem.title }}{% endif %}
+                    </span>
+                    <span class="g-imagegrid-item-desc-subtitle">
+                        {% if imagegriditem.subtitle %}{{ imagegriditem.subtitle }}{% endif %}
+                    </span>
+                </span>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% do gantry.load('lightcase.init') %}

@@ -1,0 +1,18 @@
+.g-horizontalmenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin: 0 0.5rem;
+		font-weight: bold;
+		font-size: $core-font-size - 0.1;
+		text-transform: uppercase;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

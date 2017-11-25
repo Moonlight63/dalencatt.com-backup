@@ -1,0 +1,301 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1487161388
+layout:
+  /top/:
+    -
+      - system-messages-9828
+  /navigation/:
+    -
+      - 'logo-5992 18'
+      - 'menu-2350 82'
+  /slideshow/:
+    -
+      - position-position-6661
+  /header/:
+    -
+      - position-position-7051
+  /above/:
+    -
+      - position-position-3264
+  /showcase/:
+    -
+      - position-position-9435
+  /utility/:
+    -
+      - position-position-5239
+  /feature/:
+    -
+      - position-position-7980
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - position-position-8547
+          -
+            - system-content-1120
+      -
+        'aside 20':
+          -
+            - position-position-8807
+  /expanded/:
+    -
+      - position-position-8124
+  /extension/:
+    -
+      - position-position-4800
+  /bottom/:
+    -
+      - position-position-3343
+  /footer/:
+    -
+      - simplemenu-6826
+  /copyright/:
+    -
+      - branding-9192
+  offcanvas:
+    -
+      - mobile-menu-7951
+structure:
+  top:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-top'
+  navigation:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-navigation'
+  slideshow:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-slideshow'
+  header:
+    attributes:
+      boxed: '3'
+      class: 'g-default-header'
+  above:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-above'
+  showcase:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-showcase'
+  utility:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-utility'
+  feature:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-feature'
+  sidebar:
+    type: section
+    subtype: aside
+    attributes:
+      class: ''
+  mainbar:
+    type: section
+    subtype: main
+    title: Main
+    attributes:
+      class: ''
+  aside:
+    attributes:
+      class: ''
+  container-main:
+    attributes:
+      boxed: '3'
+      class: 'g-default-main'
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-expanded'
+  extension:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-extension'
+  bottom:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-bottom'
+  footer:
+    attributes:
+      boxed: '3'
+      class: 'g-default-footer'
+  copyright:
+    type: section
+    attributes:
+      boxed: '3'
+      class: 'g-default-copyright'
+  offcanvas:
+    attributes:
+      swipe: '0'
+content:
+  menu-2350:
+    block:
+      variations: align-right
+  position-position-6661:
+    title: 'Slideshow A'
+    attributes:
+      key: slideshow-a
+  position-position-7051:
+    title: 'Header A'
+    attributes:
+      key: header-a
+  position-position-3264:
+    title: 'Above A'
+    attributes:
+      key: above-a
+  position-position-9435:
+    title: 'Showcase A'
+    attributes:
+      key: showcase-a
+  position-position-5239:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-7980:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-8547:
+    title: 'MainBar A'
+    attributes:
+      key: mainbar-a
+  position-position-8807:
+    title: 'Aside A'
+    attributes:
+      key: aside-a
+  position-position-8124:
+    title: 'Expanded A'
+    attributes:
+      key: expanded-a
+  position-position-4800:
+    title: 'Extension A'
+    attributes:
+      key: extension-a
+  position-position-3343:
+    title: 'Bottom A'
+    attributes:
+      key: bottom-a
+  simplemenu-6826:
+    title: 'Bottom Menu'
+    attributes:
+      title: ''
+      menus:
+        -
+          items:
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Overview
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Particles
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Typography
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Variations
+          title: Features
+        -
+          items:
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: About
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Blog
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Portfolio
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Contact
+          title: Pages
+        -
+          items:
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: Fullwidth
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: 'Left Sidebar'
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: 'Right Sidebar'
+            -
+              icon: ''
+              link: '#'
+              target: _self
+              title: 'Two Sidebars'
+          title: Layout
+        -
+          items:
+            -
+              icon: ''
+              link: 'https://www.facebook.com/RocketTheme/'
+              target: _blank
+              title: Facebook
+            -
+              icon: ''
+              link: 'https://twitter.com/rockettheme'
+              target: _blank
+              title: Twitter
+            -
+              icon: ''
+              link: 'https://www.youtube.com/user/OfficialRocketTheme'
+              target: _blank
+              title: YouTube
+            -
+              icon: ''
+              link: 'https://plus.google.com/+rockettheme'
+              target: _blank
+              title: Google+
+          title: Connect
+    block:
+      class: g-bottom-simplemenu
+  branding-9192:
+    attributes:
+      content: '&copy; 2017 by <a href="http://www.rockettheme.com/" title="RocketTheme" class="g-powered-by">RocketTheme</a>.'
+    block:
+      variations: center

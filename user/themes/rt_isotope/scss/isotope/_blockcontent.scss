@@ -1,0 +1,40 @@
+.g-blockcontent {
+  h1 {
+    font-weight: 300;
+    font-size: $core-font-size + 2;
+    letter-spacing: -2px;
+    opacity: 0.5;
+    line-height: 3.75rem;
+  }
+  .g-blockcontent-headline {
+    margin-bottom: 0.5rem;
+  }
+  .g-blockcontent-description {
+    font-size: $core-font-size + 0.2;
+  }
+  .g-blockcontent-subcontent-title {
+    font-family: get-font-family($font-family-promo);
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    i {
+        display: block;
+        margin-bottom: 2rem;
+    }
+  }
+  .g-blockcontent-icons {
+    display: block;
+  }
+  .g-blockcontent-subcontent-subtitle {
+    font-family: get-font-family($font-family-default);
+    font-weight: $font-weight-regular;
+    font-size: $core-font-size - 0.1;
+    line-height: $core-line-height - 0.5;
+  }
+  .g-blockcontent-subcontent-desc {
+    font-size: $core-font-size - 0.1;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+#g-expanded {
+    background: $expanded-background;
+    color: $expanded-text-color;
+
+	// Container
+	.g-container {
+		padding: 1.5rem 0;	
+	}
+
+	.g-popupgrid-preview {
+		&:before {
+			background: $expanded-background;
+		}
+	}	
+}
+
+@media print {
+	#g-expanded {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

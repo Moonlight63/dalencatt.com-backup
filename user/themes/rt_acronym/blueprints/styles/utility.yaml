@@ -1,0 +1,15 @@
+name: Utility Styles
+description: Utility styles for the Acronym theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "rgba(255, 255, 255, 0.0)"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#9091a2"

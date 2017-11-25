@@ -1,0 +1,19 @@
+name: Accent Colors
+description: Accent colors for the Isotope theme
+type: core
+
+form:
+  fields:
+
+    color-1:
+      type: input.colorpicker
+      label: Accent Color 1
+      default: "#3176d6"
+    color-2:
+      type: input.colorpicker
+      label: Accent Color 2
+      default: "#009675"
+    color-3:
+      type: input.colorpicker
+      label: Accent Color 3
+      default: "#6e5ce2"

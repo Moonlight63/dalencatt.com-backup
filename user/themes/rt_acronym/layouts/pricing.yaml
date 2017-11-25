@@ -1,0 +1,272 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1488281659
+layout:
+  top: {  }
+  navigation: {  }
+  /slideshow/:
+    -
+      - simplecontent-3632
+  /header/: {  }
+  /above/: {  }
+  /showcase/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - pricingtable-6316
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  /extension/: {  }
+  /bottom/: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  slideshow:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-slideshow
+  header:
+    attributes:
+      boxed: '3'
+      class: g-default-header
+  above:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-above
+  showcase:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-showcase
+  utility:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-utility
+  feature:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-feature
+  sidebar:
+    attributes:
+      class: ''
+  mainbar:
+    type: section
+    subtype: main
+    title: Main
+    attributes:
+      class: ''
+  aside:
+    attributes:
+      class: ''
+  container-main:
+    attributes:
+      boxed: '3'
+      class: g-default-main
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-expanded
+  extension:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-extension
+  bottom:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-default-bottom
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  simplecontent-3632:
+    title: 'Header - Pricing'
+    attributes:
+      class: ''
+      title: Pricing
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: '<strong>Pricing</strong> Overview'
+          author: ''
+          leading_content: 'Gantry is a cross-platform framework with a vast library of standardized features and functions, to make powerful, flexible themes.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'Pricing Overview'
+  pricingtable-6316:
+    title: 'Pricing - Pricing Table'
+    attributes:
+      class: ''
+      title: ''
+      headertext: ''
+      footertext: ''
+      columns: g-pricingtable-3-col
+      tables:
+        -
+          accent: accent1
+          customcolor: ''
+          class: ''
+          ribbon: ''
+          icon: ''
+          price: $75
+          period: ''
+          desc: ''
+          buttontext: Choose
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: ''
+          items:
+            -
+              text: '5 web pages'
+              class: g-bold
+              title: 'Item 1'
+            -
+              text: '5 mb upload'
+              class: g-bold
+              title: 'Item 2'
+            -
+              text: 'Blog Plugin'
+              class: g-linethrough
+              title: 'Item 3'
+            -
+              text: ' Shop Plugin'
+              class: g-linethrough
+              title: 'Item 4'
+            -
+              text: ' Premium Themes'
+              class: g-linethrough
+              title: 'Item 5'
+            -
+              text: 'Phone Support'
+              class: g-linethrough
+              title: 'Item 6'
+          plan: Bronze
+        -
+          accent: accent2
+          customcolor: ''
+          class: ''
+          ribbon: Popular
+          icon: ''
+          price: $125
+          period: ''
+          desc: ''
+          buttontext: Choose
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: ''
+          items:
+            -
+              text: '15 web pages'
+              class: g-bold
+              title: 'Item 1'
+            -
+              text: '15 mb upload'
+              class: g-bold
+              title: 'Item 2'
+            -
+              text: ' Blog Plugin'
+              class: g-bold
+              title: 'Item 3'
+            -
+              text: 'Shop Plugin'
+              class: g-bold
+              title: 'Item 4'
+            -
+              text: 'Premium Themes'
+              class: g-linethrough
+              title: 'Item 5'
+            -
+              text: 'Phone Support'
+              class: g-linethrough
+              title: 'Item 6'
+          plan: Silver
+        -
+          accent: accent1
+          customcolor: ''
+          class: ''
+          ribbon: ''
+          icon: ''
+          price: $200
+          period: ''
+          desc: ''
+          buttontext: Choose
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: ''
+          items:
+            -
+              text: ' 25 web pages'
+              class: g-bold
+              title: 'Item 1'
+            -
+              text: '25 mb upload'
+              class: g-bold
+              title: 'Item 2'
+            -
+              text: 'Blog Plugin'
+              class: g-bold
+              title: 'Item 3'
+            -
+              text: 'Shop Plugin'
+              class: g-bold
+              title: 'Item 4'
+            -
+              text: 'Premium Themes'
+              class: g-bold
+              title: 'Item 5'
+            -
+              text: 'Phone Support'
+              class: g-bold
+              title: 'Item 6'
+          plan: Gold

@@ -1,0 +1,18 @@
+#g-copyright {
+    background: $copyright-background;
+    color: $copyright-text-color;
+
+    @include breakpoint(mobile-only) {
+        text-align: center;
+    }
+    a {
+        color: $copyright-text-color;
+    }
+}
+
+@media print {
+    #g-copyright {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

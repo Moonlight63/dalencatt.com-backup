@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: fullwidth
+  timestamp: 1457353897
+layout:
+  top: {  }
+  navigation: {  }
+  header: {  }
+  slideshow:
+    -
+      - simplecontent-7561
+  above: {  }
+  showcase: {  }
+  utility: {  }
+  feature: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - custom-8235
+      -
+        'aside 20': {  }
+  expanded: {  }
+  extension: {  }
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  slideshow:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  feature:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  sidebar:
+    type: section
+    attributes:
+      class: ''
+    block:
+      class: equal-height
+      fixed: '1'
+  mainbar:
+    type: section
+    block:
+      class: equal-height
+  aside:
+    attributes:
+      class: ''
+    block:
+      class: equal-height
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: '3'
+      class: g-default-main
+      extra: {  }
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  simplecontent-7561:
+    title: 'Fullwidth Example'
+    attributes:
+      class: ''
+      title: Layout
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: 'Fullwidth Example'
+          author: ''
+          leading_content: 'Example Fullwidth layout.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'Fullwidth Example'
+  custom-8235:
+    title: 'H2 Heading'
+    attributes:
+      html: "<h2>H2 Heading</h2>\n<p>Nullam eget neque. Nullam <a href=\"#\">imperdiet venenatis</a> ligula. Integer a leo. Nunc consectetur. Maecenas sem. Proin vulputate, massa vel volutpat laoreet, purus erat pretium ligula, eget varius arcu nibh sed libero. Fusce ante. Nullam interdum aliquet metus. Ut ultrices vestibulum tellus. Praesent quis erat. Nam id turpis sit amet neque cursus luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque id tortor. In vitae sapien. Nunc quis tellus. </p>\n\n<div class=\"g-content float-right\"><div class=\"moduletable\">\n<ul class=\"unstyled\">\n  <li><a href=\"#\">Integer bibendum lacinia velit</a></li>\n  <li><a href=\"#\">Phasellus elementum, quam a euismod imperdiet</a></li>\n  <li><a href=\"#\">Pellentesque pulvinar dui a magna</a></li>\n</ul>\n</div></div>\n\n<h3>H3 Heading</h3>\n<p>In erat. Pellentesque erat. <strong>Mauris vehicula vestibulum justo.</strong> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pulvinar est. Integer urna. Pellentesque pulvinar dui a magna. Nulla facilisi.</p>\n\n<h4>H4 Heading</h4>\n<p>Mauris lobortis. Aliquam lacinia purus. <strong>Pellentesque magna</strong>. Mauris euismod metus nec tortor. Phasellus elementum, quam a euismod imperdiet, ligula felis faucibus enim, eu malesuada nunc felis sed turpis. <a href=\"#\">Morbi convallis luctus tortor</a>. Integer bibendum lacinia velit. Suspendisse mi lorem, porttitor ut, interdum et, lobortis a, lectus. Phasellus vitae est at massa luctus iaculis. In tincidunt.</p>\n\n<h5>H5 Heading</h5>\n\n<p>Vestibulum mollis, est id rhoncus volutpat, dolor velit tincidunt neque, vitae pellentesque ante sem eu nisl. <em>Donec facilisis</em>, magna eget elementum pellentesque.</p>"

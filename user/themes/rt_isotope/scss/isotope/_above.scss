@@ -1,0 +1,24 @@
+#g-above {
+    background: $above-background;
+    color: $above-text-color;
+
+    .fp-above {
+    	> .g-content {
+	    	margin: 0;
+	    	padding: 0;
+    	}
+    }
+
+    .g-flexslider-showcase-item-title {
+    	&:after {
+    		background: $above-text-color;
+    	}
+    }
+}
+
+@media print {
+	#g-above {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

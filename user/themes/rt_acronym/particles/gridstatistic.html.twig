@@ -1,0 +1,74 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    <div class="{{ particle.class|e }}">
+
+        {% if particle.title %}<h3 class="g-title">{{ particle.title|raw }}</h3>{% endif %}
+
+        <div class="g-gridstatistic">
+            {% if particle.desc %}<div class="g-gridstatistic-desc">{{ particle.desc|raw }}</div>{% endif %}
+            {% if particle.readmore %}<a href="{{ particle.readmorelink|e }}" class="button {{ particle.readmoreclass|e }}">{{ particle.readmore|raw }}</a>{% endif %}
+
+            <div class="g-gridstatistic-wrapper {{ particle.cols|e }}">
+
+                {% for gridstatisticitem in particle.gridstatisticitems %}
+                    <div class="g-gridstatistic-item">
+                        <div class="g-gridstatistic-item-wrapper">
+                            <div class="g-gridstatistic-item-text1 odometer" data-odometer-value="{{ gridstatisticitem.text1|e }}"></div>
+                            <div class="g-gridstatistic-item-icon">{% if gridstatisticitem.icon %}<span class="g-gridstatistic-item-separator">x</span> <i class="{{ gridstatisticitem.icon }} }}"></i>{% endif %}</div>
+                            <div class="g-gridstatistic-item-text2"><span>{{ gridstatisticitem.text2|e }}</span></div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            {% if particle.footerdesc %}<div class="g-gridstatistic-footerdesc">{{ particle.footerdesc|raw }}</div>{% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/odometer.js') }}"></script>
+    <script type="text/javascript">
+        ;((function() {
+
+            var isElementInViewport = function(el, delta) {
+                var rect = jQuery(el).get(0).getBoundingClientRect();
+                delta = delta || 0;
+                return (
+                    rect.top >= -delta &&
+                    rect.left >= -delta &&
+                    rect.bottom <= (delta + (window.innerHeight || document.documentElement.clientHeight)) &&
+                    rect.right <= (delta + (window.innerWidth || document.documentElement.clientWidth))
+                );
+            }
+
+            jQuery(window).scroll(function() {
+                var odometers = jQuery.find('.odometer'), value, instances = {};
+                odometers.forEach(function(odometer, idx) {
+                    odometer = jQuery(odometer).get(0);
+                    if (!instances['o-' + idx] && isElementInViewport(odometer, 100)) {
+                        value = jQuery(odometer).attr('data-odometer-value');
+                        instances['o-' + idx] = {
+                            i: new Odometer({ el: odometer }),
+                            v: value
+                        };
+                        setTimeout(function() {
+                            instances['o-' + idx].i.update(instances['o-' + idx].v || 0);
+                        }, 100);
+                    }
+                });
+            });
+
+            jQuery(window).ready(function() {
+                jQuery(this).trigger('scroll');
+            });
+
+        })());
+    </script>
+{% endblock %}

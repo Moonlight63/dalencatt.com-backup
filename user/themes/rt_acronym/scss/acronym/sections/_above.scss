@@ -1,0 +1,17 @@
+#g-above {
+    color: $above-text-color;
+    background: $above-background;
+    border-radius: $border-radius;
+    position: relative;
+
+    .g-grid {
+        @include align-items(center);
+    }
+}
+
+@media print {
+    #g-above {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

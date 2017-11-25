@@ -1,0 +1,44 @@
+#g-copyright {
+	background: $copyright-background;
+	color: $copyright-text-color;
+	font-size: $core-font-size - 0.2;
+	text-transform: uppercase;
+
+	// Container
+	.g-content {
+		padding-bottom: $content-padding/2;
+		@include breakpoint(mobile-only) {
+			padding: $content-padding/2 $content-padding 0 $content-padding;
+		}		
+	}
+	
+	// Branding
+	.g-branding {
+		@include breakpoint(mobile-only) {
+			text-align: center;
+		}
+	}
+
+	// Copyright Content
+	.g-copyright {
+		text-align: center;
+	}
+
+	// To Top
+	.g-totop {
+		text-align: right;
+		@include breakpoint(mobile-only) {
+			text-align: center !important;
+		}
+    	.dir-rtl & {
+			text-align: left;
+    	}		
+	}
+}
+
+@media print {
+	#g-copyright {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

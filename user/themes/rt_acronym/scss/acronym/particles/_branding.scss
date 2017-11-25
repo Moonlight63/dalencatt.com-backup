@@ -1,0 +1,15 @@
+.g-branding {
+    white-space: nowrap;
+
+    .dir-rtl & {
+        direction: ltr;
+    }
+
+    a {
+        color: $base-text-color;
+
+        &:hover {
+            color: $accent-color-1;
+        }
+    }
+}

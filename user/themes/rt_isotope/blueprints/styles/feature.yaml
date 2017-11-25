@@ -1,0 +1,15 @@
+name: Feature Styles
+description: Feature styles for the Isotope theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#f8f8f8"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#555555"

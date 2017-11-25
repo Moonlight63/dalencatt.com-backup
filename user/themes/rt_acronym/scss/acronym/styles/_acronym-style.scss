@@ -1,0 +1,190 @@
+// Slideshow Background Reset for Home
+.fp-slideshow {
+    background: none !important;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    @media only all and (max-width: 74.938rem) and (min-width: $breakpoints-tablet-container) {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    @include breakpoint(tablet-range) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// Above Promos
+.g-home-above {
+    padding-top: 15rem;
+    padding-bottom: 3rem;
+    margin-top: -17rem;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    @media only all and (max-width: 74.938rem) and (min-width: $breakpoints-tablet-container) {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    @include breakpoint(tablet-range) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.g-promo {
+    h1 {
+        padding: 0 10%;
+        @include breakpoint(tablet-range) {
+            padding: 0;
+        }
+        @include breakpoint(mobile-only) {
+            padding: 0;
+        }
+        font-weight: $font-weight-ultrabold;
+        @include responsive-font(2.5vw, $core-font-size + 1, false, $core-font-size);
+    }
+}
+
+.g-promo-2 {
+    .g-content {
+        .g-simplecontent {
+            padding: 0 8%;
+            @include breakpoint(tablet-range) {
+                padding: 0;
+            }
+            @include breakpoint(mobile-only) {
+                padding: 0;
+            }
+        }
+    }
+    .g-promo-signature {
+        margin-top: $content-padding;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(flex-start);
+
+        .g-promo-avatar {
+            width: 60px;
+            height: 60px;
+        }
+        .g-promo-sign {
+            max-width: 80px;
+        }
+        .g-promo-titles {
+            padding: 0 $content-padding;
+        }
+    }
+}
+
+// Home Header
+.g-home-header {
+    @include breakpoint(tablet-range) {
+        padding: 0 2%;
+    }
+    @include breakpoint(mobile-only) {
+        padding: 0 2%;
+    }
+    @include breakpoint(desktop-range) {
+        padding-left: 10%;
+        padding-right: 0 !important;
+        margin-right: -4%;
+    }
+    @include breakpoint(large-desktop-range) {
+        padding-left: 10%;
+        padding-right: 0 !important;
+        margin-right: -4%;
+    }
+
+    .dir-rtl & {
+        @include breakpoint(desktop-range) {
+            padding-right: 10% !important;
+            padding-left: 0;
+            margin-left: -4%;
+            margin-right: 0;
+        }
+        @include breakpoint(large-desktop-range) {
+            padding-right: 10% !important;
+            padding-left: 0;
+            margin-left: -4%;
+            margin-right: 0;
+        }
+    }
+}
+
+// Home Feature
+.g-home-feature {
+    @extend .section-paddings;
+
+    .g-grid {
+        @include align-items(center);
+    }
+
+    .g-logo {
+        opacity: 0.2;
+        @include transition(opacity 0.2s ease-out);
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+// Bottom
+.fp-bottom {
+    padding: $content-padding * 2 0;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    @media only all and (max-width: 74.938rem) and (min-width: $breakpoints-tablet-container) {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    @include breakpoint(tablet-range) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+//Section Margins
+.g-default {
+    &-above, &-slideshow, &-showcase, &-extension, &-bottom, &-main {
+        margin-left: 10%;
+        margin-right: 10%;
+
+        @media only all and (max-width: 74.938rem) and (min-width: $breakpoints-tablet-container) {
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        @include breakpoint(tablet-range) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include breakpoint(mobile-only) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &-top, &-navigation, &-header, &-utility, &-feature, &-expanded, &-footer, &-copyright {
+        @extend .section-paddings;
+    }
+}

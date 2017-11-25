@@ -1,0 +1,15 @@
+#g-bottom {
+	background: $bottom-background;
+	color: $bottom-text-color;
+	// Container
+	.g-container {
+		padding: 1.5rem 0;		
+	}	
+}
+
+@media print {
+	#g-bottom {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

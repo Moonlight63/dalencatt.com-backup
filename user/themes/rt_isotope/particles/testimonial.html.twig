@@ -1,0 +1,47 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+  <div class="g-testimonials {{ particle.class|e }}">
+    {% if particle.title %}
+    <h3 class="g-title">{{ particle.title|raw }}</h3>
+    {% endif %}
+    
+    {% if particle.intro %}
+    <p>{{ particle.intro|raw }}</p>
+    {% endif %}
+
+    <div class="g-testimonials-items {{ particle.cols|e }}">
+    {% for testimonial in particle.testimonials %}
+    <div class="g-testimonial-item {{ testimonial.style|e }}">
+      {% if testimonial.content %}
+      <div class="g-testimonial-content">
+        
+        {% if testimonial.img or testimonial.author or testimonial.company %}
+        <div class="g-testimonial-author-container">
+          {% if testimonial.img %}
+          <img class="g-testimonial-author-img" src="{{ url(testimonial.img|e) }}" alt="{{ testimonial.author|e }}">
+          {% endif %}
+          
+          {% if testimonial.author or testimonial.company %}
+          <div class="g-testimonial-author-text">
+            {% if testimonial.author %}
+            <span class="g-testimonial-author-name">{{ testimonial.author|e }}</span>
+            {% endif %}
+            {% if testimonial.company %}
+            <span class="g-testimonial-author-company"><a href="{{ testimonial.companyurl|e }}">{{ testimonial.company|e }}</a></span>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="g-testimonial-text">
+          {{ testimonial.content|raw }}
+        </div>        
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}

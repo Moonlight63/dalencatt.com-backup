@@ -1,0 +1,19 @@
+name: Slideshow Styles
+description: Slideshow styles for the Acronym theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "rgba(255, 255, 255, 0.0)"
+    background-image:
+      type: input.imagepicker
+      label: Background Image
+      default: "gantry-media://backgrounds/slideshow/img-01.jpg"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#9091a2"

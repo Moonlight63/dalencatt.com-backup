@@ -1,0 +1,32 @@
+.noliststyle {
+	list-style: none;
+}
+.g-uppercase {
+	text-transform: uppercase;
+}
+.g-notexttransform {
+	text-transform: none;
+}
+.g-positive-margin-top {
+	margin-top: 23rem;
+}
+.g-negative-margin-bottom {
+	margin-bottom: -25rem;
+}
+
+.g-textpromo-typed {
+	visibility: hidden;
+}
+
+.typed-cursor{
+	display: inline-block;
+    opacity: 1;
+    font-size: $core-font-size + 0.5;
+    @include animation(blink 0.7s infinite);
+}
+	
+@include keyframes(blink) {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

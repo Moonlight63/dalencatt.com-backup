@@ -1,0 +1,16 @@
+name: Acronym
+version: 1.0.3
+description: Acronym theme
+icon: tint
+author:
+  name: RocketTheme
+  email: support@rockettheme.com
+  url: http://www.rockettheme.com
+homepage: http://www.rockettheme.com/grav/themes/acronym
+keywords: rockettheme, gantry5, theme
+bugs: http://www.rockettheme.com/forum/grav-theme-acronym
+license: RocketTheme License
+
+form:
+  validation: loose
+  fields:

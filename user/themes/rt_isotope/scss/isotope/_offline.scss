@@ -1,0 +1,31 @@
+.g-offline-header {
+	&#g-header {
+		.g-container {
+			border-bottom: none;
+		}
+		.g-logo {
+			font-size: 3rem;
+			margin: 1.5rem auto;
+		}
+	}
+}
+.g-offline {
+    #grav-login {
+        max-width: 32rem; 
+        .form-actions {
+            margin-top: $content-margin;
+            @include breakpoint(mobile-only) {
+                text-align: center;
+            }
+        }
+        .button {
+            text-transform: capitalize;
+        }
+        .rememberme { 
+            @include breakpoint(mobile-only) {
+                float: none;
+                display: block;
+            }
+        }
+    }    
+} 

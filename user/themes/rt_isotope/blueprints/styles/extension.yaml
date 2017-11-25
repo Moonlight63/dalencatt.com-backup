@@ -1,0 +1,23 @@
+name: Extension Styles
+description: Extension styles for the Isotope theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#3176d6"     
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    background-image:
+      type: input.imagepicker
+      label: Background Image
+      default: "gantry-media://backgrounds/extension/img-01.jpg"      
+    overlay-opacity:
+      type: input.text
+      label: Overlay Opacity
+      default: "0.75"

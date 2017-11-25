@@ -1,0 +1,125 @@
+.g-headertabs {
+    .g-headertabs-tab {
+        outline: none;
+    }
+
+    .g-headertabs-container {
+        @include display(flex);
+        @include flex-direction(column-reverse);
+    }
+
+    .g-headertabs-tab-wrapper-container {
+        list-style: none;
+        margin: 0 0 1rem 0;
+        @include display(flex);
+
+        .g-headertabs-tab-wrapper {
+            @include flex(1);
+        }
+    }
+
+    .g-headertabs-content-wrapper-container {
+        list-style: none;
+        margin: 0;
+
+        li:not(:first-child) .g-headertabs-content { display: none; }
+    }
+
+    .g-headertabs-tab-wrapper-head {
+        display: block;
+        cursor: pointer;
+
+        .g-headertabs-tab {
+            position: relative;
+            display: block;
+            z-index: 2;
+            cursor: pointer;
+            padding: 1.75rem;
+            @include breakpoint(tablet-range) {
+                padding: 1rem;
+            }
+            margin: 0;
+            @include transition(all 0.25s);
+
+            &:before {
+                position: absolute;
+                z-index: 1;
+                content: '';
+                left: -$content-margin;
+                bottom: -$content-margin;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                height: 100%;
+                border: 2px solid transparent;
+            }
+
+            .g-headertabs-tab-title {
+                display: block;
+                outline: none;
+                font-size: $core-font-size + 0.5;
+                @include breakpoint(tablet-range) {
+                    font-size: $core-font-size + 0.2;
+                }
+                font-weight: $font-weight-light;
+                color: $black;
+            }
+
+            .g-headertabs-tab-desc {
+                display: block;
+                outline: none;
+                font-size: $core-font-size - 0.2;
+                font-weight: $font-weight-regular;
+                color: $base-text-color;
+                @include transition(all 0.25s);
+            }
+
+            &:hover {
+                .g-headertabs-tab-desc {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .g-headertabs-content-text {
+        @include flex(0 1 80%);
+        width: 80%;
+
+        @include breakpoint(tablet-range) {
+            @include flex(0 1 100%);
+            width: 100%;
+        }
+
+        @include breakpoint(mobile-only) {
+            @include flex(0 1 100%);
+            width: 100%;
+        }
+    }
+}
+
+.ui-tabs-active {
+    .g-headertabs-tab-wrapper-head {
+        .g-headertabs-tab {
+            background: $accent-color-1;
+
+            &:before {
+                border-color: $accent-color-1;
+            }
+
+            .g-headertabs-tab-title {
+                color: $white;
+            }
+
+            .g-headertabs-tab-desc {
+                color: fadeout($white, 50%);
+            }
+
+            &:hover {
+                .g-headertabs-tab-desc {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

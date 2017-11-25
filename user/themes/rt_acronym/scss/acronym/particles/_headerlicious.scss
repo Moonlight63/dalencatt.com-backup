@@ -1,0 +1,373 @@
+.g-headerlicious {
+    .g-headerlicious-header-wrapper {
+        display: block;
+
+        &.animate {
+            h2 {
+                span {
+                    @include transform(translate3d(0, 0, 0));
+                }
+            }
+        }
+
+        a {
+            h2 {
+                span:hover {
+                    cursor: pointer !important;
+                }
+            }
+        }
+
+        // Dock
+        &.g-headerlicious-header-dock {
+            h2 {
+                margin: 0;
+                font-size: 10rem;
+                font-weight: $font-weight-ultrabold;
+                color: $white;
+                line-height: 19rem;
+                letter-spacing: -3px;
+                text-align: center;
+                text-shadow: 0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 1px 3px rgba(0,0,0,.2),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
+
+                @include breakpoint(tablet-range) {
+                    letter-spacing: -1px;
+                    font-size: 7rem;
+                }
+
+                @include breakpoint(mobile-only) {
+                    font-size: 3.5rem;
+                    letter-spacing: -1px;
+                    line-height: normal;
+                    margin-bottom: ($content-padding * 2);
+                }
+            }
+
+            &.animate {
+                h2 {
+                    span {
+                        line-height: 15rem;
+                        @include transition(all 0.25s);
+
+                        @include breakpoint(mobile-only) {
+                            line-height: normal;
+                        }
+
+                        &:hover {
+                            cursor: default;
+                            font-size: 15rem;
+
+                            @include breakpoint(tablet-range) {
+                                font-size: 10rem;
+                            }
+
+                            @include breakpoint(mobile-only) {
+                                font-size: 3.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // CMYK
+        &.g-headerlicious-header-cmyk {
+            h2 {
+                margin: 0;
+                font-size: 10rem;
+                font-weight: $font-weight-ultrabold;
+                text-align: center;
+                color: $white;
+
+                @include breakpoint(tablet-range) {
+                    font-size: 7rem;
+                }
+
+                @include breakpoint(mobile-only) {
+                    font-size: 5rem;
+                    margin-bottom: ($content-padding * 2);
+                }
+
+                span {
+                    text-shadow: 0.25rem -0.25rem $accent-color-1, -0.25rem -0.25rem $accent-color-2, 0 0.5rem $base-text-color;
+
+                    @include breakpoint(mobile-only) {
+                        text-shadow: 0.15rem -0.15rem $accent-color-1, -0.15rem -0.15rem $accent-color-2, -0.1rem 0.4rem $base-text-color;
+                    }
+                }
+            }
+
+            &.animate {
+                h2 {
+                    span {
+                        @include transition(all 0.25s);
+
+                        &:hover {
+                            cursor: default;
+                            text-shadow: 0.6rem 0.1rem magenta, -0.35rem -0.35rem cyan, 0.1rem 0.6rem yellow;
+
+                            @include breakpoint(mobile-only) {
+                                text-shadow: 0.5rem 0rem magenta, -0.25rem -0.25rem cyan, 0 0.5rem yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Perspective
+        &.g-headerlicious-header-perspective {
+            h2 {
+                margin: 0;
+                font-size: 10rem;
+                font-weight: $font-weight-ultrabold;
+                text-align: center;
+                color: $white;
+                @include transform(perspective(2.5em) rotateX(15deg) scaleY(0.8));
+                @include transition(all 0.35s);
+
+                text-shadow: 0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 1px 3px rgba(0,0,0,.2),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
+            }
+
+            &.animate {
+                h2 {
+                    &:hover {
+                        cursor: default;
+                        @include transform(perspective(8em) rotateX(11deg) scale(1.2));
+
+                        text-shadow: 0 0 0 hsl(174,5%,80%),
+                        0 1px 0 hsl(174,5%,75%),
+                        0 2px 0 hsl(174,5%,70%),
+                        0 3px 0 hsl(174,5%,66%),
+                        0 4px 0 hsl(174,5%,64%),
+                        0 0 5px rgba(0,0,0,.05),
+                        0 1px 3px rgba(0,0,0,.2),
+                        0 3px 5px rgba(0,0,0,.2),
+                        0 5px 10px rgba(0,0,0,.2),
+                        0 10px 10px rgba(0,0,0,.2),
+                        0 20px 20px rgba(0,0,0,.3);
+                    }
+                }
+            }
+        }
+
+        // Extrude
+        &.g-headerlicious-header-extrude {
+            h2 {
+                margin: 0;
+                font-size: 10rem;
+                font-weight: $font-weight-ultrabold;
+                text-align: center;
+                mix-blend-mode: screen;
+                letter-spacing: 0.2em;
+                text-shadow: -2px 1px $white,
+                -3px 2px $white,
+                -4px 3px $white,
+                -5px 4px $white,
+                -6px 5px $white,
+                -7px 6px $white,
+                -8px 7px $white,
+                -9px 8px $white,
+                -10px 9px $white,
+                -11px 10px $white,
+                -12px 11px $white;
+
+                @include breakpoint(tablet-range) {
+                    letter-spacing: 0.2em;
+                    font-size: 5rem;
+                    text-shadow: -2px 1px $white,
+                    -3px 2px $white,
+                    -4px 3px $white,
+                    -5px 4px $white,
+                    -6px 5px $white;
+                }
+
+                @include breakpoint(mobile-only) {
+                    font-size: 2.5rem;
+                    letter-spacing: 0.1em;
+                    margin-bottom: ($content-padding * 2);
+                    text-shadow: -2px 1px $white,
+                    -3px 2px $white;
+                }
+            }
+
+            &.animate {
+                h2 {
+                    opacity: 0;
+                    animation: revolve 1s cubic-bezier(.47,.01,0,1.01) forwards 0.25s;
+                    text-shadow: 0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white,
+                    0px 0px $white;
+
+                    @keyframes revolve {
+                        to {
+                            opacity: 1;
+                            text-shadow: -2px 1px $white,
+                            -3px 2px $white,
+                            -4px 3px $white,
+                            -5px 4px $white,
+                            -6px 5px $white,
+                            -7px 6px $white,
+                            -8px 7px $white,
+                            -9px 8px $white,
+                            -10px 9px $white,
+                            -11px 10px $white,
+                            -12px 11px $white;
+                        }
+                    }
+
+                    @include breakpoint(tablet-range) {
+                        @keyframes revolve {
+                            to {
+                                opacity: 1;
+                                text-shadow: -2px 1px $white,
+                                -3px 2px $white,
+                                -4px 3px $white,
+                                -5px 4px $white,
+                                -6px 5px $white;
+                            }
+                        }
+                    }
+
+                    @include breakpoint(mobile-only) {
+                        @keyframes revolve {
+                            to {
+                                opacity: 1;
+                                text-shadow: -2px 1px $white,
+                                -3px 2px $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Peeled Text
+        &.g-headerlicious-header-peeledtext {
+            h2 {
+                margin: 0;
+                font-size: 10rem;
+                font-weight: $font-weight-ultrabold;
+                text-align: center;
+                color: $white;
+
+                span {
+                    display: inline-block;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    perspective: 500;
+                    -webkit-font-smoothing: antialiased;
+
+                    &:before, &:after {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: -1px;
+                        transform-origin: left top;
+                        content: attr(data-char);
+                        @include transition(all ease-out 0.3s);
+                    }
+
+                    &:before {
+                        z-index: 1;
+                        color: rgba(0,0,0,0.2);
+                        transform: scale(1.1, 1) skew(0deg, 20deg);
+                    }
+
+                    &:after {
+                        z-index: 2;
+                        color: $accent-color-1;
+                        text-shadow: -1px 0 1px $accent-color-1, 1px 0 1px rgba(0,0,0,0.8);
+                        transform: rotateY(-40deg);
+                    }
+
+                    & + span {
+                        margin-left: 0.15em;
+                    }
+                }
+
+                @include breakpoint(tablet-range) {
+                    font-size: 7rem;
+
+                    span {
+                        & + span {
+                            margin-left: 0.05em;
+                        }
+                    }
+                }
+
+                @include breakpoint(mobile-only) {
+                    font-size: 2.5rem;
+                    margin-bottom: ($content-padding * 2);
+
+                    span {
+                        & + span {
+                            margin-left: 0.05em;
+                        }
+                    }
+                }
+            }
+
+            &.animate {
+                h2 {
+                    span {
+                        &:hover {
+                            &:before {
+                                transform: scale(1.1, 1) skew(0deg, 5deg);
+                            }
+
+                            &:after {
+                                transform: rotateY(-10deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .g-headerlicious-tagline {
+        display: block;
+        font-size: $core-font-size * 2;
+        text-align: center;
+        color: fadeout($white, 70%);
+
+        @include breakpoint(mobile-only) {
+            font-size: $core-font-size + 0.5;
+        }
+    }
+}

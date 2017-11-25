@@ -1,0 +1,197 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/offline.png'
+  name: coming_soon
+  timestamp: 1446441888
+layout:
+  /navigation/:
+    -
+      - logo-7061
+  /top/:
+    -
+      - system-messages-6543
+  /header/:
+    -
+      - infolist-8012
+  /slideshow/: {  }
+  /showcase/: {  }
+  /above/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-3518/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - simplecounter-1803
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  /extension/:
+    -
+      - infolist-3744
+  /bottom/:
+    -
+      - 'custom-2368 50'
+      - 'newsletter-4577 50'
+  /footer/: {  }
+  /copyright/:
+    -
+      - 'branding-8113 33.3'
+      - 'copyright-3234 33.3'
+      - 'totop-8262 33.3'
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: g-headroom
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      boxed: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-3518:
+    attributes:
+      boxed: ''
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      extra:
+        -
+          data-enllax-ratio: '0.4'
+        -
+          data-enllax-type: background
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+content:
+  system-messages-6543:
+    block:
+      variations: 'nomarginall nopaddingall'
+  logo-7061:
+    block:
+      variations: center
+  infolist-8012:
+    title: 'Isotope is Coming Soon'
+    attributes:
+      class: 'g-layercontent noborder'
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: header
+          imagestyle: compact
+          desc: 'Good News! Something Awesome is in the Works'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: ''
+          icon: ''
+          readmoreclass: ''
+          title: 'Isotope is Coming Soon'
+    block:
+      variations: center
+  simplecounter-1803:
+    title: 'Simple Counter'
+    attributes:
+      title: 'Stay Tuned'
+      desc: 'We are working on a new and exciting template that we think you will really like.'
+      date: '1'
+      month: '1'
+      year: '2021'
+      daytext: Day
+      daystext: Days
+      hourtext: Hour
+      hourstext: Hours
+      minutetext: Minute
+      minutestext: Minutes
+      secondtext: Second
+      secondstext: Seconds
+    block:
+      variations: center
+  infolist-3744:
+    title: 'Have Something to Tell Us?'
+    attributes:
+      class: 'g-layercontent noborder'
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: header
+          imagestyle: compact
+          desc: 'Ideas, Suggestion, or Review'
+          tag: ''
+          subtag: ''
+          label: 'Contact Us'
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Have Something to Tell Us?'
+    block:
+      variations: center
+  custom-2368:
+    title: 'About Isotope'
+    attributes:
+      html: "<h3 class=\"g-title\">About Isotope</h3>\nIsotope is available for purchase or part of a club membership from RocketTheme, inclusive of the RocketLauncher, template, addons and sources."
+  newsletter-4577:
+    title: 'Subscribe Here'
+    attributes:
+      title: 'Subscribe Here'
+      headtext: 'Subscribe to our newsletter and stay updated on the latest developments and special offers!'
+      inputboxtext: 'Email Address'
+      buttontext: Join
+      uri: rocketthemeblog
+      buttonclass: button-4
+  branding-8113:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-8262:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''

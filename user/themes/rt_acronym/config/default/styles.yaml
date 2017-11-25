@@ -1,0 +1,82 @@
+preset1:
+  image: 'gantry-admin://images/preset1.png'
+  description: 'Preset 1'
+  colors:
+    - '#4063fb'
+    - '#2fe09c'
+    - '#141c4b'
+  styles:
+    base:
+      background: '#090a1e'
+      background2: '#141c4b'
+      text-color: '#9091a2'
+      text-active-color: '#232529'
+    accent:
+      color-1: '#4063fb'
+      color-2: '#2fe09c'
+    menustyle:
+      text-color: '#9091a2'
+      text-color-active: '#ffffff'
+      sublevel-text-color: '#222446'
+      sublevel-text-color-active: '#ffffff'
+      sublevel-background: '#ffffff'
+    font:
+      family-default:    'lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title:      'lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-promo:      'lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-subpromo:   'lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    top:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    navigation:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    slideshow:
+      background: 'rgba(255, 255, 255, 0.0)'
+      background-image: 'gantry-media://backgrounds/slideshow/img-01.jpg'
+      text-color: '#9091a2'
+    header:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    above:
+      background: '#4063fb'
+      text-color: '#ffffff'
+    showcase:
+      background: '#4063fb'
+      text-color: '#ffffff'
+    utility:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    feature:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    main:
+      background: '#ffffff'
+      text-color: '#9091a2'
+    expanded:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    extension:
+      background: '#4063fb'
+      text-color: '#ffffff'
+    bottom:
+      background: '#4063fb'
+      background-image-left: 'gantry-media://backgrounds/bottom/img-left.png'
+      background-image-right: 'gantry-media://backgrounds/bottom/img-right.png'
+      text-color: '#ffffff'
+    footer:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: '#9091a2'
+    copyright:
+      background: 'rgba(255, 255, 255, 0.0)'
+      text-color: 'rgba(144, 145, 162, 0.5)'
+    offcanvas:
+      background: '#4063fb'
+      text-color: '#ffffff'
+      toggle-color: '#9091a2'
+    breakpoints:
+      large-desktop-container: 75rem
+      desktop-container: 60rem
+      tablet-container: 48rem
+      large-mobile-container: 30rem
+      mobile-menu-breakpoint: 48rem

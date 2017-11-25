@@ -1,0 +1,29 @@
+#g-header {
+	background: $header-background;
+	color: $header-text-color;
+
+	position: relative;
+	z-index: 1;
+
+	@if $header-background-image {
+    	background-image: url($header-background-image);
+	} 
+
+	&:before {
+	   	background: fadeout($header-background, 1 - number($header-overlay-opacity));
+	   	position: absolute;
+	   	content: "";
+	   	top: 0;
+	   	right: 0;
+	   	bottom: 0;
+	   	left: 0;
+	    z-index: -1;		
+	}		
+}
+
+@media print {
+	#g-header {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

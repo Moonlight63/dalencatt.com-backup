@@ -1,0 +1,58 @@
+#g-extension {
+    background: $extension-background;
+    color: $extension-text-color;
+    position: relative;
+    z-index: 1;
+
+	@if $extension-background-image {
+    	background-image: url($extension-background-image);
+	}
+
+	&:before {
+	   	background: fadeout($extension-background, 1 - number($extension-overlay-opacity));
+	   	position: absolute;
+	   	content: "";
+	   	top: 0;
+	   	right: 0;
+	   	bottom: 0;
+	   	left: 0;
+	    z-index: -1;
+	}
+
+	// Container
+	.g-container {
+		padding: 1.5rem 0;
+	}
+
+	// Disable the Parallax on Mobile
+	@include breakpoint(mobile-only) {
+		background-position: top center !important;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+    html.touch & {
+      background-position: top center !important;
+    }
+
+	// Link color
+	a {
+		color: lighten($extension-background, 30%);
+		&:hover {
+		  color: $extension-text-color;
+		}
+	}
+
+	// Info List
+	.g-infolist .g-infolist-item {
+		border-bottom: 0;
+		margin-bottom: 1rem;
+	}
+
+}
+
+@media print {
+	#g-extension {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

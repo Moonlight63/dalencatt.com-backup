@@ -1,0 +1,70 @@
+name: Headerlicious
+description: Display neat looking header text with tagline.
+type: particle
+icon: fa-header
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    header:
+      type: input.text
+      label: Header
+      description: Customize the header text.
+
+    header_link:
+      type: input.text
+      label: Header Link
+      description: Specify header text link
+
+    .header_target:
+      type: select.selectize
+      label: Link Target
+      description: Target browser window when item is clicked.
+      placeholder: 'Select...'
+      default: _self
+      options:
+          _self: Self
+          _blank: New Window
+
+    headerstyle:
+      type: select.select
+      label: Header Style
+      description: Select style that should be used for the header.
+      placeholder: 'Select...'
+      default: dock
+      options:
+        dock: Dock
+        cmyk: CMYK
+        extrude: Extrude
+        perspective: Perspective
+        peeledtext: Peeled Text
+
+    headeranimate:
+      type: select.select
+      label: Header Animation
+      description: Select if you want header to be animated
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    tagline:
+      type: textarea.textarea
+      label: Tagline
+      description: Customize the tagline text.
+      placeholder: Enter your tagline here.

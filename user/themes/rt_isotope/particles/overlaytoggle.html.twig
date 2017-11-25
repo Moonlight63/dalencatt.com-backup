@@ -1,0 +1,32 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+  <div class="g-overlaytoggle">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %} 
+    <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#" onclick="return false">
+      {% if particle.menutext %}<span class="g-overlaytoggle-text">{{ particle.menutext|raw }}</span>{% endif %}
+      <span class="g-overlaytoggle-bar-wrapper"><span class="g-overlaytoggle-bar"></span></span>
+    </a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+<script>
+jQuery(window).load(function(){
+  /* When user clicks the Icon */
+  jQuery(".nav-toggle").click(function() {
+    jQuery(this).toggleClass("active");
+    jQuery("#g-overlay").toggleClass("open");
+  });
+
+  /* When user clicks outside */
+  jQuery("#g-overlay").click(function() {
+    jQuery(".nav-toggle").toggleClass("active");
+    jQuery("#g-overlay").toggleClass("open");
+  }); 
+});
+</script>
+{% endblock %}

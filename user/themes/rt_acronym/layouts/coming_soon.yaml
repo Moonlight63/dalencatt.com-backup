@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: coming_soon
+  timestamp: 1482243239
+layout:
+  /top/:
+    -
+      - system-messages-9828
+  /navigation/:
+    -
+      - logo-5992
+  /header/: {  }
+  /slideshow/:
+    -
+      - simplecontent-7561
+  /above/: {  }
+  /showcase/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - simplecounter-6582
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  /extension/: {  }
+  /bottom/:
+    -
+      - blockcontent-4403
+  /footer/: {  }
+  /copyright/:
+    -
+      - copyright-5748
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  header:
+    attributes:
+      boxed: '3'
+      class: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: '0'
+      class: ''
+  utility:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  feature:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  sidebar:
+    type: section
+    block:
+      class: equal-height
+  mainbar:
+    type: section
+    block:
+      class: equal-height
+  aside:
+    block:
+      class: equal-height
+  container-main:
+    attributes:
+      boxed: '3'
+      class: ''
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  extension:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+  footer:
+    attributes:
+      boxed: '3'
+      class: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-mobile-center-compact
+content:
+  logo-5992:
+    block:
+      variations: 'nomarginall center'
+  simplecontent-7561:
+    title: 'Coming Soon'
+    attributes:
+      class: ''
+      title: Soon
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: 'Coming Soon'
+          author: ''
+          leading_content: 'Website under construction.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: 'Coming Soon'
+  simplecounter-6582:
+    title: 'Simple Counter'
+    attributes:
+      title: 'Stay Tuned'
+      desc: 'We are working on a new and exciting template that we think you will really like.'
+      date: '31'
+      year: '2020'
+      daytext: Day
+      daystext: Days
+      hourtext: Hour
+      hourstext: Hours
+      minutetext: Minute
+      minutestext: Minutes
+      secondtext: Second
+      secondstext: Seconds
+    block:
+      variations: center
+  blockcontent-4403:
+    title: 'Block Content'
+    attributes:
+      headline: 'Have Something to Tell Us?'
+      description: 'Ideas, Suggestions or Review'
+      linktext: 'Contact Us'
+      link: '#'
+    block:
+      variations: center
+  copyright-5748:
+    block:
+      class: g-copyright
+      variations: center

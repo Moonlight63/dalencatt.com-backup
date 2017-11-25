@@ -1,0 +1,23 @@
+name: Bottom Styles
+description: Bottom styles for the Acronym theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#4063fb"
+    background-image-left:
+      type: input.imagepicker
+      label: Background Image Left
+      default: "gantry-media://backgrounds/bottom/img-left.png"
+    background-image-right:
+      type: input.imagepicker
+      label: Background Image Right
+      default: "gantry-media://backgrounds/bottom/img-right.png"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

@@ -1,0 +1,125 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% do gantry.load('lightcase.init') %}
+
+{% block particle %}
+    {% block layout %}
+
+        <div class="{{ particle.class|e }} g-owlcarousel-cards g-owlcarousel-cards-{{ particle.displayitems }}-items">
+            {% if particle.title %}
+                <h3 class="g-title">
+                    {{ particle.title|raw }}
+                </h3>
+            {% endif %}
+
+            {% if particle.description %}
+                <div class="g-owlcarousel-description">
+                    {{ particle.description|raw }}
+                </div>
+            {% endif %}
+
+            <div id="g-owlcarousel-{{ id }}" class="g-owlcarousel owl-carousel {% if particle.nav == 'enabled' %}g-owlcarousel-cards-show-nav{% endif %}">
+
+                {% for item in particle.items %}
+                    <div class="item">
+                            {% if item.link %}
+                                <a class="g-owlcarousel-cards-image-link" href="{{ url(item.link)|e }}" title="{{ item.title|e }}">
+                            {% else %}
+                                <div class="g-owlcarousel-cards-image-link">
+                            {% endif %}
+                            {% if item.image %}<img {% if particle.lazyload %}class="owl-lazy" data-src="{{ url(item.image)|e }}"{% else %}src="{{ url(item.image)|e }}"{% endif %} alt="{{ item.title|e }}" />{% endif %}
+                            <span class="indicator">
+                                <span>
+                                    {{ item.caption }}
+                                </span>
+                            </span>
+
+                            {% if item.title or item.subtitle %}
+                            <span class="g-owlcarousel-cards-item-desc">
+                                {% if item.title %}
+                                <span class="g-owlcarousel-cards-item-desc-title">
+                                    {{ item.title|e }}
+                                </span>
+                                {% endif %}
+
+                                {% if item.subtitle %}
+                                <span class="g-owlcarousel-cards-item-desc-subtitle">
+                                    {{ item.subtitle|e }}
+                                </span>
+                                {% endif %}
+                            </span>
+                            {% endif %}
+                            {% if item.link %}
+                                </a>
+                            {% else %}
+                                </div>
+                            {% endif %}
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    {% endblock %}
+{% endblock %}
+
+{% do gantry.document.addScript(url('gantry-theme://js/owlcarousel.js'), 10, 'footer') %}
+
+{% set inline_js %}
+    jQuery(window).load(function() {
+        var owl{{ id|replace({'-':'_'}) }} = jQuery('#g-owlcarousel-{{ id }}');
+        owl{{ id|replace({'-':'_'}) }}.owlCarousel({
+        items: {{ particle.displayitems }},
+        {% if particle.lazyload %}
+        lazyLoad: true,
+        {% endif %}
+        rtl: {% if gantry.page.direction == 'rtl' %}true{% else %}false{% endif %},
+        animateIn: 'fadeIn',
+        {% if particle.nav == 'enabled' %}
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+        {% else %}
+        nav: false,
+        {% endif %}
+        dots: false,
+        {% if particle.loop == 'enabled' %}
+        loop: true,
+        {% else %}
+        loop: false,
+        {% endif %}
+        smartSpeed: {{ particle.scrollspeed|default('1000') }},
+        {% if particle.autoplay == 'enabled' %}
+        autoplay: true,
+        autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+        {% if particle.pauseOnHover == 'enabled' %}
+        autoplayHoverPause: true,
+        {% else %}
+        autoplayHoverPause: false,
+        {% endif %}
+        {% else %}
+        autoplay: false,
+        {% endif %}
+        {% if particle.displayitems > "1" %}
+        responsive:{
+            0: {
+                items: 1,
+            },
+            500: {
+                items: {{ (particle.displayitems/2)|round(ceil) - 1 }},
+            },
+            750: {
+                items: {{ (particle.displayitems/2)|round(ceil) }},
+            },
+            1000: {
+                items: {{ (particle.displayitems/2)|round(ceil) + 1 }},
+            },
+            1300: {
+                items: {{ particle.displayitems }}
+            }
+        },
+        {% endif %}
+        })
+    });
+{% endset %}
+
+{% do gantry.document.addInlineScript( inline_js, 10, 'footer') %}

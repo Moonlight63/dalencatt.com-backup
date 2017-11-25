@@ -1,0 +1,47 @@
+.g-pricingtable {
+	list-style: none;
+	text-align: center;
+	margin: 0 -1rem;
+	border: 1px solid $rule-color;
+	border-radius: $border-radius;	
+	li {
+		padding: $content-padding;
+		border-bottom: 1px solid $rule-color;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.g-pricingtable-title {
+		background: $accent-color-1;
+		color: $white;
+		font-size: $core-font-size + 0.8;
+		line-height: $core-line-height - 0.3;
+		font-family: get-font-family($font-family-title);	
+		font-weight: $font-weight-ultrabold;
+		text-transform: uppercase;	
+	    @include breakpoint(desktop-range) {
+	    	font-size: $core-font-size + 0.5;
+	    }	
+	    @include breakpoint(tablet-range) {
+	    	font-size: $core-font-size + 0.25;
+	    }
+	    @include breakpoint(mobile-only) {
+	    	font-size: $core-font-size + 0.1;
+	    }	    		    	
+	}
+	.g-pricingtable-price {
+		color: $accent-color-1;
+		font-size: $core-font-size + 3;
+		font-family: get-font-family($font-family-title);
+		font-weight: $font-weight-bold;
+	    @include breakpoint(desktop-range) {
+	    	font-size: $core-font-size + 2;
+	    }	
+	    @include breakpoint(tablet-range) {
+	    	font-size: $core-font-size + 2;
+	    }
+	    @include breakpoint(mobile-only) {
+	    	font-size: $core-font-size + 0.5;
+	    }			
+	}
+}

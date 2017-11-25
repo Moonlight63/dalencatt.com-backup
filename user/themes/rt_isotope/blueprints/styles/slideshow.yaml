@@ -1,0 +1,27 @@
+name: Slideshow Styles
+description: Slideshow styles for the Isotope theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#3176d6"
+    gradient1:
+      type: input.colorpicker
+      label: Overlay Gradient 1
+      default: "#086fff"
+    gradient2:
+      type: input.colorpicker
+      label: Overlay Gradient 2
+      default: "#009675"
+    overlay-opacity:
+      type: input.text
+      label: Gradient Opacity
+      default: "0.8"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

@@ -1,0 +1,205 @@
+.g-gridcontent {
+	.g-gridcontent-wrapper {
+		@include display(flex);
+		@include flex-flow(row wrap);
+    @include flex-wrap(wrap);
+	    margin: 1rem -0.25rem;
+	}
+  .g-gridcontent-desc {
+    margin-bottom: 1rem;
+  }
+	.g-gridcontent-item {
+	    @include flex(0 0 auto);
+	    width: 100%;
+	    display: inline-block;
+	    i.fa, span {
+	    	display: block;
+	    }
+	    i.fa {
+	    	margin: 1rem auto 2.5rem auto;
+	    }
+	}  	
+	.g-gridcontent-readmore {
+		@include breakpoint(mobile-only) {
+			text-align: center !important;
+			margin-top: 1rem;
+		}	
+    	.dir-rtl & {
+			text-align: left;
+    	}			
+	}
+	.g-gridcontent-item-img, .g-gridcontent-item-content {
+		position: relative;
+	}
+	.g-gridcontent-item-content {
+		border-top: 5px solid $box1-background;
+		padding: 3rem 2rem;
+		.button {
+			margin-top: 1rem;
+		}
+	}
+	.g-gridcontent-item-text1, .g-gridcontent-item-text2 {
+		text-transform: uppercase;
+	}
+	.g-gridcontent-item-text1 {
+		font-size: $core-font-size - 0.1;
+		line-height: $core-line-height;	
+		font-weight: $font-weight-bold;			
+	}
+	.g-gridcontent-item-text2 {
+		font-family: get-font-family($font-family-title);
+		font-weight: $font-weight-regular;	
+		font-size: $core-font-size + 1.5;
+		line-height: $core-line-height - 0.25;		
+		@include breakpoint(desktop-range) {
+			font-size: $core-font-size + 1.25;
+		}						
+		@include breakpoint(mobile-only) {
+			font-size: $core-font-size + 0.5;
+		}				
+	}		
+	.g-gridcontent-title-style-1 {
+		.g-gridcontent-item-content {
+			background-color: $box1-background;
+			color: $white;
+		}
+		.button.button-3, .button.button-4 {
+		    border: 2px solid $white;
+		    color: $white !important;	  			
+		    &:hover {
+			    border: 2px solid darken($accent-color-1, 15%);
+			    color: darken($accent-color-1, 15%) !important;	    	
+		    }
+		}		
+	}
+	.g-gridcontent-title-style-2 {
+		.g-gridcontent-item-content {
+			background-color: fadeout($base-text-color, 85%);
+			color: $base-text-color;	
+		}
+		.button.button-4 {
+		    border: 2px solid $base-text-color;
+		    color: $base-text-color !important;			
+		    &:hover {
+			    border: 2px solid $accent-color-1;
+			    color: $accent-color-1 !important;	    	
+		    }
+		}		
+	}	
+	.g-gridcontent-title-style-3 {
+		.g-gridcontent-item-content {
+			width: 80%;
+			margin: -6.25rem auto 0 auto;
+			padding: 2rem;
+			@include background(linear-gradient(rgba($base-background, 0.85), rgba($base-background, 1)));
+			color: $base-text-color;	
+		}
+		.g-gridcontent-item-text2 {
+			font-family: get-font-family($font-family-promo);
+			font-weight: $font-weight-bold;		
+			text-transform: none;	
+			font-size: $core-font-size + 1.25;
+			line-height: $core-line-height - 0.25;	
+			margin: 1rem 0;
+			@include breakpoint(mobile-only) {
+				font-size: $core-font-size + 0.75;
+			}			
+		}
+		.button.button-4 {
+		    &:hover {
+			    border: 2px solid $accent-color-1;
+			    color: $accent-color-1 !important;	    	
+		    }
+		}		
+	}		
+	.g-gridcontent-title-style-4 {
+		.g-gridcontent-item-content {
+			border-top: 0;
+			padding: 0;
+			margin-bottom: 1rem;
+		}	
+		.g-gridcontent-item-text2 {
+			font-family: get-font-family($font-family-default);
+			font-weight: $font-weight-regular;
+			font-size: $core-font-size + 0.25;
+			line-height: $core-line-height;
+			width: 80%;
+			margin: 1rem auto 0.5rem auto;
+		}	
+		.g-gridcontent-item-desc {
+			font-size: $core-font-size - 0.1;
+		}
+	}	
+	.button.button-4 {
+	    border: 2px solid;
+	}
+	.button.arrow {
+		background: transparent;
+	    border: 0;
+	    color: inherit !important;
+	    padding: 0.5rem 0;
+	    &:after {
+	    	font-family: FontAwesome;
+	    	content: "\f178";
+	    	font-size: 2rem;
+	    	.dir-rtl & {
+	    		content: "\f177";
+	    	}
+	    }
+	    &:hover {
+	    	color: $accent-color-1 !important;
+	    }
+	}	
+	.g-gridcontent-2cols {
+		.g-gridcontent-item {
+			width: 50%;
+		}	
+	}	
+	.g-gridcontent-3cols {
+		.g-gridcontent-item {
+			width: 33.33333%;
+		}	
+	}
+	.g-gridcontent-4cols {
+		.g-gridcontent-item {
+			width: 25%;
+		}	
+	}			
+	.g-gridcontent-5cols {
+		.g-gridcontent-item {
+			width: 20%;
+		}	
+	}
+	.g-gridcontent-6cols {
+		.g-gridcontent-item {
+			width: 16.66667%;
+		}	
+	}		
+
+	.g-gridcontent-2cols {
+		.g-gridcontent-item {
+			@include breakpoint(small-mobile-range) {
+				width: 100%;
+			}	
+  		@include breakpoint(tablet-range) {
+        .g-typography & {
+          width: 100%;
+        }
+      }
+		}
+	}
+	.g-gridcontent-3cols, .g-gridcontent-5cols {
+		.g-gridcontent-item {
+			@include breakpoint(mobile-only) {
+				width: 100%;
+			}	
+		}		
+	}
+	.g-gridcontent-4cols, .g-gridcontent-6cols {
+		.g-gridcontent-item {
+			@include breakpoint(mobile-only) {
+				width: 50%;
+			}	
+		}			
+	}	  
+}

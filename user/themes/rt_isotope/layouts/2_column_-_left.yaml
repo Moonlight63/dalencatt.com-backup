@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/2-col-left.png'
+  name: 2_column_-_left
+  timestamp: 1446320874
+layout:
+  /navigation/:
+    -
+      - 'position-navigation-a 33.3'
+      - 'position-navigation-b 33.3'
+      - 'position-navigation-c 33.3'
+  /top/:
+    -
+      - system-messages-5544
+    -
+      - 'position-top-a 33.3'
+      - 'position-top-b 33.3'
+      - 'position-top-c 33.3'
+  /header/:
+    -
+      - 'position-header-a 33.3'
+      - 'position-header-b 33.3'
+      - 'position-header-c 33.3'
+  /showcase/:
+    -
+      - 'position-showcase-a 33.3'
+      - 'position-showcase-b 33.3'
+      - 'position-showcase-c 33.3'
+  /above/:
+    -
+      - 'position-above-a 33.3'
+      - 'position-above-b 33.3'
+      - 'position-above-c 33.3'
+  /utility/:
+    -
+      - 'position-utility-a 33.3'
+      - 'position-utility-b 33.3'
+      - 'position-utility-c 33.3'
+  /feature/:
+    -
+      - 'position-feature-a 33.3'
+      - 'position-feature-b 33.3'
+      - 'position-feature-c 33.3'
+  container-6532:
+    -
+      -
+        'mainbody 80':
+          -
+            - 'position-mainbar-a 33.3'
+            - 'position-mainbar-b 33.3'
+            - 'position-mainbar-c 33.3'
+          -
+            - system-content-2260
+      -
+        'sidebar 20':
+          -
+            - position-sidebar
+  /expanded/:
+    -
+      - 'position-expanded-a 33.3'
+      - 'position-expanded-b 33.3'
+      - 'position-expanded-c 33.3'
+  /extension/:
+    -
+      - 'position-extension-a 33.3'
+      - 'position-extension-b 33.3'
+      - 'position-extension-c 33.3'
+  /bottom/:
+    -
+      - 'position-bottom-a 33.3'
+      - 'position-bottom-b 33.3'
+      - 'position-bottom-c 33.3'
+  /footer/:
+    -
+      - 'position-footer-a 33.3'
+      - 'position-footer-b 33.3'
+      - 'position-footer-c 33.3'
+    -
+      - 'logo-3788 20'
+      - 'horizontalmenu-4384 60'
+      - 'social-9828 20'
+  /copyright/:
+    -
+      - 'branding-2728 25'
+      - 'copyright-9721 50'
+      - 'totop-4245 25'
+    -
+      - 'position-copyright-a 33.3'
+      - 'position-copyright-b 33.3'
+      - 'position-copyright-c 33.3'
+  offcanvas:
+    -
+      - logo-5673
+    -
+      - social-9105
+    -
+      - mobile-menu-8113
+    -
+      - position-offcanvas
+structure:
+  navigation:
+    type: section
+    attributes:
+      id: g-navigation
+      boxed: ''
+  top:
+    type: section
+    attributes:
+      id: g-top
+      boxed: ''
+  header:
+    attributes:
+      id: g-header
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      id: g-showcase
+      boxed: ''
+  above:
+    type: section
+    attributes:
+      id: g-above
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      id: g-utility
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      id: g-feature
+      boxed: ''
+  mainbody:
+    type: section
+    attributes:
+      id: g-mainbody
+  sidebar:
+    type: section
+    attributes:
+      id: g-sidebar
+  expanded:
+    type: section
+    attributes:
+      id: g-expanded
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      id: g-extension
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      id: g-bottom
+      boxed: ''
+  footer:
+    attributes:
+      id: g-footer
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      id: g-copyright
+      boxed: ''
+  offcanvas:
+    attributes:
+      id: g-offcanvas
+content:
+  system-messages-5544:
+    title: Messages

@@ -1,0 +1,186 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript %}
+  {% do gantry.load('jquery') %}
+  <script src="{{ url('gantry-theme://js/flexslider.js') }}"></script>
+{% endblock %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+	{% if particle.layout == "slideshow" %}
+    <div class="g-flexslider g-flexslider-slideshow">
+    	<div id="g-flexslider-slideshow-{{ id }}" class="g-flexslider-slideshow-container">
+			<div class="g-flexslider-slideshow-slides">
+				{% for item in particle.items %}
+				<div class="g-flexslider-item-container g-flexslider-slideshow-item-container">
+					<div class="g-flexslider-slideshow-item" {% if item.image %}style="background-image: url('{{ url(item.image)|e }}');"{% endif %}>
+						<div class="g-flexslider-slideshow-item-content-container">
+							<div class="g-flexslider-slideshow-item-overlay"
+								{% if item.overlayImage %}style="background: url('{{ url(item.overlayImage)|e }}') no-repeat;"{% endif %}
+								{% if item.overlayParallax %} data-enllax-ratio="{{ item.overlayParallaxRatio|e }}" data-enllax-type="background"{% endif %}
+							>
+								<div class="g-flexslider-slideshow-item-content">
+									{% if item.title %}<div class="g-flexslider-slideshow-item-title">{{ item.title|raw }}</div>{% endif %}
+									{% if item.desc %}<div class="g-flexslider-slideshow-item-desc">{{ item.desc|raw }}</div>{% endif %}
+									{% if item.link %}<div class="g-flexslider-slideshow-item-link"><a target="{{ item.buttontarget|default('_self')|e }}" class="g-flexslider-slideshow-item-button button {{ item.buttonclass|e }}" href="{{ item.link|e }}">{{ item.linktext|raw }}</a></div>{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% elseif particle.layout == "testimonial" %}
+    <div class="g-flexslider g-flexslider-testimonial">
+    	<div id="g-flexslider-testimonial-{{ id }}" class="g-flexslider-testimonial-container">
+			<div class="g-flexslider-testimonial-slides">
+				{% for item in particle.items %}
+				<div class="g-flexslider-item-container g-flexslider-testimonial-item-container">
+					<div class="g-flexslider-testimonial-item" {% if item.image %}style="background-image: url('{{ url(item.image)|e }}');"{% endif %}>
+						<div class="g-flexslider-testimonial-item-overlay"
+							{% if item.overlayImage %}style="background: url('{{ url(item.overlayImage)|e }}') no-repeat;"{% endif %}
+							{% if item.overlayParallax %} data-enllax-ratio="{{ item.overlayParallaxRatio|e }}" data-enllax-type="background"{% endif %}
+						>
+							<div class="g-flexslider-testimonial-item-content">
+								{% if item.title %}<div class="g-flexslider-testimonial-item-title">{{ item.title|raw }}</div>{% endif %}
+								{% if item.desc %}<div class="g-flexslider-testimonial-item-desc">{{ item.desc|raw }}</div>{% endif %}
+
+								<div class="g-flexslider-testimonial-item-testimonial-content">
+								{% if item.testimonialImage %}<div class="g-flexslider-testimonial-item-testimonial-image"><img src="{{ url(item.testimonialImage)|e }}" alt="{{ item.testimonialName|e }}"></div>{% endif %}
+								{% if item.testimonialName %}<div class="g-flexslider-testimonial-item-testimonial-name">{{ item.testimonialName|raw }}</div>{% endif %}
+								{% if item.testimonialPosition %}<div class="g-flexslider-testimonial-item-testimonial-position">{{ item.testimonialPosition|raw }}</div>{% endif %}
+								</div>
+
+								{% if item.link %}<div class="g-flexslider-testimonial-item-link"><a target="{{ item.buttontarget|default('_self')|e }}" class="g-flexslider-testimonial-item-button button {{ item.buttonclass|e }}" href="{{ item.link|e }}">{{ item.linktext|raw }}</a></div>{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% elseif particle.layout == "showcase" %}
+    <div class="g-flexslider g-flexslider-showcase">
+    	<div id="g-flexslider-showcase-{{ id }}" class="g-flexslider-showcase-container">
+			<div class="g-flexslider-showcase-slides">
+				{% for item in particle.items %}
+				<div class="g-flexslider-item-container g-flexslider-showcase-item-container">
+					<div class="g-flexslider-showcase-item">
+						<div class="g-flexslider-showcase-item-content-container">
+							<div class="g-flexslider-showcase-item-image">
+								<img src="{{ url(item.image)|e }}" alt="{{ item.title|e }}">
+							</div>
+							<div class="g-flexslider-showcase-item-content">
+								{% if item.title %}<div class="g-flexslider-showcase-item-title">{{ item.title|raw }}</div>{% endif %}
+								{% if item.desc %}<div class="g-flexslider-showcase-item-desc">{{ item.desc|raw }}</div>{% endif %}
+								{% if item.link %}<div class="g-flexslider-showcase-item-link"><a target="{{ item.buttontarget|default('_self')|e }}" class="g-flexslider-showcase-item-button button {{ item.buttonclass|e }}" href="{{ item.link|e }}">{{ item.linktext|raw }}</a></div>{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+    	<div id="g-flexslider-carousel-{{ id }}" class="g-flexslider-carousel-container">
+			<div class="g-flexslider-carousel-slides">
+				{% for item in particle.items %}
+				<div class="g-flexslider-item-container g-flexslider-carousel-item-container">
+					<div class="g-flexslider-carousel-item">
+						<div class="g-flexslider-carousel-item-content-container">
+							<div class="g-flexslider-carousel-item-image">
+								<img src="{{ url(item.image)|e }}" alt="{{ item.title|e }}">
+								<div class="g-flexslider-carousel-item-image-preview-icon"><span class="fa fa-plus-circle"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script src="{{ url('gantry-theme://js/enllax.js') }}"></script>
+  {% if particle.layout == "slideshow" %}
+  <script type="text/javascript">
+      jQuery(window).load(function(){
+          jQuery('#g-flexslider-slideshow-{{ id }}').flexslider({
+              selector: ".g-flexslider-slideshow-slides > .g-flexslider-slideshow-item-container",
+              animation: "slide",
+              prevText: "",
+              nextText: "",
+              rtl: {{ particle.rtl|default('false') }},
+              pauseOnHover: {{ particle.pauseOnHover|raw }},
+              {% if particle.autoplay %}
+                  slideshow: true,
+                  slideshowSpeed: {{ particle.autoplaySpeed|default("5000") }}
+              {% else %}
+                  slideshow: false
+              {% endif %}
+          });
+      });
+  </script>
+  {% elseif particle.layout == "testimonial" %}
+  <script type="text/javascript">
+      jQuery(window).load(function(){
+          jQuery('#g-flexslider-testimonial-{{ id }}').flexslider({
+              selector: ".g-flexslider-testimonial-slides > .g-flexslider-testimonial-item-container",
+              animation: "slide",
+              prevText: "",
+              nextText: "",
+              rtl: {{ particle.rtl|default('false') }},
+              pauseOnHover: {{ particle.pauseOnHover|raw }},
+              {% if particle.autoplay %}
+                  slideshow: true,
+                  slideshowSpeed: {{ particle.autoplaySpeed|default("5000") }}
+              {% else %}
+                  slideshow: false
+              {% endif %}
+          });
+      });
+  </script>
+  {% elseif particle.layout == "showcase" %}
+  <script type="text/javascript">
+      jQuery(window).load(function(){
+          jQuery('#g-flexslider-carousel-{{ id }}').flexslider({
+              selector: ".g-flexslider-carousel-slides > .g-flexslider-carousel-item-container",
+              animation: "slide",
+              controlNav: false,
+              prevText: "",
+              nextText: "",
+              rtl: {{ particle.rtl|default('false') }},
+              animationLoop: true,
+              itemWidth: {{ particle.showcaseThumbWidth|default("150") }},
+              asNavFor: '#g-flexslider-showcase-{{ id }}',
+              pauseOnHover: {{ particle.pauseOnHover|raw }}
+          });
+          jQuery('#g-flexslider-showcase-{{ id }}').flexslider({
+              selector: ".g-flexslider-showcase-slides > .g-flexslider-showcase-item-container",
+              animation: "slide",
+              directionNav: false,
+              controlNav: false,
+              animationLoop: true,
+              rtl: {{ particle.rtl|default('false') }},
+              sync: "#g-flexslider-carousel-{{ id }}",
+              pauseOnHover: {{ particle.pauseOnHover|raw }},
+              {% if particle.autoplay %}
+                  slideshow: true,
+                  slideshowSpeed: {{ particle.autoplaySpeed|default("5000") }}
+              {% else %}
+                  slideshow: false
+              {% endif %}
+          });
+      });
+  </script>
+  {% endif %}
+{% endblock %}

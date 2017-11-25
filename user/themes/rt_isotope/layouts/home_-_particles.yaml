@@ -1,0 +1,1064 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1446497252
+layout:
+  /overlay/:
+    -
+      - menu-6682
+    -
+      - blockcontent-3824
+    -
+      - social-6445
+  /navigation/:
+    -
+      - 'logo-8536 80'
+      - 'overlaytoggle-4486 20'
+  /top/:
+    -
+      - system-messages-2702
+  /header/: {  }
+  /slideshow/:
+    -
+      - flexslider-6839
+  /showcase/:
+    -
+      - flexslider-9352
+    -
+      - custom-1064
+  /above/:
+    -
+      - flexslider-3985
+  /utility/:
+    -
+      - promocontent-2335
+  /feature/:
+    -
+      - flippingcontent-9786
+  /container-4448/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - system-content-1845
+      -
+        'aside 20': {  }
+  /expanded/:
+    -
+      - popupgrid-6712
+  /extension/:
+    -
+      - blockcontent-1882
+  /bottom/:
+    -
+      - testimonial-5614
+  /footer/:
+    -
+      - 'infolist-1084 25'
+      - 'infolist-9652 25'
+      - 'custom-2723 25'
+      - 'custom-3300 25'
+  /copyright/:
+    -
+      - 'branding-1875 33.3'
+      - 'copyright-4835 33.3'
+      - 'totop-2327 33.3'
+  offcanvas:
+    -
+      - mobile-menu-7990
+structure:
+  overlay:
+    type: section
+    attributes:
+      boxed: '0'
+  navigation:
+    type: section
+    attributes:
+      boxed: '0'
+  top:
+    type: section
+    attributes:
+      boxed: '0'
+  header:
+    attributes:
+      boxed: '0'
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+      class: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: '0'
+  above:
+    type: section
+    attributes:
+      boxed: '0'
+  utility:
+    type: section
+    attributes:
+      boxed: '0'
+  feature:
+    type: section
+    attributes:
+      boxed: '0'
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-4448:
+    attributes:
+      boxed: '0'
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '0'
+  extension:
+    type: section
+    attributes:
+      boxed: '0'
+      class: ''
+      extra:
+        -
+          data-enllax-ratio: '0.3'
+        -
+          data-enllax-type: background
+  bottom:
+    type: section
+    attributes:
+      boxed: '0'
+  footer:
+    attributes:
+      boxed: '0'
+  copyright:
+    type: section
+    attributes:
+      boxed: 0
+content:
+  blockcontent-3824:
+    title: 'Block Content'
+    attributes:
+      class: 'center g-overlay-blockcontent'
+      title: 'Keep in Touch'
+      description: 'Have a suggestion, comment, or question? Drop us a line and we''ll reply you soon!'
+      subcontents:
+        -
+          name: Email
+          icon: 'fa fa-envelope-o'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: hi@isotope-g5.com
+          class: box4
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Email
+        -
+          name: Phone
+          icon: 'fa fa-phone'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: +1-222-333555777
+          class: box4
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Phone
+        -
+          name: Address
+          icon: 'fa fa-paper-plane-o'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: 'Isotope Building, 88, USA'
+          class: box4
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Address
+  social-6445:
+    attributes:
+      css:
+        class: g-social
+  system-messages-2702:
+    block:
+      variations: 'nomarginall nopaddingall'
+  overlaytoggle-4486:
+    title: 'Overlay Toggle'
+    attributes:
+      menutext: Menu
+  flexslider-6839:
+    title: 'FP Slideshow'
+    attributes:
+      class: fp-slideshow-demo
+      layout: slideshow
+      autoplay: '1'
+      autoplaySpeed: '5000'
+      pauseOnHover: '1'
+      items:
+        -
+          image: 'gantry-media://demo/home/slideshow/img-01.jpg'
+          overlayImage: 'gantry-media://demo/home/slideshow/overlay-01.png'
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Design <span class="g-ampersand">&</span> Code'
+          desc: 'An elegant, interactive and animated experience.'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: 'View More'
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Design & Code'
+        -
+          image: 'gantry-media://demo/home/slideshow/img-01.jpg'
+          overlayImage: 'gantry-media://demo/home/slideshow/overlay-01.png'
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Simple <span class="g-ampersand">&</span> Swift'
+          desc: 'Customize with ease using the intuitive Gantry 5 interface.'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: 'View More'
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Simple & Swift'
+        -
+          image: 'gantry-media://demo/home/slideshow/img-01.jpg'
+          overlayImage: 'gantry-media://demo/home/slideshow/overlay-01.png'
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Drag <span class="g-ampersand">&</span> Drop'
+          desc: 'Dynamic interface for layouts and the menu.'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: 'View More'
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Drag & Drop'
+  flexslider-9352:
+    title: 'FP Showcase'
+    attributes:
+      layout: testimonial
+      autoplaySpeed: '5000'
+      items:
+        -
+          image: ''
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: ''
+          desc: 'Headroom allows for select sections to scroll with the page, and hide dynamically. Just apply the g-headroom class to a section.'
+          testimonialImage: 'gantry-media://demo/home/showcase/img-01.jpg'
+          testimonialName: 'Taylor Jackson'
+          testimonialPosition: 'CEO of Kuceeng, Inc.'
+          link: ''
+          linktext: ''
+          buttontarget: _parent
+          buttonclass: ''
+          name: 'Testimonial 1'
+        -
+          image: ''
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: ''
+          desc: 'Gantry 5 supports both fixed and fluid width responsive options, giving you more flexibility in layout preferences.'
+          testimonialImage: 'gantry-media://demo/home/showcase/img-01.jpg'
+          testimonialName: 'Clara Berg'
+          testimonialPosition: 'CEO of GoldPear, Inc.'
+          link: ''
+          linktext: ''
+          buttontarget: _parent
+          buttonclass: ''
+          name: 'Testimonial 2'
+        -
+          image: ''
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: ''
+          desc: 'A versatile dropdown menu is integrated directly into Gantry 5, with inline block support and a dedicated mobile menu.'
+          testimonialImage: 'gantry-media://demo/home/showcase/img-01.jpg'
+          testimonialName: 'Calvin Bond'
+          testimonialPosition: 'CEO of Hape, Inc.'
+          link: ''
+          linktext: ''
+          buttontarget: _parent
+          buttonclass: ''
+          name: 'Testimonial 3'
+    block:
+      class: 'nomarginbottom nopaddingbottom'
+  custom-1064:
+    title: 'What We Made Recently'
+    attributes:
+      html: '<h2 class="g-title largetopspace">What We Made Recently</h2>'
+    block:
+      class: 'nomargintop nopaddingtop'
+      variations: title-center
+  flexslider-3985:
+    title: 'FP Above'
+    attributes:
+      layout: showcase
+      autoplaySpeed: '5000'
+      items:
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: Parallax
+          desc: '<em>Parallax adjusts the position of an image, relative to the scroll and viewing angle of the page, providing an extra layer of interaction.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: Parallax
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: FlexSlider
+          desc: '<em>The FlexSlider particle is an elegant and interactive element, that transitions through various content and image blocks.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: FlexSlider
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: Offcanvas
+          desc: '<em>Offcanvas is a section that appears beyond the main wrapper, used for the mobile menu plus any additional blocks you desire.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: Offcanvas
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Styles Panel'
+          desc: '<em>A comprehensive control interface to modify section text colors, background colors and images, and other stylistic options.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Styles Panel'
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Menu Editor'
+          desc: '<em>The Menu Editor provides a drag and drop interface for structuring and managing menus, such as inline blocks and multiple columns.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Menu Editor'
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: Particles
+          desc: '<em>Particles are self contained blocks, with internal control options with intuitive capabilities such as collection lists.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: Particles
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Utilizes Twig'
+          desc: '<em>Twig is a dynamic template engine for PHP, that allows for efficient and clean PHP coding to aid development.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Utilizes Twig'
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'YAML Config'
+          desc: '<em>YAML makes it easy to create blueprints for back-end configuration options, with a human readable structure and format.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'YAML Config'
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Preset Styles'
+          desc: '<em>A selection of preset style variations to choose from, with distinct color schemes and easy customization controls.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: 'Preset Styles'
+        -
+          image: 'gantry-media://demo/home/above/img-01.jpg'
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: Guides
+          desc: '<em>The template and Gantry benefit from extensive written and video documentation to assist in configuration and customization.</em>'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: Details
+          buttontarget: _parent
+          buttonclass: button-3
+          name: Guides
+    block:
+      class: fp-above
+  promocontent-2335:
+    title: Navigation
+    attributes:
+      class: center
+      title: Navigation
+      promostyle: promo
+      promo: 'An innovative menu design with overlay and animations'
+      desc: 'Activate the menu from the menu button or icon, where the items will appear in an overlay with large, stylistic buttons for the menu items. All featuring engaging but non-intrusive animations.'
+      readmore: 'Read More'
+      readmoreclass: button-3
+      link: '#'
+      tags:
+        -
+          icon: ''
+          text: 'Flexible &amp; Intuitive'
+          link: '#'
+          title: 'Flexible & Intuitive'
+    block:
+      class: fp-utility
+  flippingcontent-9786:
+    title: 'Our Clients'
+    attributes:
+      title: 'Our Clients'
+      cols: g-flippingcontent-4cols
+      flippingcontentitems:
+        -
+          img: 'gantry-media://demo/home/feature/img-01.png'
+          text1: ''
+          text2: Layouts
+          desc: 'Infinite layout possibilities with unlimited rows.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Layouts
+        -
+          img: 'gantry-media://demo/home/feature/img-02.png'
+          text1: ''
+          text2: Styles
+          desc: 'Highly configurable with individual section style controls.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Styles
+        -
+          img: 'gantry-media://demo/home/feature/img-03.png'
+          text1: ''
+          text2: Menu
+          desc: 'Advanced  editor for ordering, inline elements and columns.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Menu
+        -
+          img: 'gantry-media://demo/home/feature/img-04.png'
+          text1: ''
+          text2: Mobile
+          desc: 'Responsive layout for mobiles, tablets and desktops.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Mobile
+        -
+          img: 'gantry-media://demo/home/feature/img-05.png'
+          text1: ''
+          text2: Particles
+          desc: 'Self contained adaptable blocks with rich features.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Particles
+        -
+          img: 'gantry-media://demo/home/feature/img-06.png'
+          text1: ''
+          text2: Documentation
+          desc: 'An extensive collection of template and framework guides.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Documentation
+        -
+          img: 'gantry-media://demo/home/feature/img-07.png'
+          text1: ''
+          text2: Configuration
+          desc: 'YAML is used for configuration to improve access and usability.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: Configuration
+        -
+          img: 'gantry-media://demo/home/feature/img-08.png'
+          text1: ''
+          text2: 'PHP & Twig'
+          desc: 'Twig is a template engine for PHP to improve development.'
+          linktext: 'Read More'
+          linktarget: _parent
+          link: '#'
+          title: 'PHP & Twig'
+    block:
+      variations: title-center
+  popupgrid-6712:
+    title: 'Template Features'
+    attributes:
+      title: 'Template Features'
+      items:
+        -
+          img: 'gantry-media://demo/home/expanded/img-01.jpg'
+          datasize: 960x640
+          overlay: g-overlay-enable
+          previewicon: 'fa fa-search-plus'
+          tag: New
+          desc: 'Popup Image Grid is a rich element for display images and content, with a mosaic type grid, which loads a full page overlay with a larger image and content.'
+          animations: g-zoom
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'New Popup Image Grid Particle'
+        -
+          img: 'gantry-media://demo/home/expanded/img-02.jpg'
+          datasize: 720x960
+          overlay: g-overlay-disable
+          previewicon: ''
+          tag: Menu
+          desc: 'The Menu Editor in Gantry 5 allows you to change the menu item order, set multiple columns and place inline particles or positions inside a dropdown.'
+          animations: 'g-rotate g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Advanced Built-in Menu Editor'
+        -
+          img: 'gantry-media://demo/home/expanded/img-03.jpg'
+          datasize: 630x960
+          overlay: g-overlay-enable
+          previewicon: 'fa fa-search-plus'
+          tag: Layout
+          desc: 'A responsive layout adapts to the viewing device, whether a smartphone, tablet, laptop or desktop computer, allowing for a seamless experience.'
+          animations: 'g-zoom g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Responsive Layout with Mobile Support'
+        -
+          img: 'gantry-media://demo/home/expanded/img-04.jpg'
+          datasize: 960x640
+          overlay: g-overlay-enable
+          previewicon: 'fa fa-search-plus'
+          tag: Style
+          desc: 'Choose from an array of preset style variations, each with extensive customization options to match whatever color scheme you need for your site.'
+          animations: 'g-rotate g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'A Selection of Preset Styles'
+        -
+          img: 'gantry-media://demo/home/expanded/img-05.jpg'
+          datasize: 960x850
+          overlay: g-overlay-enable
+          previewicon: 'fa fa-search-plus'
+          tag: Support
+          desc: 'Gantry 5 has a comprehensive library of written and video documentation to assist in its setup, use and customization, as well as associated template guides.'
+          animations: 'g-zoom g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Extensive Documentation & Guides'
+        -
+          img: 'gantry-media://demo/home/expanded/img-06.jpg'
+          datasize: 960x650
+          overlay: g-overlay-disable
+          previewicon: ''
+          tag: Config
+          desc: 'YAML is a human readable language, that is used for all Gantry 5 configuration, which is easy to setup and customize, if necessary.'
+          animations: 'g-zoom g-grayscale'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Human Readable Configuration'
+        -
+          img: 'gantry-media://demo/home/expanded/img-07.jpg'
+          datasize: 960x960
+          overlay: g-overlay-disable
+          previewicon: ''
+          tag: PHP
+          desc: 'Twig is a templating engine for PHP, that provides a sub-platform, making the code easier to manage and customize, and powers the Gantry 5 Particles.'
+          animations: 'g-zoom g-grayscale'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Twig Templating Engine for PHP'
+        -
+          img: 'gantry-media://demo/home/expanded/img-08.jpg'
+          datasize: 960x760
+          overlay: g-overlay-disable
+          previewicon: ''
+          tag: Particles
+          desc: 'Particles are powerful autonomous blocks with prebuilt code and configuration options, that provide an intuitive interface for complex content creations.'
+          animations: 'g-rotate g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Self Contained Dynamic Blocks'
+        -
+          img: 'gantry-media://demo/home/expanded/img-09.jpg'
+          datasize: 960x560
+          overlay: g-overlay-enable
+          previewicon: 'fa fa-search-plus'
+          tag: Offcanvas
+          desc: 'The Offcanvas section is intended to enable you to place modules and positions in a special hidden-until-opened sidebar. This sidebar houses the Mobile Menu Particle.'
+          animations: 'g-zoom g-blur'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Offcanvas Area for Mobile Blocks'
+        -
+          img: 'gantry-media://demo/home/expanded/img-10.jpg'
+          datasize: 960x620
+          overlay: g-overlay-disable
+          previewicon: ''
+          tag: 'Gantry 5'
+          desc: 'Gantry 5 is a next generation template framework, for multiple platforms, with powerful core features such as a drag and drop Layout Manager.'
+          animations: 'g-zoom g-rotate g-blur g-grayscale'
+          buttontext: 'Learn More'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: button-3
+          title: 'Powerful Template Framework'
+    block:
+      variations: title-center
+  blockcontent-1882:
+    title: Extras
+    attributes:
+      title: Extras
+      subcontents:
+        -
+          name: Fast
+          icon: 'fa fa-paper-plane fa-fw fa-3x'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: 'The Gantry 5 Framework has been written from the ground out to focus on speed and performance, whether the frontend or backend.'
+          class: ''
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Fast
+        -
+          name: Reliable
+          icon: 'fa fa-gears fa-fw fa-3x'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: 'There is built in support for several web browser in their later revisions, including IE10, to ensure maximum compatibility across devices.'
+          class: ''
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Reliable
+        -
+          name: Beautiful
+          icon: 'fa fa-star fa-fw fa-3x'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: 'The administrative interface is elegant, contemporary and intuitive, allowing you to quickly customize your site, extensively and with ease.'
+          class: ''
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Beautiful
+        -
+          name: Supported
+          icon: 'fa fa-umbrella fa-fw fa-3x'
+          img: ''
+          rokboximage: ''
+          rokboxcaption: ''
+          subtitle: ''
+          description: 'Gantry 5 is free and open source, with regular updates issued via the administrator; and you can track progress and post issues via Github.'
+          class: ''
+          button: ''
+          buttonlink: ''
+          buttonclass: ''
+          title: Supported
+    block:
+      variations: title-center
+  testimonial-5614:
+    title: 'Our Crew'
+    attributes:
+      title: 'Our Crew'
+      cols: g-3cols
+      testimonials:
+        -
+          style: g-testimonial-standard
+          img: 'gantry-media://demo/home/bottom/img-01.jpg'
+          content: 'The template styling is built with SCSS, a programmable stylesheet language for CSS, making the CSS more dynamic and adaptable.'
+          author: 'Jerry Ellis'
+          company: CEO
+          companyurl: '#'
+          title: 'Jerry Ellis'
+        -
+          style: g-testimonial-standard
+          img: 'gantry-media://demo/home/bottom/img-01.jpg'
+          content: 'The Gantry 5 administrator benefits from unlimited undo/redo, to ensure that your changes and hours of work are never lost.'
+          author: 'Tiffany Graham'
+          company: Manager
+          companyurl: '#'
+          title: 'Tiffany Graham'
+        -
+          style: g-testimonial-standard
+          img: 'gantry-media://demo/home/bottom/img-01.jpg'
+          content: 'Configuration in Gantry 5 features sophisticated built-in fields such as Icon Picker, Image Picker, Font Picker, Collections, and much more.'
+          author: 'Craig Robert'
+          company: Developer
+          companyurl: '#'
+          title: 'Craig Robert'
+    block:
+      variations: title-center
+  infolist-1084:
+    title: 'Useful Links'
+    attributes:
+      class: g-gridmenu
+      title: 'Useful Links'
+      cols: g-1cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/grav/themes/isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'About Isotope'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/docs/grav/themes/isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'Style Guide'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: index.php/pages/about-us
+          icon: ''
+          readmoreclass: ''
+          title: Pages
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://docs.gantry.org/'
+          icon: ''
+          readmoreclass: ''
+          title: Guides
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/contact-us'
+          icon: ''
+          readmoreclass: ''
+          title: Questions
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/forum/grav-theme-isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'Help & Support'
+  infolist-9652:
+    title: Elsewhere
+    attributes:
+      class: g-gridmenu
+      title: Elsewhere
+      cols: g-2cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://www.facebook.com/RocketTheme/'
+          icon: ''
+          readmoreclass: ''
+          title: Facebook
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://twitter.com/rockettheme'
+          icon: ''
+          readmoreclass: ''
+          title: Twitter
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Pinterest
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://www.youtube.com/user/OfficialRocketTheme'
+          icon: ''
+          readmoreclass: ''
+          title: YouTube
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Delicious
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Instagram
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Snapchat
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Periscope
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://github.com/gantry/gantry5'
+          icon: ''
+          readmoreclass: ''
+          title: Github
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Tookapic
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Flickr
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 500px
+  custom-2723:
+    title: About
+    attributes:
+      html: "<h3 class=\"g-title\">About</h3>\n<p>All demo content is for sample purposes only, to represent a live site.</p>\n<p>Note: Isotope is built on the latest version of the Gantry 5 Framework.</p>"
+  custom-3300:
+    title: Availability
+    attributes:
+      html: "<h3 class=\"g-title\">Availability</h3>\n<p><a href=\"http://www.rockettheme.com/joomla/templates/isotope\">Isotope</a> can be <span class=\"hidden-tablet\">individually </span>purchased with lifetime download / forum access.</p>\n<p>Alternatively, Isotope is available as part of a subscription.</p>"
+  branding-1875:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-2327:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''
+  mobile-menu-7990:
+    title: 'Mobile Menu'

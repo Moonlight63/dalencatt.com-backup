@@ -1,0 +1,78 @@
+.accordion {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $core-font-size;
+
+    .accordion-item-title {
+        position: relative;
+        font-family: get-font-family($font-family-default);
+        font-weight: $font-weight-regular;
+        font-size: $core-font-size + 0.35;
+        color: $base-text-active-color;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        text-transform: none;
+        padding-bottom: 0.5rem;
+        outline: 0;
+        @include breakpoint(mobile-only) {
+            font-size: $core-font-size + 0.25;
+        }
+        @include breakpoint(tablet-range) {
+            font-size: $core-font-size + 0.25;
+        }
+    }
+
+    .indicator {
+        text-align: center;
+        float: right;
+        .dir-rtl & {
+            float: left;
+        }
+        display: inline;
+        @include breakpoint(small-mobile-range) {
+          display: inline-block;
+          float: none;
+          margin-left: 1rem;
+        }
+        cursor: pointer;
+        font-size: ($core-font-size * 2 - 0.2);
+        font-weight: $font-weight-light;
+        font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+        line-height: ($core-font-size * 2) - 0.1;
+        padding-left: 1px;
+        color: $accent-color-2;
+        border-radius: 50%;
+        border: 1px solid $accent-color-2;
+        width: 35px;
+        height: 35px;
+        @include transition(all 0.2s);
+
+        &:hover {
+            color: $base-text-color;
+            border-color: $base-text-color;
+        }
+    }
+
+    li {
+        padding: 1rem 0;
+
+        &.active {
+            .accordion-item-title {
+                .indicator {
+                    color: $base-text-color;
+                    border-color: $base-text-color;
+                }
+            }
+            .toggle {
+                background: $accent-color-1;
+            }
+        }
+
+        div {
+            padding: 0.5rem 0;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+#g-footer {
+    color: $footer-text-color;
+    background: $footer-background;
+
+    .g-simplemenu-particle {
+        h6 {
+            color: $white;
+        }
+        a {
+            color: $footer-text-color;
+        }
+    }
+}
+
+@media print {
+    #g-footer  {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

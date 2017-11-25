@@ -1,0 +1,25 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="g-simplemenu-particle {{ particle.class|e }}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+    {% for menu in particle.menus %}
+    <div class="g-simplemenu-container">
+        <h6>{{ menu.title }}</h6>
+        <ul class="g-simplemenu">
+            {% for item in menu.items %}
+            <li>
+                {% if item.icon %}
+                <i class="{{ item.icon }}"></i>
+                {% endif %}
+                <a target="{{ item.target|default('_blank') }}" href="{{ item.link|e }}" title="{{ item.title }}">{{ item.title|raw }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

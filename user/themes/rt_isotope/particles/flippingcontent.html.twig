@@ -1,0 +1,29 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}	
+	<div class="g-flippingcontent">
+		<div class="g-flippingcontent-wrapper {{ particle.cols|e }}">
+			{% for flippingcontentitem in particle.flippingcontentitems %}
+				<div class="g-flippingcontent-item">
+					<div class="g-flippingcontent-item-front">
+						<div class="g-flippingcontent-item-content-wrapper">
+							{% if flippingcontentitem.img %}<img src="{{ url(flippingcontentitem.img)|e }}" alt="{{ flippingcontentitem.imgAltText|e }}">{% endif %}
+						</div>
+					</div>
+					<div class="g-flippingcontent-item-back">
+						<div class="g-flippingcontent-item-content-wrapper">
+				        	{% if flippingcontentitem.text2 %}<span class="g-flippingcontent-item-title">{{ flippingcontentitem.text2|raw }}</span>{% endif %}
+				        	{% if flippingcontentitem.text1 %}<span class="g-flippingcontent-item-subtitle">{{ flippingcontentitem.text1|raw }}</span>{% endif %}
+				        	{% if flippingcontentitem.desc %}<div class="g-flippingcontent-item-desc">{{ flippingcontentitem.desc|raw }}</div>{% endif %}	
+					        {% if flippingcontentitem.link %}<a target="{{ flippingcontentitem.linktarget|default('_self')|e }}" href="{{ flippingcontentitem.link|e }}" class="g-flippingcontent-item-link">{{ flippingcontentitem.linktext|raw }}</a>{% endif %} 		
+						</div>
+					</div>
+				</div>
+			{% endfor %} 
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+{% endblock %}

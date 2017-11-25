@@ -1,0 +1,165 @@
+name: Flipping Cards
+description: Particle to flip content with 3D animation.
+type: particle
+icon: fa-share-square-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    axis:
+      type: select.select
+      label: Axis
+      description: The axis that you want card to rotate around.
+      placeholder: 'Select...'
+      default: y
+      options:
+        x: X - Axis
+        y: Y - Axis
+
+    trigger:
+      type: select.select
+      label: Trigger
+      description: Event that activates the card flip action
+      placeholder: 'Select...'
+      default: click
+      options:
+        click: Click
+        hover: Hover
+
+    forceWidth:
+      type: select.select
+      label: Force Width
+      description: Whether the front and back panels should be forced to the width of the container. Will make flip add style width:xxpx to them (where xx is the container's outerWidth). Does not work well with fluid containers.
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    forceHeight:
+      type: select.select
+      label: Force Height
+      description: Whether the front and back panels should be forced to the height of the container. Will make flip add style height:yypx to them (where yy is the container's outerHeight). Does not work well with fluid containers.
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    autoSize:
+      type: select.select
+      label: Auto Size
+      description: Whether the front and back panels should be automatically sized to fit the container. Will make flip add styles width:100% and height:100% to them. Works well in fluid containers.
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    speed:
+      type: input.number
+      label: Speed
+      description: Duration of the card flipping animation in miliseconds. Higher means slower.
+      placeholder: 500
+      default: 500
+
+    cols:
+      type: select.select
+      label: Maximum Columns
+      description: Select the maximum column amount.
+      placeholder: 'Select...'
+      default: g-imagegrid-2cols
+      options:
+        1: 1 Column
+        2: 2 Columns
+        3: 3 Columns
+        4: 4 Columns
+        5: 5 Columns
+
+    items:
+      type: collection.list
+      array: true
+      label: Cards
+      description: Create each item to appear in the content row.
+      value: title
+      ajax: true
+      fields:
+        _front:
+          type: separator.note
+          class: alert alert-info
+          content: Front Content
+
+        .title_front:
+          type: input.text
+          label: Title
+          description: Customize the Title.
+          placeholder: Enter the item Title
+
+        .desc_front:
+          type: textarea.textarea
+          label: Description
+          description: Customize the description.
+          placeholder: Enter short description
+
+        .icon_front:
+          type: input.icon
+          label: Icon
+          description: Select the icon.
+
+        .buttontext_front:
+          type: input.text
+          label: Button Label
+          description: Specify the button label.
+
+        .buttonclass_front:
+          type: input.selectize
+          label: Button Classes
+          description: CSS class names for the button.
+
+        _back:
+          type: separator.note
+          class: alert alert-info
+          content: Back Content
+
+        .title_back:
+          type: input.text
+          label: Title
+          description: Customize the Title.
+          placeholder: Enter the item Title
+
+        .desc_back:
+          type: textarea.textarea
+          label: Description
+          description: Customize the description.
+          placeholder: Enter short description
+
+        .icon_back:
+          type: input.icon
+          label: Icon
+          description: Select the icon.
+
+        .buttontext_back:
+          type: input.text
+          label: Flipping Button Label
+          description: Specify the button label.
+
+        .buttonclass_back:
+          type: input.selectize
+          label: Button Classes
+          description: CSS class names for the button.

@@ -1,0 +1,58 @@
+.g-offline {
+    h1 {
+        font-weight: $font-weight-light;
+    }
+
+    .button {
+        background: $accent-color-2;
+        color: $white;
+    }
+
+    .g-loginform {
+        #g-loginform {
+            width: 50%;
+            margin: 0 auto;
+            @include breakpoint(mobile-only) {
+              width: 80%;
+            }
+
+            fieldset {
+                text-align: left;
+            }
+            label {
+                margin-bottom: $content-margin;
+                display: block;
+            }
+        }
+    }
+
+    #frame {
+        #form-login {
+            width: 50%;
+            margin: 0 auto;
+            @include breakpoint(mobile-only) {
+              width: 80%;
+            }
+
+            fieldset {
+                text-align: left;
+            }
+            label {
+                display: block;
+                margin-bottom: $content-margin;
+            }
+        }
+    }
+    #grav-login .form-actions {
+        margin-top: $content-margin;
+        @include breakpoint(mobile-only) {
+            text-align: center;
+        }
+    }
+    #grav-login .rememberme {
+        @include breakpoint(mobile-only) {
+            float: none;
+            display: block;
+        }
+    }
+}

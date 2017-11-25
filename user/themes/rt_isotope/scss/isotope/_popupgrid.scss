@@ -1,0 +1,325 @@
+.g-popupgrid {
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    @include transition(opacity 0.3s)
+  }
+}
+
+.g-popupgrid-loaded::after {
+  opacity: 0;
+}
+
+.g-popupgrid-item {
+  width: 270px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.g-popupgrid-item-current {
+  opacity: 0 !important;
+}
+
+.g-popupgrid-item-img-wrap {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  &:focus, &:hover {
+    outline: none;
+    img {
+      opacity: 0.85;
+      .g-zoom & {
+        @include transform(scale(1.25));
+      }
+      .g-rotate & {
+        @include transform(rotate(5deg) scale(1.25));
+      }
+      .g-blur & {
+        @include filter(blur(3px));
+      }
+      .g-grayscale & {
+        @include filter(grayscale(100%));
+      }
+      .g-zoomout.g-rotate & {
+        @include transform(rotate(5deg) scale(1.15));
+      }
+      .g-blur.g-grayscale & {
+        @include filter(blur(3px) grayscale(100%));
+      }
+    }
+    .g-popupgrid-description-preview-icon {
+      opacity: 1;
+    }
+  }
+  img {
+    display: block;
+    opacity: 0.65;
+    @include transform(scale(1));
+    @include transition (all 0.3s);
+  }
+
+  .g-popupgrid-description-preview-tag {
+    text-transform: uppercase;
+    font-size: $core-font-size - 0.2;
+    font-weight: $font-weight-bold;
+    position: absolute;
+    top: 0;
+    margin: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    color: $white;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .g-popupgrid-description-preview-title {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    font-size: $core-font-size + 0.25;
+    line-height: $core-line-height - 0.25;
+    font-weight: $font-weight-bold;
+  }
+  .g-popupgrid-description-preview-content,
+  .g-popupgrid-description-preview-readmore {
+    display: none;
+  }
+}
+
+.g-popupgrid-preview {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: lighten($black, 15%);
+    @include transition(opacity 0.6s)
+  }
+}
+
+.g-popupgrid-preview-open {
+  pointer-events: auto;
+  visibility: visible;
+  &::before {
+    opacity: 1;
+  }
+}
+
+.g-popupgrid-clone {
+  position: fixed;
+  z-index: 110;
+  -webkit-backface-visibility: hidden;
+  @include transition(transform 0.5s)
+}
+
+.g-popupgrid-original {
+  position: relative;
+  z-index: 120;
+  display: block;
+  object-fit: contain;
+  -webkit-backface-visibility: hidden;
+  @include transition(opacity 0.2s)
+}
+
+.g-popupgrid-preview-open .g-popupgrid-animate {
+  /* open */
+  -webkit-transition: -webkit-transform 0.6s, opacity 0.2s;
+  transition: transform 0.6s, opacity 0.2s;
+}
+
+.g-popupgrid-animate {
+  /* close */
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.g-popupgrid-description {
+  color: $white;
+}
+
+.g-popupgrid-preview-area {
+    &:before {
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+}
+
+.g-overlay-enable.g-popupgrid-description-preview-icon {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: fadeout($accent-color-1, 25%);
+    opacity: 0;
+    z-index: 10;
+    @include transition (opacity 0.3s);
+    span {
+      color: $white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include transform(translate3d(-50%, -50%, 0px));
+    }
+}
+.g-overlay-disable.g-popupgrid-description-preview-icon {
+  span {
+    display: none;
+  }
+}
+
+.g-popupgrid-description-preview {
+  font-size: 2em;
+  position: absolute;
+  z-index: 140;
+  width: 100%;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  padding: 0 1em;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  -webkit-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0);
+}
+
+.g-popupgrid-preview-open .g-popupgrid-description-preview {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.g-popupgrid-description-preview {
+  .g-popupgrid-description-preview-tag {
+    font-size: $core-font-size;
+    line-height: $core-line-height - 0.25;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+  .g-popupgrid-description-preview-title {
+    font-weight: $font-family-title;
+    font-size: $core-font-size + 0.75;
+    font-weight: $font-weight-bold;
+    margin: 0 0 1rem 0;
+  }
+  .g-popupgrid-description-preview-content {
+    font-size: $core-font-size + 0.1;
+    width: 100%;
+  }
+  .g-popupgrid-description-preview-readmore {
+    margin: 1rem 0;
+  }
+}
+
+/* Close button */
+
+.g-popupgrid-action {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
+  color: $accent-color-1;
+  border: none;
+  background: none;
+  &:hover, &:focus {
+    color: $accent-color-1;
+    outline: none;
+  }
+}
+
+.g-popupgrid-action-close {
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: scale3d(0.6, 0.6, 1);
+  transform: scale3d(0.6, 0.6, 1);
+}
+
+.g-popupgrid-preview-image-loaded .g-popupgrid-action-close {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+.g-popupgrid-text-hidden {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+@media screen and (max-width: 40em) {
+  .g-popupgrid-description-preview {
+    .g-popupgrid-description-preview-title  {
+      font-size: 0.5em;
+    }
+    .g-popupgrid-description-preview-content {
+      display: none;
+    }
+  }
+  .details {
+    display: none;
+  }
+}

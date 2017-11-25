@@ -1,0 +1,11 @@
+email: me@dalencatt.com
+fullname: 'Dalen Catt'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$zZV4axKJYtRCy.3kUKDy5ekH7v5SYu.//KfbDOQu4DmxyWDb9zlrS

@@ -1,0 +1,72 @@
+#g-bottom {
+    color: $bottom-text-color;
+    background: $bottom-background;
+    border-radius: 0 0 $border-radius $border-radius;
+    
+    .g-grid {
+        z-index: 1;
+        position: relative;
+    }
+
+    .g-simplecontent {
+        .g-simplecontent-layout-standard {
+            .g-simplecontent-item-content-title {
+                font-weight: $font-weight-ultrabold;
+                @include responsive-font(1.5vw, $core-font-size + 1, false, $core-font-size);
+            }
+            .g-simplecontent-item-leading-content {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .g-infolist-item-title {
+        a {
+            color: $white;
+        }
+    }
+    .g-infolist .g-infolist-item-desc {
+        color: transparentize($white, 50%);
+    }
+
+    .g-title {
+        color: $white;
+    }
+
+
+    position: relative;
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        content: '';
+        background-image: url($bottom-background-image-left);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        pointer-events: none;
+    }
+
+    &:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        content: '';
+        background-image: url($bottom-background-image-right);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        pointer-events: none;
+    }
+}
+
+@media print {
+    #g-bottom {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

@@ -1,0 +1,26 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }}">
+    <div class="g-accordionmenu">
+        {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+            <nav class="nav" role="navigation">
+                <ul class="nav__list">
+                    {% for group in particle.group %}
+                    <li>
+                        <input id="group-{{ loop.index }}" type="checkbox" hidden />
+                        <label for="group-{{ loop.index }}"><span class="indicator"></span> {{ group.title }}</label>
+                        {% if group.items %}
+                        <ul class="group-list">
+                            {% for item in group.items %}
+                            <li><a target="{{ item.target|default('_blank') }}" href="{{ item.link }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+    </div>
+</div>
+{% endblock %}

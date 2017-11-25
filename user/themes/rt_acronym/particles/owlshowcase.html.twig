@@ -1,0 +1,113 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% do gantry.load('lightcase.init') %}
+
+{% block particle %}
+    {% block layout %}
+
+        <div class="{{ particle.class|e }} g-owlcarousel-showcase g-owlcarousel-{{ particle.displayitems }}-items">
+            {% if particle.title %}
+                <h3 class="g-title">
+                    {{ particle.title|raw }}
+                </h3>
+            {% endif %}
+
+            {% if particle.description %}
+                <div class="g-owlcarousel-description">
+                    {{ particle.description|raw }}
+                </div>
+            {% endif %}
+
+            <div id="g-owlcarousel-{{ id }}" class="g-owlcarousel owl-carousel g-owlcarousel-fullwidth">
+
+                {% for item in particle.items %}
+                    <div class="item">
+                        {% if item.link %}
+                            <a href="{{ url(item.link)|e }}" class="g-showcase-image-link">
+                        {% else %}
+                            <a href="{{ url(item.image)|e }}" class="g-showcase-image-link" data-rel="lightcase" title="{{ item.title|e }} {{ item.desc|e }}">
+                        {% endif %}
+                            <div class="showcase-image">
+                                {% if item.image %}<img {% if particle.lazyload %}class="owl-lazy" data-src="{{ url(item.image)|e }}"{% else %}src="{{ url(item.image)|e }}"{% endif %} alt="{{ item.title|e }}" />{% endif %}
+                                <div class="item-overlay">
+                                    {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                                    {% if item.title %}<div class="item-overlay-title">{{ item.title|e }}</div>{% endif %}
+                                    {% if item.desc %}<div class="item-overlay-desc">{{ item.desc|e }}</div>{% endif %}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    {% endblock %}
+{% endblock %}
+
+{% do gantry.document.addScript(url('gantry-theme://js/owlcarousel.js'), 10, 'footer') %}
+
+{% set inline_js %}
+    jQuery(window).load(function() {
+        var owl{{ id|replace({'-':'_'}) }} = jQuery('#g-owlcarousel-{{ id }}');
+        owl{{ id|replace({'-':'_'}) }}.owlCarousel({
+        items: {{ particle.displayitems }},
+        {% if particle.lazyload %}
+        lazyLoad: true,
+        {% endif %}
+        rtl: {% if gantry.page.direction == 'rtl' %}true{% else %}false{% endif %},
+        {% if particle.animateOut and particle.animateOut != 'default' %}
+        animateOut: '{{ particle.animateOut|default('fadeOut')|e }}',
+        {% endif %}
+        {% if particle.animateIn and particle.animateIn != 'default' %}
+        animateIn: '{{ particle.animateIn|default('fadeIn')|e }}',
+        {% endif %}
+        {% if particle.nav == 'enabled' %}
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+        {% else %}
+        nav: false,
+        {% endif %}
+        {% if particle.dots == 'enabled' %}
+        dots: true,
+        {% else %}
+        dots: false,
+        {% endif %}
+        {% if particle.loop == 'enabled' %}
+        loop: true,
+        {% else %}
+        loop: false,
+        {% endif %}
+        {% if particle.autoplay == 'enabled' %}
+        autoplay: true,
+        autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+        {% if particle.pauseOnHover == 'enabled' %}
+        autoplayHoverPause: true,
+        {% else %}
+        autoplayHoverPause: false,
+        {% endif %}
+        {% else %}
+        autoplay: false,
+        {% endif %}
+        {% if particle.displayitems > "1" %}
+        responsive:{
+            0: {
+                items: 1,
+            },
+            750: {
+                items: {{ (particle.displayitems/2)|round(ceil) }},
+            },
+            1300: {
+                items: {{ particle.displayitems }}
+            }
+        },
+        {% endif %}
+        {% if particle.presets == 'enabled' %}
+        {% set preset = gantry.theme.preset|replace({'preset':''}) %}
+        startPosition: '{% if preset == '1' %}0{% elseif preset == '2' %}3{% elseif preset == '3' %}6{% elseif preset == '4' %}9{% elseif preset == '5' %}12{% elseif preset == '6' %}15{% endif %}',
+        {% endif %}
+        })
+    });
+{% endset %}
+
+{% do gantry.document.addInlineScript( inline_js, 10, 'footer') %}

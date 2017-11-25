@@ -1,0 +1,16 @@
+enabled: '1'
+css:
+  class: ''
+title: ''
+target: _blank
+items:
+  -
+    icon: 'fa fa-facebook-square fa-fw'
+    text: ''
+    link: 'https://www.facebook.com/RocketTheme'
+    name: Facebook
+  -
+    icon: 'fa fa-twitter-square fa-fw'
+    text: ''
+    link: 'http://www.twitter.com/rockettheme'
+    name: Twitter

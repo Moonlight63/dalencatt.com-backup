@@ -1,0 +1,18 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="g-headerlicious {{ particle.class|e }}">
+        {% if particle.header %}
+            <div class="g-headerlicious-header-wrapper g-headerlicious-header-{{ particle.headerstyle }}{% if particle.headeranimate == 'enabled' %} animate{% endif %}">
+                {% if particle.header_link %}<a target="{{ particle.header_target|default('_self')|e }}" href="{{ particle.header_link }}" title="{{ particle.header }}">{% endif %}<h2 class="g-headerlicious-header">{{ particle.header }}</h2>{% if particle.header_link %}</a>{% endif %}
+            </div>
+        {% endif %}
+        {% if particle.tagline %}<div class="g-headerlicious-tagline">{{ particle.tagline|raw }}</div>{% endif %}
+    </div>
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/jquery.lettering.js') }}"></script>
+    <script src="{{ url('gantry-theme://js/jquery.lettering.init.js') }}"></script>
+{% endblock %}

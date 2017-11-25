@@ -1,0 +1,193 @@
+.g-imagegrid {
+    *, *:before, *:after {
+        box-sizing: border-box !important;
+    }
+
+    .g-imagegrid-wrapper {
+        @include display(flex);
+        @include flex-flow(row wrap);
+        @include flex-wrap(wrap);
+    }
+
+    .g-imagegrid-item {
+        @include flex(0 0 auto);
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding: $content-margin;
+
+        img {
+            @include transition(all 0.35s);
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .g-imagegrid-caption {
+            @include display(flex);
+            @include justify-content(flex-start);
+            color: $white;
+            font-weight: $font-weight-ultrabold;
+            font-size: $core-font-size * 2.5;
+            text-transform: uppercase;
+            z-index: 1;
+
+            .dir-rtl & {
+                margin-right: $content-padding + $content-margin;
+                margin-left: auto;
+            }
+        }
+
+        .indicator {
+            @include display(flex);
+            @include align-items(flex-start);
+            @include justify-content(flex-start);
+            text-transform: uppercase;
+            color: $white;
+            font-style: normal;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            span {
+                opacity: 0;
+                @include transform(translate(0, -20px));
+                @include transition(all 0.35s);
+                padding: $content-padding;
+                font-size: $core-font-size - 0.2;
+                letter-spacing: 2px;
+            }
+        }
+
+        // Item title & subtitle
+        .g-imagegrid-item-desc {
+            @include display(flex);
+            @include align-items(flex-start);
+            @include flex-direction(column);
+            @include justify-content(flex-end);
+            color: $white;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            span {
+                @include flex(none);
+            }
+            .g-imagegrid-item-desc-title {
+                padding: 0 $content-padding;
+                font-weight: $font-weight-bold;
+                @include responsive-font(1.3vw, $core-font-size, false, $core-font-size);
+            }
+            .g-imagegrid-item-desc-subtitle {
+                padding: $content-padding;
+                padding-top: 0;
+                font-size: $core-font-size - 0.2;
+            }
+        }
+
+        &:hover {
+            z-index: 10;
+
+            .g-imagegrid-link:before {
+                opacity: 1;
+                @include transform(scale(1));
+            }
+
+            .indicator span {
+                opacity: 1;
+                @include transform(translate(0));
+            }
+        }
+    }
+
+    .g-imagegrid-desc {
+        margin: 1.5rem 0;
+    }
+
+    .g-imagegrid-link {
+        @include display(flex);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        @include transition(all 0.35s);
+
+        &:before {
+            color: $white;
+            content: "";
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            @include linear-gradient(-200deg, transparentize($accent-color-1, 50%), transparentize($accent-color-2, 10%));
+            @include transform-origin(bottom);
+            @include transform(scale(1, 0.2));
+            @include transition(all 0.35s);
+            border-radius: $border-radius;
+        }
+    }
+
+    .g-imagegrid-2cols {
+        .g-imagegrid-item {
+            width: 50%;
+
+            @include breakpoint(mobile-only) {
+                width: 100%;
+            }
+        }
+    }
+
+    .g-imagegrid-3cols {
+        .g-imagegrid-item {
+            width: 33.33333%;
+
+            @include breakpoint(tablet-range) {
+                width: 50%;
+            }
+
+            @include breakpoint(small-mobile-range) {
+                width: 100%;
+            }
+        }
+    }
+
+    .g-imagegrid-4cols {
+        .g-imagegrid-item {
+            width: 25%;
+
+            @include breakpoint(tablet-range) {
+                width: 50%;
+            }
+
+            @include breakpoint(mobile-only) {
+                width: 100%;
+            }
+        }
+    }
+
+    .g-imagegrid-5cols {
+        .g-imagegrid-item {
+            width: 20%;
+
+            @include breakpoint(tablet-range) {
+                width: 33.33333%;
+            }
+
+            @include breakpoint(mobile-only) {
+                width: 50%;
+            }
+            @include breakpoint(small-mobile-range) {
+                width: 100%;
+            }
+        }
+    }
+}

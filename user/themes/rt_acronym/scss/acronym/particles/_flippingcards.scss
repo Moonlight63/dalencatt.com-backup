@@ -1,0 +1,84 @@
+.g-flippingcards-wrapper {
+    @include display(flex);
+    @include flex-flow(row wrap);
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    margin: -$content-margin;
+
+    .g-flippingcards-row {
+        @include display(flex);
+        @include breakpoint(mobile-only) {
+            @include flex-direction(column);
+        }
+        @include flex-flow(row wrap);
+        @include align-content(flex-end);
+        width: 100%;
+    }
+
+    // Card
+    .g-flippingcard {
+        display: inline-block;
+        margin: $content-margin;
+        flex: 1 1 0%;
+        @include breakpoint(mobile-only) {
+           flex: 100%;
+        }
+
+        .g-flippingcards-iconbg {
+            position: absolute;
+            color: $accent-color-1;
+            font-size: $core-font-size + 7;
+            opacity: 0.1;
+            top: -3rem;
+            right: 4rem;
+        }
+
+        i {
+            margin: $content-margin 0;
+            font-size: $core-font-size + 2;
+            color: $accent-color-1;
+        }
+
+        .g-flippingcards-button {
+            font-weight: $font-weight-bold;
+            margin: $content-margin 0;
+            color: $accent-color-1;
+            i {
+                font-size: $core-font-size;
+            }
+        }
+
+        .g-flippingcards-title {
+            font-weight: $font-weight-bold;
+            margin: $content-margin 0;
+        }
+
+        .g-flippingcards-front {
+            border-radius: $border-radius;
+            position: relative;
+            .g-flippingcards-title {
+                color: $black;
+            }
+            .g-flippingcards-desc {
+                color: $base-text-color;
+            }
+            background: $white;
+            padding: $content-padding;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .g-flippingcards-back {
+            border-radius: $border-radius;
+            .g-flippingcards-title, .g-flippingcards-button {
+                color: $white;
+            }
+            i {
+                color: $white;
+            }
+            background: $base-background;
+            padding: $content-padding;
+            cursor: pointer;
+            overflow: hidden;
+        }
+    }
+}
