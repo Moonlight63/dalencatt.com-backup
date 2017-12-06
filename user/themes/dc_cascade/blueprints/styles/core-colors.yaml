@@ -1,0 +1,43 @@
+name: Core Colors
+description: Core universal colors for the theme
+type: core
+
+form:
+  fields:
+
+    grey:
+      type: input.colorpicker
+      label: Gery
+      default: "#95a5a6"
+    pink:
+      type: input.colorpicker
+      label: Pink
+      default: "#d13b7b"
+    red:
+      type: input.colorpicker
+      label: Red
+      default: "#ef4a44"
+    purple:
+      type: input.colorpicker
+      label: Purple
+      default: "#874f9a"
+    orange:
+      type: input.colorpicker
+      label: Orange
+      default: "#ee7933"
+    blue:
+      type: input.colorpicker
+      label: Blue
+      default: "#3c92c8"
+    cyan:
+      type: input.colorpicker
+      label: Cyan
+      default: "#279fba"
+    green:
+      type: input.colorpicker
+      label: Green
+      default: "#35ad37"
+    yellow:
+      type: input.colorpicker
+      label: Yellow
+      default: "#e8d905"

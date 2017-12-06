@@ -1,0 +1,6 @@
+preset: preset1
+offcanvas:
+  toggle-visibility: '3'
+slideshow:
+  gradient1: '#086fff'
+  overlay-opacity: '0.8'

@@ -1,0 +1,213 @@
+.md-alerts {
+
+	$alerts-background-desaturation: 0 !default;
+	$alerts-background-transparency: 0 !default;
+
+	$alerts-text-darken: 0 !default;
+	$alerts-text-label-padding: 0.25em 0.5em !default;
+	$alerts-text-padding: 0.5em !default;
+
+	$alerts-border-width:           0 0 0 10px !default;
+	$alerts-border-radius:          0px !default;
+	$alerts-border-style:           solid !default;
+
+	$alerts-notice-border-width:    0 !default;
+	$alerts-notice-border-radius:   0px !default;
+	$alerts-notice-border-style:    none !default;
+
+
+
+	margin-bottom: 1.2em;
+	overflow: hidden;
+
+	&:not(.md-alerts-notice) {
+		border-width: unquote($alerts-border-width);
+		border-radius: unquote($alerts-border-radius);
+		border-style: unquote($alerts-border-style);
+	}
+	&.md-alerts-notice {
+		border-width: unquote($alerts-notice-border-width);
+		border-radius: unquote($alerts-notice-border-radius);
+		border-style: unquote($alerts-notice-border-style);
+	}
+
+	.md-alert-label {
+		color: $white;
+		font-weight: bold;
+		padding: unquote($alerts-text-label-padding);
+	}
+
+	.md-alert-container {
+		padding: unquote($alerts-text-padding);
+
+		.md-alert-line:not(:first-child) {
+			margin-top: 0;
+		}
+		.md-alert-line:not(:last-child) {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+	@mixin alert-block($color) {
+		border-color: $color;
+	}
+	@mixin alert-label($color) {
+		background-color: $color;
+	}
+	@mixin alert-container(
+		$color,
+		$desaturation: number($alerts-background-desaturation)/100,
+		$bgTransparency: number($alerts-background-transparency)/100,
+		$textDarken: percentage(number($alerts-text-darken))/100
+	) {
+		content: $bgTransparency;
+		background-color: transparentize(desaturate($color, $desaturation), $bgTransparency);
+		color: darken($color, $textDarken);
+		border-color: $color;
+	}
+
+
+	&.md-alerts-override-grey {
+		@include alert-block($core-colors-grey);
+		.md-alert-label {
+			@include alert-label($core-colors-grey);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-grey);
+		}
+	}
+
+	&.md-alerts-override-pink {
+		@include alert-block($core-colors-pink);
+		.md-alert-label {
+			@include alert-label($core-colors-pink);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-pink);
+		}
+	}
+
+	&.md-alerts-override-red {
+		@include alert-block($core-colors-red);
+		.md-alert-label {
+			@include alert-label($core-colors-red);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-red);
+		}
+	}
+
+	&.md-alerts-override-purple {
+		@include alert-block($core-colors-purple);
+		.md-alert-label {
+			@include alert-label($core-colors-purple);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-purple);
+		}
+	}
+
+	&.md-alerts-override-orange {
+		@include alert-block($core-colors-orange);
+		.md-alert-label {
+			@include alert-label($core-colors-orange);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-orange);
+		}
+	}
+
+	&.md-alerts-override-blue {
+		@include alert-block($core-colors-blue);
+		.md-alert-label {
+			@include alert-label($core-colors-blue);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-blue);
+		}
+	}
+
+	&.md-alerts-override-cyan {
+		@include alert-block($core-colors-cyan);
+		.md-alert-label {
+			@include alert-label($core-colors-cyan);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-cyan);
+		}
+	}
+
+	&.md-alerts-override-green {
+		@include alert-block($core-colors-green);
+		.md-alert-label {
+			@include alert-label($core-colors-green);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-green);
+		}
+	}
+
+	&.md-alerts-override-yellow {
+		@include alert-block($core-colors-yellow);
+		.md-alert-label {
+			@include alert-label($core-colors-yellow);
+		}
+		.md-alert-container {
+			@include alert-container($core-colors-yellow);
+		}
+	}
+
+	&.md-alerts-override-primary {
+		@include alert-block($accent-color-1);
+		.md-alert-label {
+			@include alert-label($accent-color-1);
+		}
+		.md-alert-container {
+			@include alert-container($accent-color-1);
+		}
+	}
+
+	&.md-alerts-override-secondary {
+		@include alert-block($accent-color-2);
+		.md-alert-label {
+			@include alert-label($accent-color-2);
+		}
+		.md-alert-container {
+			@include alert-container($accent-color-2);
+		}
+	}
+
+	&.md-alerts-override-tertiary {
+		@include alert-block($accent-color-3);
+		.md-alert-label {
+			@include alert-label($accent-color-3);
+		}
+		.md-alert-container {
+			@include alert-container($accent-color-3);
+		}
+	}
+
+
+	&.md-alerts-level-0 {
+		@extend .md-alerts-override-green;
+	}
+
+	&.md-alerts-level-1 {
+		@extend .md-alerts-override-blue;
+	}
+
+	&.md-alerts-level-2 {
+		@extend .md-alerts-override-yellow;
+	}
+
+	&.md-alerts-level-3 {
+		@extend .md-alerts-override-orange;
+	}
+
+	&.md-alerts-level-4 {
+		@extend .md-alerts-override-red;
+	}
+
+}

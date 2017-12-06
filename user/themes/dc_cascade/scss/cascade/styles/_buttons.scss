@@ -1,0 +1,153 @@
+
+$buttons-outline-width: 2px !default;
+$buttons-radius: 0.5rem !default;
+$buttons-padding: 0.5rem 1.5rem !default;
+
+@mixin button-color($color) {
+	background: $color;
+	&:hover, &:active, &:focus {
+		background: darken($color, 15%);
+	}
+
+	&.outline {
+		background: transparent !important;
+		color: $color !important;
+		&::after {
+			border-color: $color !important;
+		}
+		&:hover, &:active, &:focus {
+			background: transparent !important;
+			color: darken($color, 15%) !important;
+			&::after {
+				border-color: darken($color, 15%) !important;
+			}
+		}
+	}
+}
+
+%g-button {
+
+	@include button-color($accent-color-1);
+
+	display: inline-block;
+	position: relative;
+	font-family: get-font-family($font-family-default);
+	font-weight: $font-weight-bold;
+	font-size: $core-font-size;
+	padding: $buttons-padding;
+	margin: 0 0 0.5rem 0;
+	vertical-align: middle;
+	text-shadow: none;
+	@include transition(all 0.2s);
+	color: $white;
+	border-radius: $buttons-radius;
+	&:hover, &:active, &:focus {
+		color: $white !important;
+	}
+}
+
+.button {
+	@extend %g-button;
+	.fa {
+		font-size: $core-font-size + 0.5;
+	}
+
+	&.outline::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-width: $buttons-outline-width;
+		border-style: solid;
+		border-radius: inherit;
+	}
+
+	&.square {
+		border-radius: 0;
+		&[class*="button"] {
+			border-radius: 0;
+		}
+	}
+
+	&.round {
+		border-radius: 2rem;
+	}
+
+	&.block {
+		display: block;
+	}
+	&.xlarge {
+		font-size: $core-font-size + 0.4;
+	}
+	&.large {
+		font-size: $core-font-size + 0.2;
+	}
+	&.medium {
+		font-size: $core-font-size;
+	}
+	&.small {
+		font-size: $core-font-size - 0.2;		
+	}
+	&.xsmall {
+		font-size: $core-font-size - 0.4;
+	}
+
+
+	&.primary {
+		@include button-color($accent-color-1);
+	}
+	&.secondary {
+		@include button-color($accent-color-2);
+	}
+	&.tertiary {
+		@include button-color($accent-color-3);
+	}
+
+	&.grey {
+		@include button-color($core-colors-grey);
+	}
+	&.pink {
+		@include button-color($core-colors-pink);
+	}
+	&.red {
+		@include button-color($core-colors-red);
+	}
+	&.purple {
+		@include button-color($core-colors-purple);
+	}
+	&.orange {
+		@include button-color($core-colors-orange);
+	}
+	&.blue {
+		@include button-color($core-colors-blue);
+	}
+	&.cyan {
+		@include button-color($core-colors-cyan);
+	}
+	&.green {
+		@include button-color($core-colors-green);
+	}
+	&.yellow {
+		@include button-color($core-colors-yellow);
+	}
+
+
+
+	&.button-arrow {
+		background: transparent;
+	    font-size: 3rem;
+	    line-height: 1;
+	    padding: 0 2rem;
+		&:hover, &:active, &:focus {
+			color: darken($accent-color-1, 25%) !important;
+		}	    
+	}
+}
+.g-button-arrow {
+	display: block;
+    font-family: "helvetica";
+    font-size: 4rem;
+    line-height: 2rem;    
+}

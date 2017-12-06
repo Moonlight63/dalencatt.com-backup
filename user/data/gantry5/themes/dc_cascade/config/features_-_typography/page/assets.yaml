@@ -1,0 +1,7 @@
+javascript:
+  -
+    location: 'gantry-theme://external/prettify/run_prettify.js'
+    inline: ''
+    in_footer: '0'
+    extra: {  }
+    name: Prettify

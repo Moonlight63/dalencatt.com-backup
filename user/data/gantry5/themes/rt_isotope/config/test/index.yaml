@@ -1,0 +1,71 @@
+name: test
+timestamp: 1512012827
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1491238012
+positions: {  }
+sections:
+  overlay: Overlay
+  navigation: Navigation
+  top: Top
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  menu:
+    menu-6682: Menu
+  blockcontent:
+    blockcontent-3824: 'Block Content'
+    blockcontent-1882: Extras
+  social:
+    social-6445: Social
+  logo:
+    logo-8536: Logo
+  overlaytoggle:
+    overlaytoggle-4486: 'Overlay Toggle'
+  messages:
+    system-messages-2702: 'System Messages'
+  flexslider:
+    flexslider-6839: 'FP Slideshow'
+    flexslider-9352: 'FP Showcase'
+    flexslider-3985: 'FP Above'
+  custom:
+    custom-1064: 'What We Made Recently'
+    custom-2723: About
+    custom-3300: Availability
+  promocontent:
+    promocontent-2335: Navigation
+  flippingcontent:
+    flippingcontent-9786: 'Our Clients'
+  content:
+    system-content-1845: 'Page Content'
+  popupgrid:
+    popupgrid-6712: 'Template Features'
+  testimonial:
+    testimonial-5614: 'Our Crew'
+  infolist:
+    infolist-1084: 'Useful Links'
+    infolist-9652: Elsewhere
+  branding:
+    branding-1875: Branding
+  copyright:
+    copyright-4835: Copyright
+  totop:
+    totop-2327: 'To Top'
+  mobile-menu:
+    mobile-menu-7990: 'Mobile Menu'
+inherit: {  }

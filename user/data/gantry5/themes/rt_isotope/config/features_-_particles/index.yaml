@@ -1,0 +1,72 @@
+name: features_-_particles
+timestamp: 1491238318
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1449067356
+positions:
+  sidebar: Sidebar
+  aside: Aside
+sections:
+  navigation: Navigation
+  top: Top
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-4057: Logo
+  menu:
+    menu-3995: Menu
+  messages:
+    system-messages-8159: 'System Messages'
+  infolist:
+    infolist-1086: 'Particles - Header'
+    infolist-7317: 'Particles - Info List'
+  flexslider:
+    flexslider-8575: 'Particles - Slideshow'
+    flexslider-6725: 'Particles - FlexSlider Testimonial'
+    flexslider-8751: 'Particles - FlexSlider Showcase'
+  gridcontent:
+    gridcontent-1231: 'Particles - Grid Content'
+  contentlist:
+    contentlist-2109: 'Particles - Content List'
+  imagegrid:
+    imagegrid-9969: 'Particles - Image Grid'
+  promoimage:
+    promoimage-7133: 'Particles - Promo Image'
+  contact:
+    contact-4152: 'Particles - Contact'
+  promocontent:
+    promocontent-1863: 'Particles - Promo Content Particle'
+  blockcontent:
+    blockcontent-9646: 'Particles - Block Content'
+  flippingcontent:
+    flippingcontent-3599: 'Particles - Flipping Content'
+  popupgrid:
+    popupgrid-5556: 'Particles - Popup Image Grid'
+  position:
+    position-sidebar: Sidebar
+    position-aside: Aside
+  branding:
+    branding-3018: Branding
+  copyright:
+    copyright-5323: Copyright
+  totop:
+    totop-8334: 'To Top'
+  mobile-menu:
+    mobile-menu-8402: 'Mobile Menu'
+inherit: {  }

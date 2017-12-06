@@ -1,0 +1,72 @@
+name: home
+timestamp: 1511675992
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1510811230
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  above: Above
+  feature: Feature
+  showcase: Showcase
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  headerlicious:
+    headerlicious-7991: Headerlicious
+  particlesjs:
+    particlesjs-4543: Particles
+  owlcards:
+    owlcards-2603: 'Owl Cards'
+  custom:
+    custom-3442: 'Promo 1'
+  simplecontent:
+    simplecontent-1498: Signature
+    simplecontent-7783: 'Simple Content'
+  logo:
+    logo-9937: 'Logo / Image'
+    logo-2461: 'Logo / Image'
+    logo-8996: 'Logo / Image'
+    logo-3862: 'Logo / Image'
+    logo-6586: Logo
+  owlshowcase:
+    owlshowcase-7305: 'Owl Showcase'
+  flippingcards:
+    flippingcards-4199: 'Flipping Cards'
+  contentarray:
+    contentarray-4120: 'Platform Content'
+  newsletter:
+    newsletter-8589: Newsletter
+  messages:
+    system-messages-8699: 'System Messages'
+  menu:
+    menu-4147: Menu
+  simplemenu:
+    simplemenu-9165: 'Bottom Menu'
+  branding:
+    branding-7779: Branding
+  mobile-menu:
+    mobile-menu-1597: Mobile-menu
+inherit:
+  default:
+    top: top
+    navigation: navigation
+    showcase: showcase
+    extension: extension
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    system-messages-8699: system-messages-9828
+    logo-6586: logo-5992
+    menu-4147: menu-2350
+    simplemenu-9165: simplemenu-6826
+    branding-7779: branding-9192
+    mobile-menu-1597: mobile-menu-7951

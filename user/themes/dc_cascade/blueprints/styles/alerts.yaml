@@ -1,0 +1,79 @@
+name: Alerts and Notices
+description: Alert and Notice styling for the theme
+type: core
+
+form:
+  fields:
+
+    border-width:
+      type: input.text
+      label: Alert Border Width
+      default: "0 0 0 10px"
+    border-radius:
+      type: input.text
+      label: Alert Border Radius
+      default: "0"
+    border-style:
+      type: select.selectize
+      label: Alert Border Style
+      default: solid
+      selectize: {'create': true}
+      options:
+        solid: solid
+        dashed: dashed
+        dotted: dotted
+        double: double
+        groove: groove
+        ridge: ridge
+        inset: inset
+        outset: outset
+        hidden: hidden
+        none: none
+
+    notice-border-width:
+      type: input.text
+      label: Notice Border Width
+      default: "0"
+    notice-border-radius:
+      type: input.text
+      label: Notice Border Radius
+      default: "0"
+    notice-border-style:
+      type: select.selectize
+      label: Notice Border Style
+      default: none
+      selectize: {'create': true}
+      options:
+        solid: solid
+        dashed: dashed
+        dotted: dotted
+        double: double
+        groove: groove
+        ridge: ridge
+        inset: inset
+        outset: outset
+        hidden: hidden
+        none: none
+
+    background-desaturation:
+      type: input.number
+      label: Background Desaturation %
+      default: 0
+    background-transparency:
+      type: input.number
+      label: Background Transparency %
+      default: 25
+
+    text-darken:
+      type: input.number
+      label: Text Darken %
+      default: 25
+    text-label-padding:
+      type: input.text
+      label: Notice Label Padding
+      default: "0.25em 0.5em"
+    text-padding:
+      type: input.text
+      label: Notice Padding
+      default: "0.5em"
+

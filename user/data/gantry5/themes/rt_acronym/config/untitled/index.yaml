@@ -1,0 +1,56 @@
+name: untitled
+timestamp: 1512013493
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: pricing
+  timestamp: 1510811230
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  above: Above
+  showcase: Showcase
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  mainbar: Main
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  simplecontent:
+    simplecontent-3632: 'Header - Pricing'
+  pricingtable:
+    pricingtable-6316: 'Pricing - Pricing Table'
+  messages:
+    system-messages-8332: 'System Messages'
+  logo:
+    logo-1783: Logo
+  menu:
+    menu-1546: Menu
+  simplemenu:
+    simplemenu-1165: 'Bottom Menu'
+  branding:
+    branding-7551: Branding
+  mobile-menu:
+    mobile-menu-3979: Mobile-menu
+inherit:
+  default:
+    top: top
+    navigation: navigation
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    system-messages-8332: system-messages-9828
+    logo-1783: logo-5992
+    menu-1546: menu-2350
+    simplemenu-1165: simplemenu-6826
+    branding-7551: branding-9192
+    mobile-menu-3979: mobile-menu-7951

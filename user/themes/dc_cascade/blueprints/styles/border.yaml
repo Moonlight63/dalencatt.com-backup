@@ -1,0 +1,11 @@
+name: Border Styles
+description: Border styles for the Isotope theme
+type: core
+
+form:
+  fields:
+
+    color-light:
+      type: input.colorpicker
+      label: Light Background
+      default: "rgba(0, 0, 0, 0.1)"

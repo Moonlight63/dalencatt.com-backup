@@ -1,0 +1,60 @@
+name: _error
+timestamp: 1511675960
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _error
+  timestamp: 1510811230
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  above: Above
+  showcase: Showcase
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  messages:
+    system-messages-9828: 'System Messages'
+  logo:
+    logo-6939: Logo
+  menu:
+    menu-5286: Menu
+  simplecontent:
+    simplecontent-7561: 'We are sorry!'
+  content:
+    system-content-3192: 'Page Content'
+  branding:
+    branding-2803: Branding
+  mobile-menu:
+    mobile-menu-7932: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    logo-6939: logo-5992
+    menu-5286: menu-2350
+    header: header
+    slideshow: slideshow
+    above: above
+    showcase: showcase
+    utility: utility
+    feature: feature
+    expanded: expanded
+    extension: extension
+    bottom: bottom
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    branding-2803: branding-9192
+    mobile-menu-7932: mobile-menu-7951

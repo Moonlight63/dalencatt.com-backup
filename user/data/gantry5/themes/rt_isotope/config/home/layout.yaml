@@ -1,0 +1,445 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1491238012
+layout:
+  overlay: {  }
+  navigation: {  }
+  /top/:
+    -
+      - system-messages-2702
+  /header/: {  }
+  /slideshow/:
+    -
+      - flexslider-6839
+    -
+      - particlesjs-7760
+  /showcase/:
+    -
+      - custom-1064
+  /above/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-4448/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - system-content-1845
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  /extension/: {  }
+  /bottom/: {  }
+  /footer/:
+    -
+      - 'infolist-1084 25'
+      - 'infolist-9652 25'
+      - 'custom-2723 25'
+      - 'custom-3300 25'
+  /copyright/:
+    -
+      - 'branding-1875 33.3'
+      - 'copyright-4835 33.3'
+      - 'totop-2327 33.3'
+  offcanvas:
+    -
+      - mobile-menu-7990
+structure:
+  overlay:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  top:
+    type: section
+    attributes:
+      boxed: '0'
+  header:
+    attributes:
+      boxed: '0'
+      class: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+      class: ''
+      extra:
+        -
+          style: 'position : relative; margin-top:0'
+  showcase:
+    type: section
+    attributes:
+      boxed: '0'
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: '0'
+  utility:
+    type: section
+    attributes:
+      boxed: '0'
+  feature:
+    type: section
+    attributes:
+      boxed: '0'
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-4448:
+    attributes:
+      boxed: '0'
+      class: ''
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '0'
+  extension:
+    type: section
+    attributes:
+      boxed: '0'
+      class: ''
+      extra:
+        -
+          data-enllax-ratio: '0.3'
+        -
+          data-enllax-type: background
+  bottom:
+    type: section
+    attributes:
+      boxed: '0'
+  footer:
+    attributes:
+      boxed: '0'
+  copyright:
+    type: section
+    attributes:
+      boxed: 0
+  offcanvas:
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
+content:
+  system-messages-2702:
+    block:
+      variations: 'nomarginall nopaddingall'
+  flexslider-6839:
+    title: 'FP Slideshow'
+    attributes:
+      class: fp-slideshow-demo
+      layout: slideshow
+      autoplay: '0'
+      items:
+        -
+          image: ''
+          overlayImage: ''
+          overlayParallax: '1'
+          overlayParallaxRatio: '0.3'
+          title: 'Design &lt/&gt Code'
+          desc: 'An elegant, interactive and animated experience.'
+          testimonialImage: ''
+          testimonialName: ''
+          testimonialPosition: ''
+          link: '#'
+          linktext: 'View More'
+          buttontarget: _self
+          buttonclass: button-3
+          name: 'Design </> Code'
+  particlesjs-7760:
+    title: Particles
+    attributes:
+      conf_presets: preset1
+      preset_sync: disabled
+      sectiononly: disabled
+      file: 'gantry-theme://json/particlejs/particlesjs-config.json'
+  custom-1064:
+    title: 'What We Made Recently'
+    attributes:
+      html: '<h2 class="g-title largetopspace">What We Made Recently</h2>'
+    block:
+      class: 'nomargintop nopaddingtop'
+      variations: title-center
+  infolist-1084:
+    title: 'Useful Links'
+    attributes:
+      class: g-gridmenu
+      title: 'Useful Links'
+      cols: g-1cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/grav/themes/isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'About Isotope'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/docs/grav/themes/isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'Style Guide'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: index.php/pages/about-us
+          icon: ''
+          readmoreclass: ''
+          title: Pages
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://docs.gantry.org/'
+          icon: ''
+          readmoreclass: ''
+          title: Guides
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/contact-us'
+          icon: ''
+          readmoreclass: ''
+          title: Questions
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'http://www.rockettheme.com/forum/grav-theme-isotope'
+          icon: ''
+          readmoreclass: ''
+          title: 'Help & Support'
+  infolist-9652:
+    title: Elsewhere
+    attributes:
+      class: g-gridmenu
+      title: Elsewhere
+      cols: g-2cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://www.facebook.com/RocketTheme/'
+          icon: ''
+          readmoreclass: ''
+          title: Facebook
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://twitter.com/rockettheme'
+          icon: ''
+          readmoreclass: ''
+          title: Twitter
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Pinterest
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://www.youtube.com/user/OfficialRocketTheme'
+          icon: ''
+          readmoreclass: ''
+          title: YouTube
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Delicious
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Instagram
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Snapchat
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Periscope
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: 'https://github.com/gantry/gantry5'
+          icon: ''
+          readmoreclass: ''
+          title: Github
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Tookapic
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Flickr
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: ''
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 500px
+  custom-2723:
+    title: About
+    attributes:
+      html: "<h3 class=\"g-title\">About</h3>\n<p>All demo content is for sample purposes only, to represent a live site.</p>\n<p>Note: Isotope is built on the latest version of the Gantry 5 Framework.</p>"
+  custom-3300:
+    title: Availability
+    attributes:
+      html: "<h3 class=\"g-title\">Availability</h3>\n<p><a href=\"http://www.rockettheme.com/joomla/templates/isotope\">Isotope</a> can be <span class=\"hidden-tablet\">individually </span>purchased with lifetime download / forum access.</p>\n<p>Alternatively, Isotope is available as part of a subscription.</p>"
+  branding-1875:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-2327:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''
+  mobile-menu-7990:
+    title: 'Mobile Menu'

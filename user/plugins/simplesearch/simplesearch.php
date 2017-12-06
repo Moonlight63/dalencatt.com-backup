@@ -178,7 +178,6 @@ class SimplesearchPlugin extends Plugin
             $this->collection = $this->checkForPermissions($this->collection);
         }
         $extras = [];
-
         if ($query) {
             foreach ($this->collection as $cpage) {
                 foreach ($this->query as $query) {
@@ -198,6 +197,7 @@ class SimplesearchPlugin extends Plugin
                 }
             }
         }
+
 
         if (!empty($extras)) {
             $this->collection->append($extras);
@@ -228,6 +228,7 @@ class SimplesearchPlugin extends Plugin
 
             $this->grav['page'] = $page;
         }
+
     }
 
     /**

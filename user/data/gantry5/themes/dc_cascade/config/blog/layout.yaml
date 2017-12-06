@@ -1,0 +1,341 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1512279443
+layout:
+  overlay: {  }
+  navigation: {  }
+  /top/:
+    -
+      - system-messages-8159
+    -
+      - 'position-top-a 33.3'
+      - 'position-top-b 33.3'
+      - 'position-top-c 33.3'
+  /header/:
+    -
+      - 'position-header-a 33.3'
+      - 'position-header-b 33.3'
+      - 'position-header-c 33.3'
+  /slideshow/:
+    -
+      - position-slideshow
+  /showcase/:
+    -
+      - 'position-showcase-a 33.3'
+      - 'position-showcase-b 33.3'
+      - 'position-showcase-c 33.3'
+  /above/:
+    -
+      - 'position-above-a 33.3'
+      - 'position-above-b 33.3'
+      - 'position-above-c 33.3'
+  /utility/:
+    -
+      - 'position-utility-a 33.3'
+      - 'position-utility-b 33.3'
+      - 'position-utility-c 33.3'
+  /feature/:
+    -
+      - 'position-feature-a 33.3'
+      - 'position-feature-b 33.3'
+      - 'position-feature-c 5'
+  /container-main/:
+    -
+      -
+        'sidebar 20':
+          -
+            - position-sidebar
+      -
+        'mainbar 60':
+          -
+            - 'position-mainbar-a 33.3'
+            - 'position-mainbar-b 33.3'
+            - 'position-mainbar-c 33.3'
+          -
+            - system-content-5020
+      -
+        'aside 20':
+          -
+            - position-aside
+          -
+            - search-2806
+  /expanded/:
+    -
+      - 'position-expanded-a 33.3'
+      - 'position-expanded-b 33.3'
+      - 'position-expanded-c 33.3'
+  /extension/:
+    -
+      - 'position-extension-a 33.3'
+      - 'position-extension-b 33.3'
+      - 'position-extension-c 33.3'
+  /bottom/:
+    -
+      - 'position-bottom-a 33.3'
+      - 'position-bottom-b 33.3'
+      - 'position-bottom-c 33.3'
+  /footer/:
+    -
+      - 'position-footer-a 25'
+      - 'position-footer-b 25'
+      - 'position-footer-c 25'
+      - 'position-footer-d 25'
+  /copyright/:
+    -
+      - 'branding-3018 33.3'
+      - 'copyright-5323 33.3'
+      - 'totop-8334 33.3'
+  /offcanvas/:
+    -
+      - mobile-menu-8402
+structure:
+  overlay:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.4'
+        -
+          data-enllax-type: background
+      boxed: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.3'
+        -
+          data-enllax-type: background
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  system-messages-8159:
+    block:
+      variations: 'nomarginall nopaddingall'
+  position-top-a:
+    title: 'Top A'
+    attributes:
+      key: top-a
+  position-top-b:
+    title: 'Top B'
+    attributes:
+      key: top-b
+  position-top-c:
+    title: 'Top C'
+    attributes:
+      key: top-c
+  position-header-a:
+    title: 'Header A'
+    attributes:
+      key: header-a
+  position-header-b:
+    title: 'Header B'
+    attributes:
+      key: header-b
+  position-header-c:
+    title: 'Header C'
+    attributes:
+      key: header-c
+  position-slideshow:
+    attributes:
+      key: slideshow
+  position-showcase-a:
+    title: 'Showcase A'
+    attributes:
+      key: showcase-a
+  position-showcase-b:
+    title: 'Showcase B'
+    attributes:
+      key: showcase-b
+  position-showcase-c:
+    title: 'Showcase C'
+    attributes:
+      key: showcase-c
+  position-above-a:
+    title: 'Above A'
+    attributes:
+      key: above-a
+  position-above-b:
+    title: 'Above B'
+    attributes:
+      key: above-b
+  position-above-c:
+    title: 'Above C'
+    attributes:
+      key: above-c
+  position-utility-a:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-utility-b:
+    title: 'Utility B'
+    attributes:
+      key: utility-b
+  position-utility-c:
+    title: 'Utility C'
+    attributes:
+      key: utility-c
+  position-feature-a:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-feature-b:
+    title: 'Feature B'
+    attributes:
+      key: feature-b
+  position-feature-c:
+    title: 'Feature C'
+    attributes:
+      key: feature-c
+    block:
+      class: visible-phone
+      variations: 'nomarginall nopaddingall'
+  position-sidebar:
+    attributes:
+      key: sidebar
+  position-mainbar-a:
+    title: 'Mainbar A'
+    attributes:
+      key: mainbar-a
+  position-mainbar-b:
+    title: 'Mainbar B'
+    attributes:
+      key: mainbar-b
+  position-mainbar-c:
+    title: 'Mainbar C'
+    attributes:
+      key: mainbar-c
+  position-aside:
+    attributes:
+      key: aside
+  position-expanded-a:
+    title: 'Expanded A'
+    attributes:
+      key: expanded-a
+  position-expanded-b:
+    title: 'Expanded B'
+    attributes:
+      key: expanded-b
+  position-expanded-c:
+    title: 'Expanded C'
+    attributes:
+      key: expanded-c
+  position-extension-a:
+    title: 'Extension A'
+    attributes:
+      key: extension-a
+  position-extension-b:
+    title: 'Extension B'
+    attributes:
+      key: extension-b
+  position-extension-c:
+    title: 'Extension C'
+    attributes:
+      key: extension-c
+  position-bottom-a:
+    title: 'Bottom A'
+    attributes:
+      key: bottom-a
+  position-bottom-b:
+    title: 'Bottom B'
+    attributes:
+      key: bottom-b
+  position-bottom-c:
+    title: 'Bottom C'
+    attributes:
+      key: bottom-c
+  position-footer-a:
+    title: 'Footer A'
+    attributes:
+      key: footer-a
+    block:
+      class: g-title-bordered
+  position-footer-b:
+    title: 'Footer B'
+    attributes:
+      key: footer-b
+    block:
+      class: g-title-bordered
+  position-footer-c:
+    title: 'Footer C'
+    attributes:
+      key: footer-c
+    block:
+      class: g-title-bordered
+  position-footer-d:
+    title: 'Footer D'
+    attributes:
+      key: footer-d
+  branding-3018:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-8334:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''
+  mobile-menu-8402:
+    title: 'Mobile Menu'

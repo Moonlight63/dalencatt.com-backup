@@ -1,0 +1,20 @@
+atoms:
+  -
+    id: assets-2441
+    type: assets
+    title: 'Custom CSS / JS'
+    inherit:
+      outline: default
+      atom: assets-2441
+      include:
+        - attributes
+  -
+    id: headroom-7686
+    type: headroom
+    title: Headroom.js
+    attributes:
+      enabled: '1'
+      cssselector: .g-headmenu
+      offset: ''
+      animation: slide
+      mobile: enable

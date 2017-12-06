@@ -1,0 +1,82 @@
+name: home
+timestamp: 1512282239
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1491238012
+positions:
+  navigation-a: 'Navigation A'
+  navigation-b: 'Navigation B'
+  navigation-c: 'Navigation C'
+sections:
+  overlay: Overlay
+  navigation: Navigation
+  top: Top
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  menu:
+    menu-7648: Menu
+  blockcontent:
+    blockcontent-7650: 'Block Content'
+  social:
+    social-3636: Social
+  logo:
+    logo-7999: Logo
+  custom:
+    custom-8922: 'Custom HTML'
+    custom-1064: 'What We Made Recently'
+    custom-2723: About
+    custom-3300: Availability
+  overlaytoggle:
+    overlaytoggle-7070: 'Overlay Toggle'
+  position:
+    position-position-1293: 'Navigation A'
+    position-position-4072: 'Navigation B'
+    position-position-9076: 'Navigation C'
+  messages:
+    system-messages-2702: 'System Messages'
+  flexslider:
+    flexslider-6839: 'FP Slideshow'
+  particlesjs:
+    particlesjs-7760: Particles
+  content:
+    system-content-1845: 'Page Content'
+  infolist:
+    infolist-1084: 'Useful Links'
+    infolist-9652: Elsewhere
+  branding:
+    branding-1875: Branding
+  copyright:
+    copyright-4835: Copyright
+  totop:
+    totop-2327: 'To Top'
+  mobile-menu:
+    mobile-menu-7990: 'Mobile Menu'
+inherit:
+  default:
+    overlay: overlay
+    menu-7648: menu-6682
+    blockcontent-7650: blockcontent-3824
+    social-3636: social-6445
+    navigation: navigation
+    logo-7999: logo-8536
+    custom-8922: custom-3022
+    overlaytoggle-7070: overlaytoggle-8711
+    position-position-1293: position-navigation-a
+    position-position-4072: position-navigation-b
+    position-position-9076: position-navigation-c

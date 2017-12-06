@@ -1,0 +1,47 @@
+name: _error
+timestamp: 1511573127
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/error.png'
+  name: _error
+  timestamp: 1491238012
+positions: {  }
+sections:
+  navigation: Navigation
+  top: Top
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-7061: Logo
+  menu:
+    menu-2019: Menu
+  messages:
+    system-messages-6543: 'System Messages'
+  infolist:
+    infolist-3465: 'Whooops! Error!'
+    infolist-8094: 'Nothing to See Here'
+  content:
+    system-content-6444: 'Page Content'
+  branding:
+    branding-8113: Branding
+  copyright:
+    copyright-3234: Copyright
+  totop:
+    totop-8262: 'To Top'
+  mobile-menu:
+    mobile-menu-6235: 'Mobile Menu'
+inherit: {  }

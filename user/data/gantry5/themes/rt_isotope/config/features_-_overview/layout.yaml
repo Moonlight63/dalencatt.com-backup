@@ -1,0 +1,589 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1449067356
+layout:
+  /navigation/:
+    -
+      - 'logo-4057 20'
+      - 'menu-3995 80'
+  /top/:
+    -
+      - system-messages-8159
+  /header/:
+    -
+      - infolist-6552
+  /slideshow/:
+    -
+      - position-slideshow
+  /showcase/: {  }
+  /above/:
+    -
+      - infolist-7759
+  /utility/: {  }
+  /feature/: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20':
+          -
+            - position-sidebar
+      -
+        'mainbar 60':
+          -
+            - infolist-4928
+      -
+        'aside 20':
+          -
+            - position-aside
+  /expanded/: {  }
+  /extension/:
+    -
+      - infolist-8478
+    -
+      - infolist-9840
+  /bottom/:
+    -
+      - infolist-5842
+  /footer/: {  }
+  /copyright/:
+    -
+      - 'branding-3018 33.3'
+      - 'copyright-5323 33.3'
+      - 'totop-8334 33.3'
+  /offcanvas/:
+    -
+      - mobile-menu-8402
+structure:
+  navigation:
+    type: section
+    attributes:
+      class: g-headroom
+      boxed: ''
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.4'
+        -
+          data-enllax-type: background
+      boxed: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.3'
+        -
+          data-enllax-type: background
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  system-messages-8159:
+    block:
+      variations: 'nomarginall nopaddingall'
+  infolist-6552:
+    title: 'Gantry 5 - Next Generation Theme Framework'
+    attributes:
+      class: 'center g-layercontent noborder'
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: header
+          imagestyle: compact
+          desc: 'Customize themes quickly and efficiently, whilst providing flexibility and ease-of-use for end-users'
+          tag: 'Next Generation Theme Framework'
+          subtag: ''
+          label: Discover
+          link: '#'
+          icon: 'fa fa-university fa-fw'
+          readmoreclass: button-xlarge
+          title: 'Gantry 5'
+  position-slideshow:
+    attributes:
+      key: slideshow
+  infolist-7759:
+    title: 'Features Overview - Theme Features Grid'
+    attributes:
+      class: 'spaced noborder'
+      cols: g-2cols
+      infolists:
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-04.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'A Dropdown Menu system, with inline icons, multiple columns and much more.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: 'Dropdown Menu'
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-05.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'Unlimited positions, with drag and drop add, delete, move and resize capabilities.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: Positions
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-06.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'Enhance positions and particles with stylistic and structural block variations.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: Variations
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-07.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'Choose from a selection of six preset styles, easily customizable from the admin.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: Presets
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-08.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'Responsive layout that adapts to the viewing device, such as laptop, tablet or mobile.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: Responsive
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-09.jpg'
+          imageloc: left
+          textstyle: compact
+          imagestyle: large
+          desc: 'Enhance default and custom content with rich typography and FontAwesome icons.'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: '#'
+          icon: ''
+          readmoreclass: button-4
+          title: Typography
+  position-sidebar:
+    attributes:
+      key: sidebar
+  infolist-4928:
+    title: 'Features Overview Gantry 5'
+    attributes:
+      class: spaced
+      infolists:
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-01.jpg'
+          imageloc: left
+          textstyle: large
+          imagestyle: browser
+          desc: "<p><small>Gantry 5 features an advanced and user friendly Menu Editor, which augments the core menu with a rich, drag and drop enhanced interface<span class=\"hidden-tablet\">, to easily change the menu's frontend appearance, such as columns</span>.</small></p>\n<p class=\"visible-large\"><small>The Menu Editor panel takes what your CMS' built-in Menu Manager has and enables you to override it. Changes you make in this panel do not in any way affect the way the CMS handles Menu items.</small></p>"
+          tag: 'Drag & Drop'
+          subtag: 'Menu Editor'
+          label: 'Learn More'
+          link: '#'
+          icon: 'fa fa-fw fa-list'
+          readmoreclass: button-4
+          title: 'Gantry 5'
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-02.jpg'
+          imageloc: right
+          textstyle: large
+          imagestyle: browser
+          desc: "<p><small>Gantry 5's layout manager also benefits from a drag and drop interface, providing an easy mechanism for adding,<span class=\"hidden-tablet\"> removing, configuring,</span> moving and resizing positions and particles.</small></p>\n<p class=\"visible-large\"><small>Due to the way layouts are now created and managed in Gantry 5, there are no restrictions to the number of positions you can have, and are now truly unlimited.</small></p>"
+          tag: 'Drag & Drop'
+          subtag: 'Layout Manager'
+          label: 'Learn More'
+          link: '#'
+          icon: 'fa fa-fw fa-columns'
+          readmoreclass: button-4
+          title: 'Gantry 5'
+        -
+          image: 'gantry-media://rocketlauncher/features/overview/img-03.jpg'
+          imageloc: left
+          textstyle: large
+          imagestyle: browser
+          desc: "<p><small>Style customization is a very simple process with Gantry 5. All available, pre-built presets are displayed in the Styles tab<span class=\"hidden-tablet\"> for you to preview, individually customize and apply</span>.</small></p>\n<p class=\"visible-large\"><small>Each preset has an assortment of individual style options, such as text and background colors for the various sections, allowing for swift and easy color scheme changes.</small></p>"
+          tag: 'Styles Settings'
+          subtag: '& Presets'
+          label: 'Learn More'
+          link: '#'
+          icon: 'fa fa-fw fa-adjust'
+          readmoreclass: button-4
+          title: 'Gantry 5'
+  position-aside:
+    attributes:
+      key: aside
+  infolist-8478:
+    title: 'Theme Features'
+    attributes:
+      title: 'Theme Features'
+      cols: g-3cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'A responsive layout automatically adapts to the device such as mobile'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Responsive Layout'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Choose from a diverse assortment of six configurable preset style variations'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: '6 Preset Styles'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Choose from a selection of block variations, effects and utility classes'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Block Classes'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Integrated typography by platform default elements and custom content'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Custom Typography'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'The drag and drop layout allows for an unlimited number of positions'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Unlimited Positions'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'A set of custom particles and layouts to allow for easy complex content creation'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Custom Particles'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'A powerful dropdown menu with inline icons, multiple columns and other features'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Dropdown Menu'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'FontAwesome icon library support with live previews and additional controls '
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'FontAwesome Icons'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Theme specific support for social menu icons, such as Facebook and Twitter'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Social Icons'
+  infolist-9840:
+    title: 'System Requirements'
+    attributes:
+      title: 'System Requirements'
+      cols: g-3cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Google Chrome 41+, Firefox 36+, Safari 8+, Opera 28+, IE10+ (9 at limited capacity)'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Browsers
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'PHP 5.4+ with Curl, OpenSSL Libraries and Multibyte String Support'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Server Requirements'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Grav 1.1+'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: Platforms
+  infolist-5842:
+    title: 'Gantry 5 Core Features'
+    attributes:
+      title: 'Gantry 5 Core Features'
+      cols: g-3cols
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Particles are simple user interface blocks that hook seamlessly into Gantry 5'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Powerful Particles System'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Configure and structure your menu hierarchy with our new Menu editor'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Visual Menu Editor'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Easy-to-use drag-n-drop layout manager makes layouts a breeze to create'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Layout Manager'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Made a mistake in the layout manager? No problem, you can easily undo it'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Unlimited Undo/Redo'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Icon Picker, Image Picker, Font Picker, Collections, and much, much more!'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Sophisticated Built-in Fields'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Dynamic compilation of multiple CSS preprocessors is supported in Gantry 5'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'SCSS LESS Support'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Easily add Gantry 5 particles to a location-configurable off-canvas panel'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Off-Canvas Panel'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Gantry 5 uses the super-powerful Twig templating system to build your themes'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'Twig-based Templating'
+        -
+          image: ''
+          imageloc: left
+          textstyle: compact
+          imagestyle: compact
+          desc: 'Easily configure Gantry 5 with simple-to-use YAML syntax'
+          tag: ''
+          subtag: ''
+          label: ''
+          link: '#'
+          icon: ''
+          readmoreclass: ''
+          title: 'YAML-based Configuration'
+  branding-3018:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-8334:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''
+  mobile-menu-8402:
+    title: 'Mobile Menu'

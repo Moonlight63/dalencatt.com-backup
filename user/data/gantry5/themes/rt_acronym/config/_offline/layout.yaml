@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _offline
+  timestamp: 1510811230
+layout:
+  top:
+    -
+      - system-messages-9828
+  navigation:
+    -
+      - logo-5992
+  slideshow:
+    -
+      - simplecontent-5551
+  /header/: {  }
+  /above/: {  }
+  /showcase/: {  }
+  /utility/: {  }
+  /feature/: {  }
+  /container-main/:
+    -
+      -
+        'sidebar 20': {  }
+      -
+        'mainbar 60':
+          -
+            - system-content-7661
+      -
+        'aside 20': {  }
+  /expanded/: {  }
+  extension: {  }
+  bottom:
+    -
+      - blockcontent-4574
+  footer: {  }
+  /copyright/:
+    -
+      - copyright-5748
+  offcanvas: {  }
+structure:
+  top:
+    inherit:
+      outline: default
+      include:
+        - attributes
+    type: section
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  slideshow:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  header:
+    attributes:
+      boxed: '1'
+      class: g-default-header
+  above:
+    type: section
+    attributes:
+      boxed: '1'
+      class: g-default-above
+  showcase:
+    type: section
+    attributes:
+      boxed: '1'
+      class: g-default-showcase
+  utility:
+    type: section
+    attributes:
+      boxed: '1'
+      class: g-default-utility
+  feature:
+    type: section
+    attributes:
+      boxed: '1'
+      class: g-default-feature
+  sidebar:
+    type: section
+    attributes:
+      class: ''
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    attributes:
+      class: ''
+    block:
+      class: equal-height
+      variations: center
+  aside:
+    attributes:
+      class: ''
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: '0'
+      class: g-default-main
+      extra: {  }
+  expanded:
+    type: section
+    attributes:
+      boxed: '1'
+      class: g-default-expanded
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  bottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+  copyright:
+    type: section
+    attributes:
+      boxed: '3'
+      class: g-mobile-center-compact
+content:
+  logo-5992:
+    block:
+      variations: 'nomarginall center'
+  simplecontent-5551:
+    title: 'Offline Description'
+    attributes:
+      class: ''
+      title: Offline
+      items:
+        -
+          layout: header
+          created_date: ''
+          content_title: 'Site offline'
+          author: ''
+          leading_content: 'We are working on a new and exciting stuff.'
+          main_content: ''
+          readmore_label: ''
+          readmore_link: ''
+          readmore_class: ''
+          readmore_target: _self
+          title: Offline
+    block:
+      variations: align-left
+  system-content-7661:
+    block:
+      variations: title6
+  blockcontent-4574:
+    title: 'Maintenance Mode'
+    attributes:
+      class: ''
+      headline: 'Maintenance Mode'
+      description: 'Sorry, our Website is Temporarily Down for Maintenance. Please Check Back Again Soon.'
+    block:
+      class: g-title-large
+      variations: center
+  copyright-5748:
+    block:
+      variations: center

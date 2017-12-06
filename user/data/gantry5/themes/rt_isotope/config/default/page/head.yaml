@@ -1,0 +1,21 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    id: assets-2441
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css: {  }
+      javascript: {  }
+  -
+    id: headroom-5166
+    type: headroom
+    title: Headroom.js
+    attributes:
+      enabled: '1'
+      cssselector: .g-headroom
+      offset: ''
+      animation: slide
+      mobile: disable

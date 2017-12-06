@@ -1,0 +1,60 @@
+name: Particles
+description: A lightweight particle for creating aniamted background particles.
+type: particle
+icon: fa-snowflake-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    conf_presets:
+      type: select.select
+      label: Configuration Presets
+      description: Preconfigured presets for your background animation.
+      default: preset1
+      options:
+        preset1: Preset 1 (Circles & Lines)
+        preset2: Preset 2 (Circles)
+        preset3: Preset 3 (Triangles)
+        preset4: Preset 4 (Polygons)
+        preset5: Preset 5 (Stars)
+        preset6: Preset 6 (Rectangles)
+
+    preset_sync:
+      type: select.select
+      label: Sync with Presets
+      description: Enable presets synchronization. For example template styles Preset 1 will sync with first particle configuration preset.
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    sectiononly:
+      type: select.select
+      label: Section Only
+      description: Display particlejs in limited section area only.
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    _customfileinfo:
+      type: separator.note
+      class: alert alert-info
+      content: Custom configuration file gives you almost endless possibilities to animate your background. You can generate your configuration file (with realtime preview) here: <a href="http://vincentgarreau.com/particles.js/">http://vincentgarreau.com/particles.js/</a>. Then simply upload it to your theme's <strong>json/particlejs/</strong> directory.
+
+    file:
+      type: input.filepicker
+      label: Custom Configuration
+      description: Select JSON config file.
+      root:
+        - gantry-theme://json/particlejs

@@ -1,0 +1,47 @@
+name: _offline
+timestamp: 1512354589
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/offline.png'
+  name: _offline
+  timestamp: 1491238012
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  messages:
+    system-messages-6543: 'System Messages'
+  logo:
+    logo-7061: Logo
+  infolist:
+    infolist-8012: Offline
+    infolist-3744: 'Maintenance Mode'
+  content:
+    system-content-7089: 'Page Content'
+  custom:
+    custom-2368: 'About Isotope'
+  newsletter:
+    newsletter-4577: 'Subscribe Here'
+  branding:
+    branding-8113: Branding
+  copyright:
+    copyright-3234: Copyright
+  totop:
+    totop-8262: 'To Top'
+inherit: {  }

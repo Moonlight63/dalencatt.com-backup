@@ -1,0 +1,172 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1449067356
+layout:
+  /navigation/:
+    -
+      - 'logo-4057 20'
+      - 'menu-3995 80'
+  /top/:
+    -
+      - system-messages-8159
+  /header/:
+    -
+      - infolist-7474
+  /slideshow/:
+    -
+      - position-slideshow
+  /showcase/: {  }
+  /above/: {  }
+  /utility/:
+    -
+      - custom-6165
+  /feature/:
+    -
+      - custom-9093
+  /container-main/:
+    -
+      -
+        'sidebar 20':
+          -
+            - position-sidebar
+      -
+        'mainbar 60': {  }
+      -
+        'aside 20':
+          -
+            - position-aside
+  /expanded/: {  }
+  /extension/: {  }
+  /bottom/: {  }
+  /footer/: {  }
+  /copyright/:
+    -
+      - 'branding-3018 33.3'
+      - 'copyright-5323 33.3'
+      - 'totop-8334 33.3'
+  /offcanvas/:
+    -
+      - mobile-menu-8402
+structure:
+  navigation:
+    type: section
+    attributes:
+      class: g-headroom
+      boxed: ''
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.4'
+        -
+          data-enllax-type: background
+      boxed: ''
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      extra:
+        -
+          data-enllax-ratio: '0.3'
+        -
+          data-enllax-type: background
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  system-messages-8159:
+    block:
+      variations: 'nomarginall nopaddingall'
+  infolist-7474:
+    title: 'Typography - Header'
+    attributes:
+      class: 'center g-layercontent noborder'
+      infolists:
+        -
+          image: ''
+          imageloc: left
+          textstyle: header
+          imagestyle: compact
+          desc: 'A selection of custom Particles available with Requiem'
+          tag: ''
+          subtag: ''
+          label: 'Learn More'
+          link: 'http://docs.gantry.org/gantry5/particles'
+          icon: 'fa fa-fw fa-text-height'
+          readmoreclass: button-xlarge
+          title: Typography
+  position-slideshow:
+    attributes:
+      key: slideshow
+  custom-6165:
+    title: 'Buttons Typography'
+    attributes:
+      html: "<h3>Buttons: 1-4</h3>\n<p>\n<a href=\"#\" class=\"button\">Default Button</a>\n<a href=\"#\" class=\"button button-2\">Button 2</a>\n<a href=\"#\" class=\"button button-3\">Button 3</a>\n<a href=\"#\" class=\"button button-4\">Button 4</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Default Button&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-2&quot;&gt;Button 2&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-3&quot;&gt;Button 3&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-4&quot;&gt;Button 4&lt;/a&gt;\n</pre>\n<h3>Buttons: Color</h3>\n<p>\n<a href=\"#\" class=\"button button-grey\">Button Grey</a>\n<a href=\"#\" class=\"button button-pink\">Button Pink</a>\n<a href=\"#\" class=\"button button-red\">Button Red</a>\n<a href=\"#\" class=\"button button-purple\">Button Purple</a>\n<a href=\"#\" class=\"button button-orange\">Button Orange</a>\n<a href=\"#\" class=\"button button-blue\">Button Blue</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button button-grey&quot;&gt;Button Grey&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-pink&quot;&gt;Button Pink&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-red&quot;&gt;Button Red&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-purple&quot;&gt;Button Purple&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-orange&quot;&gt;Button Orange&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-blue&quot;&gt;Button Blue&lt;/a&gt;\n</pre>\n<h3>Buttons: Color Compounded with Buttons 2-4</h3>\n<p>\n<a href=\"#\" class=\"button button-2 button-grey\">Button Grey</a>\n<a href=\"#\" class=\"button button-3 button-pink\">Button Pink</a>\n<a href=\"#\" class=\"button button-4 button-red\">Button Red</a>\n<a href=\"#\" class=\"button button-2 button-purple\">Button Purple</a>\n<a href=\"#\" class=\"button button-3 button-orange\">Button Orange</a>\n<a href=\"#\" class=\"button button-4 button-blue\">Button Blue</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button button-2 button-grey&quot;&gt;Button Grey&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-3 button-pink&quot;&gt;Button Pink&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-4 button-red&quot;&gt;Button Red&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-2 button-purple&quot;&gt;Button Purple&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-3 button-orange&quot;&gt;Button Orange&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-4 button-blue&quot;&gt;Button Blue&lt;/a&gt;\n</pre>\n<h3>Buttons: Square</h3>\n<p>\n<a href=\"#\" class=\"button button-square\">Default Button</a>\n<a href=\"#\" class=\"button button-square button-3\">Button 3</a>\n<a href=\"#\" class=\"button button-square button-2 button-grey\">Button Grey</a>\n<a href=\"#\" class=\"button button-square button-3 button-pink\">Button Pink</a>\n<a href=\"#\" class=\"button button-square button-2 button-red\">Button Red</a>\n<a href=\"#\" class=\"button button-square button-3 button-purple\">Button Purple</a>\n<a href=\"#\" class=\"button button-square button-2 button-orange\">Button Orange</a>\n<a href=\"#\" class=\"button button-square button-3 button-blue\">Button Blue</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button button-square&quot;&gt;Default Button&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-square button-3&quot;&gt;Button 3&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-square button-2 button-grey&quot;&gt;Button Grey&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-square button-3 button-pink&quot;&gt;Button Pink&lt;/a&gt;\n</pre>\n<h3>Buttons: Icons</h3>\n<p>\n<a href=\"#\" class=\"button\"><i class=\"fa fa-fw fa-download\"></i> Default Button</a>\n<a href=\"#\" class=\"button button-2\"><i class=\"fa fa-fw fa-cloud\"></i> Button 2</a>\n<a href=\"#\" class=\"button button-3\"><i class=\"fa fa-fw fa-star\"></i> Button 3</a>\n<a href=\"#\" class=\"button button-4\"><i class=\"fa fa-fw fa-car\"></i> Button 4</a>\n<a href=\"#\" class=\"button button-grey\"><i class=\"fa fa-fw fa-tag\"></i> Button Grey</a>\n<a href=\"#\" class=\"button button-pink\"><i class=\"fa fa-fw fa-university\"></i> Button Pink</a>\n<a href=\"#\" class=\"button button-red\"><i class=\"fa fa-fw fa-edit\"></i> Button Red</a>\n<a href=\"#\" class=\"button button-purple\"><i class=\"fa fa-fw fa-lock\"></i> Button Purple</a>\n<a href=\"#\" class=\"button button-orange\"><i class=\"fa fa-fw fa-clock-o\"></i> Button Orange</a>\n<a href=\"#\" class=\"button button-blue\"><i class=\"fa fa-fw fa-arrows\"></i> Button Blue</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;&lt;i class=&quot;fa fa-fw fa-download&quot;&gt;&lt;/i&gt; Default Button&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-2&quot;&gt;&lt;i class=&quot;fa fa-fw fa-cloud&quot;&gt;&lt;/i&gt; Button 2&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-3&quot;&gt;&lt;i class=&quot;fa fa-fw fa-star&quot;&gt;&lt;/i&gt; Button 3&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-4&quot;&gt;&lt;i class=&quot;fa fa-fw fa-car&quot;&gt;&lt;/i&gt; Button 4&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-grey&quot;&gt;&lt;i class=&quot;fa fa-fw fa-tag&quot;&gt;&lt;/i&gt; Button Grey&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-pink&quot;&gt;&lt;i class=&quot;fa fa-fw fa-university&quot;&gt;&lt;/i&gt; Button Pink&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-red&quot;&gt;&lt;i class=&quot;fa fa-fw fa-edit&quot;&gt;&lt;/i&gt; Button Red&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-purple&quot;&gt;&lt;i class=&quot;fa fa-fw fa-lock&quot;&gt;&lt;/i&gt; Button Purple&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-orange&quot;&gt;&lt;i class=&quot;fa fa-fw fa-clock-o&quot;&gt;&lt;/i&gt; Button Orange&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-blue&quot;&gt;&lt;i class=&quot;fa fa-fw fa-arrows&quot;&gt;&lt;/i&gt; Button Blue&lt;/a&gt;\n</pre>\n<h3>Buttons: Icons Only</h3>\n<p>\n<a href=\"#\" class=\"button\"><i class=\"fa fa-fw fa-download\"></i></a>\n<a href=\"#\" class=\"button button-2\"><i class=\"fa fa-fw fa-cloud\"></i></a>\n<a href=\"#\" class=\"button button-3\"><i class=\"fa fa-fw fa-star\"></i></a>\n<a href=\"#\" class=\"button button-4\"><i class=\"fa fa-fw fa-car\"></i></a>\n<a href=\"#\" class=\"button button-grey\"><i class=\"fa fa-fw fa-tag\"></i></a>\n<a href=\"#\" class=\"button button-pink\"><i class=\"fa fa-fw fa-university\"></i></a>\n<a href=\"#\" class=\"button button-red\"><i class=\"fa fa-fw fa-edit\"></i></a>\n<a href=\"#\" class=\"button button-purple\"><i class=\"fa fa-fw fa-lock\"></i></a>\n<a href=\"#\" class=\"button button-orange\"><i class=\"fa fa-fw fa-clock-o\"></i></a>\n<a href=\"#\" class=\"button button-blue\"><i class=\"fa fa-fw fa-arrows\"></i></a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;&lt;i class=&quot;fa fa-fw fa-download&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-2&quot;&gt;&lt;i class=&quot;fa fa-fw fa-cloud&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-3&quot;&gt;&lt;i class=&quot;fa fa-fw fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-4&quot;&gt;&lt;i class=&quot;fa fa-fw fa-car&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-grey&quot;&gt;&lt;i class=&quot;fa fa-fw fa-tag&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-pink&quot;&gt;&lt;i class=&quot;fa fa-fw fa-university&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-red&quot;&gt;&lt;i class=&quot;fa fa-fw fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-purple&quot;&gt;&lt;i class=&quot;fa fa-fw fa-lock&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-orange&quot;&gt;&lt;i class=&quot;fa fa-fw fa-clock-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-blue&quot;&gt;&lt;i class=&quot;fa fa-fw fa-arrows&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n</pre>\n<h3>Buttons: Sizes</h3>\n<p>\n<a href=\"#\" class=\"button button-xlarge button-grey\">Button XLarge</a>\n<a href=\"#\" class=\"button button-large button-pink\">Button Large</a>\n<a href=\"#\" class=\"button button-medium button-red\">Button Medium</a>\n<a href=\"#\" class=\"button button-small button-purple\">Button Small</a>\n<a href=\"#\" class=\"button button-xsmall button-orange\">Button XSmall</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button button-xlarge button-grey&quot;&gt;Button XLarge&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-large button-pink&quot;&gt;Button Large&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-medium button-red&quot;&gt;Button Medium&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-small button-purple&quot;&gt;Button Small&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-xsmall button-orange&quot;&gt;Button XSmall&lt;/a&gt;\n</pre>\n<h3>Buttons: Block</h3>\n<p>\n<a href=\"#\" class=\"button button-block\">Default Button</a>\n<a href=\"#\" class=\"button button-block button-2\">Button 2</a>\n<a href=\"#\" class=\"button button-block button-3\">Button 3</a>\n<a href=\"#\" class=\"button button-block button-4\">Button 4</a>\n<a href=\"#\" class=\"button button-block button-grey\">Button Grey</a>\n</p>\n<pre class=\"prettyprint\">\n&lt;a href=&quot;#&quot; class=&quot;button button-block&quot;&gt;Default Button&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-block button-2&quot;&gt;Button 2&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-block button-3&quot;&gt;Button 3&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-block button-4&quot;&gt;Button 4&lt;/a&gt;\n&lt;a href=&quot;#&quot; class=&quot;button button-block button-grey&quot;&gt;Button Grey&lt;/a&gt;\n</pre>"
+  custom-9093:
+    title: 'Standard Typography'
+    attributes:
+      html: "<div class=\"g-grid\">\n    <div class=\"g-block\">\n        <div class=\"g-content\">\n            <h2>Headings</h2>\n            <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>\n            <div>\n                <h1>h1. Heading 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nibh. Vivamus non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n                <h2>h2. Heading 2</h2>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nibh. Vivamus non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n                <h3>h3. Heading 3</h3>\n        <p class=\"visible-large\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nibh. Vivamus non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n                <h4>h4. Heading 4</h4>\n                <h5>h5. Heading 5</h5>\n                <h6>h6. Heading 6</h6>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"g-block\">\n        <div class=\"g-content\">\n            <h2>Emphasis</h2>\n            <h4><code>&lt;em&gt;</code></h4>\n            <p>For emphasizing a snippet of text with <em>stress</em></p>\n            <p>The following snippet of text is <em>rendered as italicized text</em>.</p>\n<pre class=\"prettyprint\">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>\n            <h4><code>&lt;strong&gt;</code></h4>\n            <p>For emphasizing a snippet of text with <strong>important</strong></p>\n            <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>\n<pre class=\"prettyprint\">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>\n            <h4><code>&lt;small&gt;</code></h4>\n            <p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>\n            <p><small>This line of text is meant to be treated as fine print.</small></p>\n        </div>\n    </div>\n</div>\n\n<div class=\"g-grid\">\n    <div class=\"g-block\">\n        <div class=\"g-content nomargintop nopaddingtop\">\n            <h2 class=\"nomargintop\">Notice Styles</h3>\n            <p class=\"alert alert-success\">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n<pre class=\"prettyprint\">&lt;p class=\"alert alert-success\"&gt;&hellip;&lt;/p&gt;</pre>\n            <p class=\"alert alert-info\">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n<pre class=\"prettyprint\">&lt;p class=\"alert alert-info\"&gt;&hellip;&lt;/p&gt;</pre>\n            <p class=\"alert alert-warning\">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n            <pre class=\"prettyprint\">&lt;p class=\"alert alert-warning\"&gt;&hellip;&lt;/p&gt;</pre>\n            <p class=\"alert alert-error\">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n<pre class=\"prettyprint\">&lt;p class=\"alert alert-error\"&gt;&hellip;&lt;/p&gt;</pre>\n        </div>\n    </div>\n</div>\n\n<div class=\"g-grid\">\n    <div class=\"g-block\">\n        <div class=\"g-content nomargintop nopaddingtop\">\n            <h2 class=\"nomargintop\">Blockquotes</h2>\n            <p>For quoting blocks of content from another source within your document.</p>\n            <h3>Default blockquote</h3>\n            <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title=\"HyperText Markup Language\">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.</p>\n            <blockquote>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n            </blockquote>\n<pre class=\"prettyprint\">&lt;blockquote&gt;\n&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;\n&lt;/blockquote&gt;</pre>\n\n            <h3>Blockquote options</h3>\n            <span>Style and content changes for simple variations on a standard blockquote.</span><br/>\n\n            <h4>Naming a source</h4>\n            <p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>\n                <blockquote>\n                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n                    <small>Someone famous in <cite title=\"Source Title\">Source Title</cite></small>\n                </blockquote>\n<pre class=\"prettyprint\">&lt;blockquote&gt;\n&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;\n&lt;small&gt;Someone famous &lt;cite title=\"Source Title\"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;\n&lt;/blockquote&gt;</pre>\n        </div>\n    </div>\n</div>\n\n<div class=\"g-grid\">\n    <div class=\"g-block\">\n        <div class=\"g-content nomargintop nopaddingtop\">\n            <h2 class=\"nomargintop\">Code</h2>\n            <h4>Inline</h2>\n            <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>\n            <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>\n<pre class=\"prettyprint\">For example, &lt;code&gt;&lt;section&gt;&lt;/code&gt; should be wrapped as inline.</pre>\n            <p><strong>Note:</strong> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>\n        </div>\n    </div>\n    <div class=\"g-block\">\n        <div class=\"g-content nomargintop nopaddingtop\">\n            <h2 class=\"nomargintop\">&nbsp;</h2>\n            <h4>Basic block</h2>\n                <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>\n<pre class=\"prettyprint\">&lt;p&gt;Sample text here&hellip;&lt;/p&gt;</pre>\n<pre class=\"prettyprint\">&lt;pre&gt;\n&amp;lt;p&amp;gt;Sample text here&hellip;&amp;lt;/p&amp;gt;\n&lt;/pre&gt;</pre>\n        </div>\n    </div>\n</div>\n\n<div class=\"g-grid\">\n    <div class=\"g-block\">\n        <div class=\"g-content nomargintop nopaddingtop\">\n            <h2 class=\"nomargintop\">Tables</h2>\n            <table>\n                <thead><tr>\n                    <th>#</th>\n                    <th>First Name</th>\n                    <th>Last Name</th>\n                    <th>Username</th>\n                </tr></thead>\n                <tbody>\n                <tr>\n                    <td>1</td>\n                    <td>Mark</td>\n                    <td>Otto</td>\n                    <td>@mdo</td>\n                </tr>\n                <tr>\n                    <td>2</td>\n                    <td>Jacob</td>\n                    <td>Thornton</td>\n                    <td>@fat</td>\n                </tr>\n                <tr>\n                    <td>3</td>\n                    <td>Larry</td>\n                    <td>the Bird</td>\n                    <td>@twitter</td>\n                </tr>\n                </tbody>\n            </table>\n<pre class=\"prettyprint\">&lt;table class=\"table\"&gt;\n&hellip;\n&lt;/table&gt;</pre>\n        </div>\n    </div>\n</div>"
+  position-sidebar:
+    attributes:
+      key: sidebar
+  position-aside:
+    attributes:
+      key: aside
+  branding-3018:
+    attributes:
+      content: 'Powered by <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry<span class="hidden-tablet"> Framework</span></a>'
+  totop-8334:
+    title: 'To Top'
+    attributes:
+      icon: 'fa fa-arrow-circle-o-up fa-2x'
+      content: ''
+  mobile-menu-8402:
+    title: 'Mobile Menu'

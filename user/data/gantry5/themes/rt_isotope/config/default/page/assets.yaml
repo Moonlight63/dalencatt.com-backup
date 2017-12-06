@@ -1,0 +1,10 @@
+favicon: ''
+touchicon: ''
+css: {  }
+javascript:
+  -
+    location: 'gantry-assets://js/mootools.js'
+    inline: ''
+    in_footer: '0'
+    extra: {  }
+    name: MooTools

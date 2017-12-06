@@ -1,0 +1,56 @@
+name: features_-_overview
+timestamp: 1491238318
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1449067356
+positions:
+  slideshow: Slideshow
+  sidebar: Sidebar
+  aside: Aside
+sections:
+  navigation: Navigation
+  top: Top
+  slideshow: Slideshow
+  showcase: Showcase
+  above: Above
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-4057: Logo
+  menu:
+    menu-3995: Menu
+  messages:
+    system-messages-8159: 'System Messages'
+  infolist:
+    infolist-6552: 'Gantry 5 - Next Generation Theme Framework'
+    infolist-7759: 'Features Overview - Theme Features Grid'
+    infolist-4928: 'Features Overview Gantry 5'
+    infolist-8478: 'Theme Features'
+    infolist-9840: 'System Requirements'
+    infolist-5842: 'Gantry 5 Core Features'
+  position:
+    position-slideshow: Slideshow
+    position-sidebar: Sidebar
+    position-aside: Aside
+  branding:
+    branding-3018: Branding
+  copyright:
+    copyright-5323: Copyright
+  totop:
+    totop-8334: 'To Top'
+  mobile-menu:
+    mobile-menu-8402: 'Mobile Menu'
+inherit: {  }

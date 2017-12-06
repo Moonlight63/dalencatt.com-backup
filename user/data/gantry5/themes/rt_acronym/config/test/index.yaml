@@ -1,0 +1,57 @@
+name: test
+timestamp: 1511734252
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: about_us
+  timestamp: 1510811230
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  above: Above
+  showcase: Showcase
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  mainbar: Main
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  simplecontent:
+    simplecontent-3925: 'Header - About Us'
+  blockcontent:
+    blockcontent-5701: 'About Us - Who we are'
+    blockcontent-4193: 'About Us - What we do'
+  messages:
+    system-messages-1312: 'System Messages'
+  logo:
+    logo-4853: Logo
+  menu:
+    menu-4149: Menu
+  simplemenu:
+    simplemenu-2249: 'Bottom Menu'
+  branding:
+    branding-1381: Branding
+  mobile-menu:
+    mobile-menu-3168: Mobile-menu
+inherit:
+  default:
+    top: top
+    navigation: navigation
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    system-messages-1312: system-messages-9828
+    logo-4853: logo-5992
+    menu-4149: menu-2350
+    simplemenu-2249: simplemenu-6826
+    branding-1381: branding-9192
+    mobile-menu-3168: mobile-menu-7951
